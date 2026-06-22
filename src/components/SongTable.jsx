@@ -62,7 +62,7 @@ export function SongTable({ songs, onSelectSong }) {
                 <td>{song.artistInfo.performanceVersion}</td>
                 <td>{song.musicalDetails.key}</td>
                 <td>
-                  <span className={`badge ${status.badge}`}>{status.label}</span>
+                  <span className={`badge whitespace-nowrap ${status.badge}`}>{status.label}</span>
                 </td>
                 {RESOURCES.map(({ key, Icon, label }) => (
                   <td key={key}>
