@@ -1,12 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-
-const STATUS_BADGE = {
-  active: 'badge-success',
-  learning: 'badge-warning',
-  retired: 'badge-ghost',
-  'on-hold': 'badge-neutral',
-};
+import { getStatus } from '@/lib/statuses';
 
 export function SongModal({ song, onClose }) {
   const dialogRef = useRef(null);
@@ -30,9 +24,9 @@ export function SongModal({ song, onClose }) {
             <X className="size-4" />
           </button>
           <h2 className="text-xl font-bold truncate">{song.title}</h2>
-          <span className={`badge ml-auto ${STATUS_BADGE[song.status] ?? 'badge-ghost'}`}>
-            {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
-          </span>
+          {(() => { const s = getStatus(song.status); return (
+            <span className={`badge ml-auto ${s.badge}`}>{s.label}</span>
+          ); })()}
         </div>
 
         <div className="space-y-5">

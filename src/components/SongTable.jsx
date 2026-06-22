@@ -1,10 +1,4 @@
-const STATUS_BADGE = {
-  active: "badge-success",
-  learning: "badge-warning",
-  retired: "badge-ghost",
-  "on-hold": "badge-neutral",
-  filler: "badge-info",
-};
+import { getStatus } from '@/lib/statuses';
 
 export function SongTable({ songs, onSelectSong }) {
   if (songs.length === 0) {
@@ -28,35 +22,31 @@ export function SongTable({ songs, onSelectSong }) {
           </tr>
         </thead>
         <tbody>
-          {songs.map((song) => (
-            <tr
-              key={song.id}
-              className="hover cursor-pointer"
-              onClick={() => onSelectSong(song)}
-            >
-              <td className="font-medium">{song.title}</td>
-              <td>{song.artistInfo.performanceVersion}</td>
-              <td>{song.musicalDetails.key}</td>
-              <td>
-                <span
-                  className={`badge ${STATUS_BADGE[song.status] ?? "badge-ghost"}`}
-                >
-                  {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
-                </span>
-              </td>
-              <td>
-                <button
-                  className="btn btn-ghost btn-xs"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectSong(song);
-                  }}
-                >
-                  Details
-                </button>
-              </td>
-            </tr>
-          ))}
+          {songs.map((song) => {
+            const status = getStatus(song.status);
+            return (
+              <tr
+                key={song.id}
+                className="hover cursor-pointer"
+                onClick={() => onSelectSong(song)}
+              >
+                <td className="font-medium">{song.title}</td>
+                <td>{song.artistInfo.performanceVersion}</td>
+                <td>{song.musicalDetails.key}</td>
+                <td>
+                  <span className={`badge ${status.badge}`}>{status.label}</span>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-ghost btn-xs"
+                    onClick={(e) => { e.stopPropagation(); onSelectSong(song); }}
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
