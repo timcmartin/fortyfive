@@ -2,10 +2,10 @@ import { Play, FileText, FileMusic, Music } from 'lucide-react';
 import { getStatus } from '@/lib/statuses';
 
 const RESOURCES = [
-  { key: 'youtubeUrl',  Icon: Play,       label: 'YouTube' },
-  { key: 'lyricsUrl',   Icon: FileText,   label: 'Lyrics'  },
-  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart'   },
-  { key: 'mp3Url',      Icon: Music,      label: 'MP3'     },
+  { key: 'youtubeUrl',  Icon: Play,       label: 'YouTube', array: false },
+  { key: 'lyricsUrls',  Icon: FileText,   label: 'Lyrics',  array: true  },
+  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart',   array: false },
+  { key: 'mp3Url',      Icon: Music,      label: 'MP3',     array: false },
 ];
 
 function ResourceCell({ url, Icon, label }) {
@@ -64,13 +64,17 @@ export function SongTable({ songs, onSelectSong }) {
                 <td>
                   <span className={`badge whitespace-nowrap ${status.badge}`}>{status.label}</span>
                 </td>
-                {RESOURCES.map(({ key, Icon, label }) => (
-                  <td key={key}>
-                    <div className="flex justify-center">
-                      <ResourceCell url={song.resources[key]} Icon={Icon} label={label} />
-                    </div>
-                  </td>
-                ))}
+                {RESOURCES.map(({ key, Icon, label, array }) => {
+                  const val = song.resources[key];
+                  const url = array ? (val?.[0] ?? null) : val;
+                  return (
+                    <td key={key}>
+                      <div className="flex justify-center">
+                        <ResourceCell url={url} Icon={Icon} label={label} />
+                      </div>
+                    </td>
+                  );
+                })}
               </tr>
             );
           })}

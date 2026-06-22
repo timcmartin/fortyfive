@@ -71,7 +71,7 @@ export function SongModal({ song, onClose }) {
           )}
 
           {/* Resources */}
-          {(song.resources.youtubeUrl || song.resources.lyricsUrl || song.resources.mp3Url || song.resources.chartPdfUrl) && (
+          {(song.resources.youtubeUrl || song.resources.lyricsUrls?.length || song.resources.mp3Url || song.resources.chartPdfUrl) && (
             <>
               <div className="divider my-0" />
               <div>
@@ -82,11 +82,11 @@ export function SongModal({ song, onClose }) {
                       🎥 YouTube
                     </a>
                   )}
-                  {song.resources.lyricsUrl && (
-                    <a href={song.resources.lyricsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                      📝 Lyrics
+                  {song.resources.lyricsUrls?.map((url, i) => (
+                    <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                      📝 Lyrics{song.resources.lyricsUrls.length > 1 ? ` ${i + 1}` : ''}
                     </a>
-                  )}
+                  ))}
                   {song.resources.mp3Url && (
                     <a href={song.resources.mp3Url} download className="btn btn-sm btn-outline">
                       🎵 MP3

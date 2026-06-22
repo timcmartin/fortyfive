@@ -18,8 +18,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Train-50-Ways-to-Say-Goodbye-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Train-50-Ways-to-Say-Goodbye-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -44,8 +44,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/8675309.mp3",
-      "lyricsUrl": "https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -70,8 +70,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Coldplay-Adventure-of-a-Lifetime-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Coldplay-Adventure-of-a-Lifetime-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -96,8 +98,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Jimi-Hendrix-All-Along-the-Watchtower-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Jimi-Hendrix-All-Along-the-Watchtower-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -122,8 +126,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Shania-Twain-Any-Man-of-Mine-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Shania-Twain-Any-Man-of-Mine-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -148,8 +152,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Britney-Spears-Baby-One-More-Time-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Britney-Spears-Baby-One-More-Time-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -174,8 +180,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/T-rex-Bang-a-Gong-Get-It-On-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/T-rex-Bang-a-Gong-Get-It-On-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -200,8 +206,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Cher-Believe-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Cher-Believe-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -226,8 +232,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -252,8 +258,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Michael-Jackson-Billie-Jean-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Michael-Jackson-Billie-Jean-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -278,8 +284,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Stevie-Wonder-Boogie-On-Reggae-Woman-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Stevie-Wonder-Boogie-On-Reggae-Woman-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -304,8 +312,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Dnce-Cake-by-the-Ocean-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Dnce-Cake-by-the-Ocean-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -330,8 +338,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Paul-Simon-Call-Me-Al-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Paul-Simon-Call-Me-Al-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -356,8 +364,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-China-Grove-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Doobie-Brothers-China-Grove-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -382,8 +392,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/cold-cold-heart.mp3",
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -408,8 +418,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Barry-Manilow-Copacabana-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Barry-Manilow-Copacabana-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -434,8 +444,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Climax-Blues-Band-Couldnt-Get-It-Right-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Climax-Blues-Band-Couldnt-Get-It-Right-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -460,8 +472,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/crazy.mp3",
-      "lyricsUrl": "https://genius.com/Gnarls-Barkley-Crazy-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Gnarls-Barkley-Crazy-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -486,8 +498,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Queen-Crazy-Little-Thing-Called-Love-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Queen-Crazy-Little-Thing-Called-Love-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -512,8 +526,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Trammps-Disco-Inferno-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-Trammps-Disco-Inferno-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -538,8 +552,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Florence-The-Machine-Dog-Days-Are-Over-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Florence-The-Machine-Dog-Days-Are-Over-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -564,8 +580,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Ed-Sheeran-Dont-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Ed-Sheeran-Dont-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -590,8 +606,10 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/ZUHKDHkRasc?si=Pz-UAD5h4XnWH5H6",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Sixpence-none-the-richer-dont-dream-its-over-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Sixpence-none-the-richer-dont-dream-its-over-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-15",
@@ -616,8 +634,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dont-start-now.mp3",
-      "lyricsUrl": "https://genius.com/Dua-Lipa-Dont-Start-Now-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Dua-Lipa-Dont-Start-Now-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -642,8 +660,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dont-stop.mp3",
-      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Dont-Stop-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Dont-Stop-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -668,8 +686,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Journey-Dont-stop-believin-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Journey-Dont-stop-believin-lyrics"]
     },
     "status": "on-hold",
     "dateAdded": "2025-01-01",
@@ -694,8 +712,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Human-League-Dont-You-Want-Me-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Human-League-Dont-You-Want-Me-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -720,8 +740,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dreams.mp3",
-      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Dreams-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Dreams-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -746,8 +766,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Train-Drive-By-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Train-Drive-By-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -772,8 +792,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Stevie-Nicks-Edge-of-Seventeen-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Stevie-Nicks-Edge-of-Seventeen-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -798,8 +818,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Tears-for-Fears-Everybody-Wants-to-Rule-the-World-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Tears-for-Fears-Everybody-Wants-to-Rule-the-World-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -824,8 +846,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Santana-Evil-Ways-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Santana-Evil-Ways-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -850,10 +872,62 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Elle-King-Exs-and-ohs-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Elle-King-Exs-and-ohs-lyrics"]
     },
     "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "feel-it-still",
+    "title": "Feel It Still",
+    "artistInfo": {
+      "performanceVersion": "Portugal, The Man",
+      "originalArtist": "Portugal, The Man"
+    },
+    "musicalDetails": {
+      "key": "C# minor"
+    },
+    "performanceNotes": {
+      "arrangement": "Same as recording - we loop the riff twice at the end.",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/feel-it-still.mp3",
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Portugal-the-man-feel-it-still-lyrics"]
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "fire",
+    "title": "Fire",
+    "artistInfo": {
+      "performanceVersion": "Pointer Sisters",
+      "originalArtist": "Pointer Sisters"
+    },
+    "musicalDetails": {
+      "key": "D Flat"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "https://youtu.be/K9S5EZgIJck?si=IeeC71SMH6l2uflL",
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/fire.mp3",
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-pointer-sisters-fire-lyrics"]
+    },
+    "status": "active",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -876,8 +950,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Miley-Cyrus-Flowers-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Miley-Cyrus-Flowers-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -902,8 +976,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Ceelo-Green-Forget-You-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Ceelo-Green-Forget-You-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -928,10 +1002,39 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "poker-face-just-dance",
+    "title": "Gaga Medley",
+    "artistInfo": {
+      "performanceVersion": "Lady Gaga",
+      "originalArtist": "Lady Gaga"
+    },
+    "musicalDetails": {
+      "key": "Ab / Db minor"
+    },
+    "performanceNotes": {
+      "arrangement": "Mash up of Poker Face and Just Dance",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/poker-face-just-dance.mp3",
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Lady-Gaga-Poker-Face-lyrics",
+        "https://genius.com/Lady-Gaga-Just-Dance-lyrics"
+      ]
+    },
+    "status": "active",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -954,8 +1057,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Kc-and-the-sunshine-band-Get-Down-Tonight-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Kc-and-the-sunshine-band-Get-Down-Tonight-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -980,8 +1085,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Daft-Punk-Get-Lucky-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Daft-Punk-Get-Lucky-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1006,8 +1111,8 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/dcod-Gq-U3A?si=8FcjG_E2nGanQJM0",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Ella-henderson-ghost-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Ella-henderson-ghost-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1032,8 +1137,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Spencer-Davis-Group-Gimme-Some-Lovin-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Spencer-Davis-Group-Gimme-Some-Lovin-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1058,8 +1165,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Abba-Gimme-gimme-gimme-a-man-after-midnight-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Abba-Gimme-gimme-gimme-a-man-after-midnight-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1084,8 +1193,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Black-Keys-Gold-on-the-Ceiling-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Black-Keys-Gold-on-the-Ceiling-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1110,8 +1221,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Deee-lite-Groove-Is-in-the-Heart-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Deee-lite-Groove-Is-in-the-Heart-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1136,8 +1249,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Pharrell-Williams-Happy-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Pharrell-Williams-Happy-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1162,8 +1275,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1188,8 +1301,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Blondie-Heart-of-Glass-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Blondie-Heart-of-Glass-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1214,8 +1327,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Yardbirds-Heartful-of-Soul-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-Yardbirds-Heartful-of-Soul-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1240,8 +1353,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Pat-Benatar-Hit-Me-with-Your-Best-Shot-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Pat-Benatar-Hit-Me-with-Your-Best-Shot-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1266,8 +1381,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Sam-and-Dave-Hold-On-Im-Coming-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Sam-and-Dave-Hold-On-Im-Coming-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1292,8 +1407,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Nick-Gilder-Hot-Child-in-the-City-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Nick-Gilder-Hot-Child-in-the-City-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1318,8 +1435,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Ace-How-Long-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Ace-How-Long-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1344,8 +1461,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Deep-Purple-Hush-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Deep-Purple-Hush-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1370,8 +1487,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/i-cant-go-for-that-no-can-do.mp3",
-      "lyricsUrl": "https://genius.com/Hall-and-oates-I-cant-go-for-that-no-can-do-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Hall-and-oates-I-cant-go-for-that-no-can-do-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1396,8 +1515,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Beatles-I-Saw-Her-Standing-There-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Beatles-I-Saw-Her-Standing-There-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1422,8 +1543,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Todd-Rundgren-I-Saw-the-Light-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Todd-Rundgren-I-Saw-the-Light-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1448,8 +1569,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Zz-top-I-Thank-You-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Zz-top-I-Thank-You-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1474,8 +1595,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Cheap-Trick-I-Want-You-to-Want-Me-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Cheap-Trick-I-Want-You-to-Want-Me-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1500,8 +1623,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Gloria-Gaynor-I-Will-Survive-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Gloria-Gaynor-I-Will-Survive-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1526,8 +1649,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Jack-White-Im-shakin-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Jack-White-Im-shakin-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1552,8 +1675,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Peter-Gabriel-In-Your-Eyes-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Peter-Gabriel-In-Your-Eyes-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1578,8 +1701,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Madonna-Into-the-Groove-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Madonna-Into-the-Groove-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1604,8 +1727,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Joe-Jackson-Is-she-really-going-out-with-him-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Joe-Jackson-Is-she-really-going-out-with-him-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1630,8 +1755,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/its-my-life.mp3",
-      "lyricsUrl": "https://genius.com/No-Doubt-Its-My-Life-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/No-Doubt-Its-My-Life-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1656,8 +1781,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Rick-Springfield-Jessies-Girl-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Rick-Springfield-Jessies-Girl-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1682,36 +1807,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Steely-Dan-Josie-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Steely-Dan-Josie-lyrics"]
     },
     "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "just-dance",
-    "title": "Just Dance",
-    "artistInfo": {
-      "performanceVersion": "Lady Gaga",
-      "originalArtist": "Lady Gaga"
-    },
-    "musicalDetails": {
-      "key": null
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Lady-Gaga-Just-Dance-lyrics",
-      "chartPdfUrl": null
-    },
-    "status": "active",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1734,8 +1833,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/3-Doors-Down-Kryptonite-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/3-Doors-Down-Kryptonite-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1760,8 +1859,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Kool-and-The-Gang-Ladies-Night-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Kool-and-The-Gang-Ladies-Night-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1786,8 +1885,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/David-Bowie-Lets-Dance-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/David-Bowie-Lets-Dance-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1812,8 +1911,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Bon-Jovi-Livin-on-a-prayer-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Bon-Jovi-Livin-on-a-prayer-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1838,8 +1937,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Black-Keys-Lonely-Boy-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-Black-Keys-Lonely-Boy-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1864,8 +1963,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Hollies-Long-Cool-Woman-In-a-Black-Dress-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Hollies-Long-Cool-Woman-In-a-Black-Dress-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1890,8 +1991,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-Long-train-runnin-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Doobie-Brothers-Long-train-runnin-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1916,8 +2019,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Rihanna-Love-on-the-Brain-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Rihanna-Love-on-the-Brain-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1942,8 +2045,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-b-52s-Love-Shack-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-b-52s-Love-Shack-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1968,8 +2071,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Justin-Bieber-Love-Yourself-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Justin-Bieber-Love-Yourself-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1994,8 +2097,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Steppenwolf-Magic-Carpet-Ride-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Steppenwolf-Magic-Carpet-Ride-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2020,8 +2123,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Three-Dog-Night-Mama-Told-Me-Not-to-Come-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Three-Dog-Night-Mama-Told-Me-Not-to-Come-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2046,8 +2151,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
@@ -2072,8 +2177,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Hall-and-oates-Maneater-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Hall-and-oates-Maneater-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2098,8 +2203,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2124,8 +2229,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Paul-McCartney-Maybe-im-amazed-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Paul-McCartney-Maybe-im-amazed-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2150,8 +2255,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Pretenders-Middle-of-the-Road-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Pretenders-Middle-of-the-Road-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2176,8 +2281,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-Minute-by-Minute-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Doobie-Brothers-Minute-by-Minute-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2202,8 +2309,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/miss-you.mp3",
-      "lyricsUrl": "https://genius.com/The-Rolling-Stones-Miss-You-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-Rolling-Stones-Miss-You-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2228,8 +2335,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Led-Zeppelin-Misty-Mountain-Hop-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Led-Zeppelin-Misty-Mountain-Hop-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2254,8 +2363,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/David-Bowie-Modern-Love-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/David-Bowie-Modern-Love-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2280,8 +2389,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Janis-Joplin-Move-Over-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Janis-Joplin-Move-Over-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2306,8 +2415,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Blondie-One-Way-or-Another-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Blondie-One-Way-or-Another-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2332,8 +2441,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Steely-Dan-Peg-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Steely-Dan-Peg-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2358,36 +2467,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": null,
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": []
     },
     "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "poker-face",
-    "title": "Poker Face",
-    "artistInfo": {
-      "performanceVersion": "Lady Gaga",
-      "originalArtist": "Lady Gaga"
-    },
-    "musicalDetails": {
-      "key": null
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Lady-Gaga-Poker-Face-lyrics",
-      "chartPdfUrl": null
-    },
-    "status": "active",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2410,8 +2493,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Corinne-Bailey-Rae-Put-Your-Records-On-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Corinne-Bailey-Rae-Put-Your-Records-On-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2436,8 +2521,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Pink-Raise-Your-Glass-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Pink-Raise-Your-Glass-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2462,8 +2547,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Led-Zeppelin-Ramble-On-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Led-Zeppelin-Ramble-On-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2488,8 +2573,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Steely-Dan-Reelin-in-the-Years-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Steely-Dan-Reelin-in-the-Years-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2514,8 +2599,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Rhiannon-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Rhiannon-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2540,8 +2625,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Bruno-Mars-Runaway-Baby-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Bruno-Mars-Runaway-Baby-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2566,8 +2651,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Elton-John-Saturday-nights-alright-for-fighting-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Elton-John-Saturday-nights-alright-for-fighting-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2592,8 +2679,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Say-You-Love-Me-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Say-You-Love-Me-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2618,8 +2705,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Beatles-Sgt-peppers-lonely-hearts-club-band-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Beatles-Sgt-peppers-lonely-hearts-club-band-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2644,8 +2733,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Taylor-Swift-Shake-It-Off-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Taylor-Swift-Shake-It-Off-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2670,8 +2759,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Guess-Who-Shakin-all-over-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-Guess-Who-Shakin-all-over-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2696,8 +2785,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Ed-Sheeran-Shape-of-You-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Ed-Sheeran-Shape-of-You-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2722,8 +2811,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Fine-Young-Cannibals-She-Drives-Me-Crazy-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Fine-Young-Cannibals-She-Drives-Me-Crazy-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2748,8 +2839,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/WALK-THE-MOON-Shut-Up-and-Dance-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/WALK-THE-MOON-Shut-Up-and-Dance-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2774,8 +2867,10 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/mJ58TVYNFro?si=shkZZ0NvrzAFktBJ",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Bonnie-raitt-something-to-talk-about-51-mix-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Bonnie-raitt-something-to-talk-about-51-mix-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2800,8 +2895,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2826,8 +2921,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Shawn-Mendes-Stitches-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Shawn-Mendes-Stitches-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2852,8 +2947,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Justin-Timberlake-Suit-and-tie-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Justin-Timberlake-Suit-and-tie-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2878,8 +2973,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Corey-Hart-Sunglasses-at-Night-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Corey-Hart-Sunglasses-at-Night-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2904,34 +2999,36 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Rick-James-Super-Freak-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Rick-James-Super-Freak-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "sweet-dreams-are-made-of-this",
-    "title": "Sweet Dreams (Are Made of This)",
+    "id": "mashup",
+    "title": "Sweet Dreams / White Stripes Mashup",
     "artistInfo": {
-      "performanceVersion": "Eurythmics",
-      "originalArtist": "Eurythmics"
+      "performanceVersion": "Pomplamoose",
+      "originalArtist": "Pomplamoose"
     },
     "musicalDetails": {
-      "key": "C minor"
+      "key": "C"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Some parts are more stretched out - mp3 has details.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Eurythmics-Sweet-Dreams-Are-Made-of-This-lyrics",
-      "chartPdfUrl": null
+      "youtubeUrl": "https://youtu.be/hERutbyNmW8?si=p-tVyp-VAELg3Tpg",
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/mashup.mp3",
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Pomplamoose-sweet-dreams-seven-nation-army-mashup-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -2956,8 +3053,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-Rolling-Stones-Sympathy-for-the-Devil-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-Rolling-Stones-Sympathy-for-the-Devil-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2982,8 +3081,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Kc-and-the-sunshine-band-Thats-the-way-i-like-it-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Kc-and-the-sunshine-band-Thats-the-way-i-like-it-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -3008,8 +3109,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Don-Henley-The-Boys-of-Summer-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Don-Henley-The-Boys-of-Summer-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -3034,8 +3135,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Glenn-Frey-The-Heat-Is-On-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Glenn-Frey-The-Heat-Is-On-lyrics"]
     },
     "status": "on-hold",
     "dateAdded": "2025-01-01",
@@ -3060,8 +3161,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Jimi-Hendrix-The-Wind-Cries-Mary-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Jimi-Hendrix-The-Wind-Cries-Mary-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -3086,8 +3189,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Maroon-5-This-Love-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Maroon-5-This-Love-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -3112,8 +3215,8 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Mark-Ronson-Uptown-Funk-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Mark-Ronson-Uptown-Funk-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -3138,8 +3241,10 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/Q3mgapAcVdU?si=dDCjIXKks-NqhACl",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/The-animals-we-gotta-get-out-of-this-place-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/The-animals-we-gotta-get-out-of-this-place-lyrics"
+      ]
     },
     "status": "filler",
     "dateAdded": "2025-02-10",
@@ -3164,8 +3269,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Jefferson-Airplane-White-Rabbit-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Jefferson-Airplane-White-Rabbit-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -3190,8 +3297,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Joe-Cocker-With-a-Little-Help-from-My-Friends-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Joe-Cocker-With-a-Little-Help-from-My-Friends-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -3216,8 +3325,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Alanis-Morissette-You-Oughta-Know-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": [
+        "https://genius.com/Alanis-Morissette-You-Oughta-Know-lyrics"
+      ]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -3242,11 +3353,12 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/_bj_32QeAaU?si=ZzLuyeSlpNLyNNWE",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Linda-Ronstadt-Youre-no-good-lyrics",
-      "chartPdfUrl": null
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/Linda-Ronstadt-Youre-no-good-lyrics"]
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   }
 ]
+
