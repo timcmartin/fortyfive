@@ -1,9 +1,10 @@
 const STATUSES = [
-  { value: 'all', label: 'All Songs' },
-  { value: 'active', label: 'Active' },
-  { value: 'learning', label: 'Learning' },
-  { value: 'retired', label: 'Retired' },
-  { value: 'on-hold', label: 'On Hold' },
+  { value: "all", label: "All Songs" },
+  { value: "active", label: "Active" },
+  { value: "learning", label: "Learning" },
+  { value: "retired", label: "Retired" },
+  { value: "on-hold", label: "On Hold" },
+  { value: "filler", label: "Filler" },
 ];
 
 export function StatusFilter({ selectedStatus, onChange }) {
@@ -13,7 +14,7 @@ export function StatusFilter({ selectedStatus, onChange }) {
         <button
           key={status.value}
           onClick={() => onChange(status.value)}
-          className={`btn btn-sm ${selectedStatus === status.value ? 'btn-primary' : 'btn-ghost'}`}
+          className={`btn btn-sm ${selectedStatus === status.value ? "btn-primary" : "btn-ghost"}`}
         >
           {status.label}
         </button>

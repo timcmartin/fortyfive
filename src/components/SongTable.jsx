@@ -1,8 +1,9 @@
 const STATUS_BADGE = {
-  active: 'badge-success',
-  learning: 'badge-warning',
-  retired: 'badge-ghost',
-  'on-hold': 'badge-neutral',
+  active: "badge-success",
+  learning: "badge-warning",
+  retired: "badge-ghost",
+  "on-hold": "badge-neutral",
+  filler: "badge-info",
 };
 
 export function SongTable({ songs, onSelectSong }) {
@@ -37,14 +38,19 @@ export function SongTable({ songs, onSelectSong }) {
               <td>{song.artistInfo.performanceVersion}</td>
               <td>{song.musicalDetails.key}</td>
               <td>
-                <span className={`badge ${STATUS_BADGE[song.status] ?? 'badge-ghost'}`}>
+                <span
+                  className={`badge ${STATUS_BADGE[song.status] ?? "badge-ghost"}`}
+                >
                   {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
                 </span>
               </td>
               <td>
                 <button
                   className="btn btn-ghost btn-xs"
-                  onClick={(e) => { e.stopPropagation(); onSelectSong(song); }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectSong(song);
+                  }}
                 >
                   Details
                 </button>

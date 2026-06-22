@@ -1,24 +1,24 @@
 [
   {
-    "id": "hallelujah",
-    "title": "Hallelujah",
+    "id": "dont-dream-its-over",
+    "title": "Don't Dream I's Over",
     "artistInfo": {
-      "performanceVersion": "Jeff Buckley",
-      "originalArtist": "Leonard Cohen"
+      "performanceVersion": "Six Pence None The Richer",
+      "originalArtist": "Crowded House"
     },
     "musicalDetails": {
-      "key": "C major"
+      "key": "F major"
     },
     "performanceNotes": {
-      "arrangement": "Acoustic, stripped down",
+      "arrangement": "Crowded House version is in E Flat",
       "leadSinger": null,
-      "specialNotes": "High vocal range",
-      "generalNotes": "Crowd favorite"
+      "specialNotes": "",
+      "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "https://www.youtube.com/watch?v=y8AWFf7EAc4",
+      "youtubeUrl": "https://youtu.be/ZUHKDHkRasc?si=Pz-UAD5h4XnWH5H6",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Leonard-cohen-hallelujah-lyrics",
+      "lyricsUrl": "https://genius.com/Sixpence-none-the-richer-dont-dream-its-over-lyrics",
       "chartPdfUrl": null
     },
     "status": "active",
@@ -26,28 +26,28 @@
     "lastUpdated": "2025-06-15"
   },
   {
-    "id": "bohemian-rhapsody",
-    "title": "Bohemian Rhapsody",
+    "id": "we-gotta-get-out-of-this-place",
+    "title": "We Gotta Get Out Of This Place",
     "artistInfo": {
-      "performanceVersion": "Queen",
-      "originalArtist": "Queen"
+      "performanceVersion": "The Animals",
+      "originalArtist": "The Animals"
     },
     "musicalDetails": {
-      "key": "B major"
+      "key": "E major"
     },
     "performanceNotes": {
-      "arrangement": "Full arrangement, multi-part",
-      "leadSinger": "Person A",
-      "specialNotes": "Requires strong vocal harmonies, multiple key changes",
-      "generalNotes": "Complex arrangement, rehearse regularly"
+      "arrangement": "",
+      "leadSinger": "Steve",
+      "specialNotes": "Gang vocals on the \"Work\" part",
+      "generalNotes": "Jam. We add this from time to time when needed."
     },
     "resources": {
-      "youtubeUrl": "https://www.youtube.com/watch?v=fJ9rUzIMt7o",
+      "youtubeUrl": "https://youtu.be/Q3mgapAcVdU?si=dDCjIXKks-NqhACl",
       "mp3Url": null,
-      "lyricsUrl": "https://genius.com/Queen-bohemian-rhapsody-lyrics",
+      "lyricsUrl": "https://genius.com/The-animals-we-gotta-get-out-of-this-place-lyrics",
       "chartPdfUrl": null
     },
-    "status": "learning",
+    "status": "filler",
     "dateAdded": "2025-02-10",
     "lastUpdated": "2025-06-15"
   }
