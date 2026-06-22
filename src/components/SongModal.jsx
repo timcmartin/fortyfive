@@ -2,8 +2,17 @@ import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import { getStatus } from '@/lib/statuses';
 
+function getChartPdfUrls(chartPdfUrl) {
+  if (!chartPdfUrl) {
+    return [];
+  }
+
+  return Array.isArray(chartPdfUrl) ? chartPdfUrl : [chartPdfUrl];
+}
+
 export function SongModal({ song, onClose }) {
   const dialogRef = useRef(null);
+  const chartPdfUrls = getChartPdfUrls(song?.resources?.chartPdfUrl);
 
   useEffect(() => {
     if (song) {
@@ -71,7 +80,7 @@ export function SongModal({ song, onClose }) {
           )}
 
           {/* Resources */}
-          {(song.resources.youtubeUrl || song.resources.lyricsUrls?.length || song.resources.mp3Url || song.resources.chartPdfUrl) && (
+          {(song.resources.youtubeUrl || song.resources.lyricsUrls?.length || song.resources.mp3Url || chartPdfUrls.length) && (
             <>
               <div className="divider my-0" />
               <div>
@@ -92,11 +101,11 @@ export function SongModal({ song, onClose }) {
                       🎵 MP3
                     </a>
                   )}
-                  {song.resources.chartPdfUrl && (
-                    <a href={song.resources.chartPdfUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                      📄 Sheet Music
+                  {chartPdfUrls.map((url, i) => (
+                    <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                      📄 Sheet Music{chartPdfUrls.length > 1 ? ` ${i + 1}` : ''}
                     </a>
-                  )}
+                  ))}
                 </div>
               </div>
             </>

@@ -4,9 +4,17 @@ import { getStatus } from '@/lib/statuses';
 const RESOURCES = [
   { key: 'youtubeUrl',  Icon: Play,       label: 'YouTube', array: false },
   { key: 'lyricsUrls',  Icon: FileText,   label: 'Lyrics',  array: true  },
-  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart',   array: false },
+  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart',   array: true  },
   { key: 'mp3Url',      Icon: Music,      label: 'MP3',     array: false },
 ];
+
+function getPrimaryResourceUrl(value, array) {
+  if (array) {
+    return Array.isArray(value) ? (value[0] ?? null) : value;
+  }
+
+  return value;
+}
 
 function ResourceCell({ url, Icon, label }) {
   if (url) {
@@ -66,7 +74,7 @@ export function SongTable({ songs, onSelectSong }) {
                 </td>
                 {RESOURCES.map(({ key, Icon, label, array }) => {
                   const val = song.resources[key];
-                  const url = array ? (val?.[0] ?? null) : val;
+                  const url = getPrimaryResourceUrl(val, array);
                   return (
                     <td key={key}>
                       <div className="flex justify-center">

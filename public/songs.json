@@ -18,7 +18,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/50 Ways To Say Goodbye.pdf",
       "lyricsUrls": ["https://genius.com/Train-50-Ways-to-Say-Goodbye-lyrics"]
     },
     "status": "retired",
@@ -44,7 +44,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/8675309.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/867-5309 - new.pdf",
       "lyricsUrls": ["https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics"]
     },
     "status": "active",
@@ -98,7 +98,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/all-along-the-watchtower.pdf",
       "lyricsUrls": [
         "https://genius.com/Jimi-Hendrix-All-Along-the-Watchtower-lyrics"
       ]
@@ -126,7 +126,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/any-man-of-mine.pdf",
       "lyricsUrls": ["https://genius.com/Shania-Twain-Any-Man-of-Mine-lyrics"]
     },
     "status": "active",
@@ -152,7 +152,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/baby-one-more-time.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/baby-one-more-time.pdf",
       "lyricsUrls": [
         "https://genius.com/Britney-Spears-Baby-One-More-Time-lyrics"
       ]
@@ -180,7 +180,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/bang-a-gong-get-it-on.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/bang-a-gong-get-it-on.pdf",
       "lyricsUrls": ["https://genius.com/T-rex-Bang-a-Gong-Get-It-On-lyrics"]
     },
     "status": "active",
@@ -206,7 +206,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/believe.pdf",
       "lyricsUrls": ["https://genius.com/Cher-Believe-lyrics"]
     },
     "status": "active",
@@ -232,7 +232,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/better-to-be-loved.pdf",
       "lyricsUrls": []
     },
     "status": "retired",
@@ -258,7 +258,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/billie-jean.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/billie-jean.pdf",
       "lyricsUrls": ["https://genius.com/Michael-Jackson-Billie-Jean-lyrics"]
     },
     "status": "active",
@@ -284,7 +284,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/boogie-on-reggae-woman.pdf",
       "lyricsUrls": [
         "https://genius.com/Stevie-Wonder-Boogie-On-Reggae-Woman-lyrics"
       ]
@@ -313,7 +313,7 @@
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/boys-of-summer.mp3",
       "lyricsUrls": ["https://genius.com/Don-Henley-The-Boys-Of-Summer-lyrics"],
-      "chartPdfUrl": null
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/the-boys-of-summer.pdf"
     },
     "status": "active",
     "dateAdded": "2025-06-22",
@@ -338,7 +338,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/cake-by-the-ocean.pdf",
       "lyricsUrls": ["https://genius.com/Dnce-Cake-by-the-Ocean-lyrics"]
     },
     "status": "retired",
@@ -364,7 +364,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/call-me-al.pdf",
       "lyricsUrls": ["https://genius.com/Paul-Simon-Call-Me-Al-lyrics"]
     },
     "status": "retired",
@@ -390,7 +390,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/china-grove.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Doobie-Brothers-China-Grove-lyrics"
       ]
@@ -418,7 +418,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/cold-cold-heart.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/cold-cold-heart.pdf",
       "lyricsUrls": []
     },
     "status": "active",
@@ -444,7 +444,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/copacabana.pdf",
       "lyricsUrls": ["https://genius.com/Barry-Manilow-Copacabana-lyrics"]
     },
     "status": "retired",
@@ -470,7 +470,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/couldnt-get-it-right.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/couldnt-get-it-right.pdf",
       "lyricsUrls": [
         "https://genius.com/Climax-Blues-Band-Couldnt-Get-It-Right-lyrics"
       ]
@@ -498,7 +498,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/crazy.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/crazy.pdf",
       "lyricsUrls": ["https://genius.com/Gnarls-Barkley-Crazy-lyrics"]
     },
     "status": "active",
@@ -524,7 +524,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/crazy-little-thing-called-love.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/crazy-little-thing-called-love.pdf",
       "lyricsUrls": [
         "https://genius.com/Queen-Crazy-Little-Thing-Called-Love-lyrics"
       ]
@@ -552,7 +552,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/disco-inferno.pdf",
       "lyricsUrls": ["https://genius.com/The-Trammps-Disco-Inferno-lyrics"]
     },
     "status": "retired",
@@ -578,7 +578,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dog-days-are-over.pdf",
       "lyricsUrls": [
         "https://genius.com/Florence-The-Machine-Dog-Days-Are-Over-lyrics"
       ]
@@ -606,7 +606,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont.pdf",
       "lyricsUrls": ["https://genius.com/Ed-Sheeran-Dont-lyrics"]
     },
     "status": "retired",
@@ -632,7 +632,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/ZUHKDHkRasc?si=Pz-UAD5h4XnWH5H6",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dont-dream-its-over.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont-dream-its-over.pdf",
       "lyricsUrls": [
         "https://genius.com/Sixpence-none-the-richer-dont-dream-its-over-lyrics"
       ]
@@ -660,7 +660,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dont-start-now.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont-start-now.pdf",
       "lyricsUrls": ["https://genius.com/Dua-Lipa-Dont-Start-Now-lyrics"]
     },
     "status": "active",
@@ -686,7 +686,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dont-stop.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont-stop.pdf",
       "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Dont-Stop-lyrics"]
     },
     "status": "active",
@@ -712,7 +712,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont-stop-believing-lovin-touchin-squeezin-medley.pdf",
       "lyricsUrls": ["https://genius.com/Journey-Dont-stop-believin-lyrics"]
     },
     "status": "on-hold",
@@ -738,7 +738,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dont-you-want-me.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Human-League-Dont-You-Want-Me-lyrics"
       ]
@@ -766,7 +766,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/dreams.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/dreams.pdf",
       "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Dreams-lyrics"]
     },
     "status": "active",
@@ -792,7 +792,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/drive-by.pdf",
       "lyricsUrls": ["https://genius.com/Train-Drive-By-lyrics"]
     },
     "status": "retired",
@@ -818,7 +818,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/edge-of-seventeen.pdf",
       "lyricsUrls": ["https://genius.com/Stevie-Nicks-Edge-of-Seventeen-lyrics"]
     },
     "status": "retired",
@@ -844,7 +844,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/everybody-wants-to-rule-the-world.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/everybody-wants-to-rule-the-world.pdf",
       "lyricsUrls": [
         "https://genius.com/Tears-for-Fears-Everybody-Wants-to-Rule-the-World-lyrics"
       ]
@@ -872,7 +872,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/evil-ways.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/evil-ways.pdf",
       "lyricsUrls": ["https://genius.com/Santana-Evil-Ways-lyrics"]
     },
     "status": "active",
@@ -898,7 +898,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/exs-and-ohs.pdf",
       "lyricsUrls": ["https://genius.com/Elle-King-Exs-and-ohs-lyrics"]
     },
     "status": "retired",
@@ -976,7 +976,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/flowers.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/flowers.pdf",
       "lyricsUrls": ["https://genius.com/Miley-Cyrus-Flowers-lyrics"]
     },
     "status": "active",
@@ -1002,7 +1002,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/forget-you.pdf",
       "lyricsUrls": ["https://genius.com/Ceelo-Green-Forget-You-lyrics"]
     },
     "status": "active",
@@ -1028,7 +1028,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/fourfiveseconds.pdf",
       "lyricsUrls": []
     },
     "status": "retired",
@@ -1054,7 +1054,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/poker-face-just-dance.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": [
+        "https://fortyfive-charts.s3.amazonaws.com/Poker Face.pdf",
+        "https://fortyfive-charts.s3.amazonaws.com/Just Dance.pdf"
+      ],
       "lyricsUrls": [
         "https://genius.com/Lady-Gaga-Poker-Face-lyrics",
         "https://genius.com/Lady-Gaga-Just-Dance-lyrics"
@@ -1083,7 +1086,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/get-lucky.pdf",
       "lyricsUrls": ["https://genius.com/Daft-Punk-Get-Lucky-lyrics"]
     },
     "status": "retired",
@@ -1109,7 +1112,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/dcod-Gq-U3A?si=8FcjG_E2nGanQJM0",
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/ghost.pdf",
       "lyricsUrls": ["https://genius.com/Ella-henderson-ghost-lyrics"]
     },
     "status": "retired",
@@ -1135,7 +1138,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/gimme-some-lovin.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Spencer-Davis-Group-Gimme-Some-Lovin-lyrics"
       ]
@@ -1163,7 +1166,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/gimme-gimme-gimme-a-man-after-midnight.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/gimme-gimme-gimme-a-man-after-midnight.pdf",
       "lyricsUrls": [
         "https://genius.com/Abba-Gimme-gimme-gimme-a-man-after-midnight-lyrics"
       ]
@@ -1191,7 +1194,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/gold-on-the-ceiling.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Black-Keys-Gold-on-the-Ceiling-lyrics"
       ]
@@ -1219,7 +1222,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/groove-is-in-the-heart.pdf",
       "lyricsUrls": [
         "https://genius.com/Deee-lite-Groove-Is-in-the-Heart-lyrics"
       ]
@@ -1247,7 +1250,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/happy.pdf",
       "lyricsUrls": ["https://genius.com/Pharrell-Williams-Happy-lyrics"]
     },
     "status": "retired",
@@ -1273,7 +1276,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/happy-anniversary.pdf",
       "lyricsUrls": []
     },
     "status": "retired",
@@ -1299,7 +1302,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/heart-of-glass.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/heart-of-glass.pdf",
       "lyricsUrls": ["https://genius.com/Blondie-Heart-of-Glass-lyrics"]
     },
     "status": "active",
@@ -1325,7 +1328,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/heartful-of-soul.pdf",
       "lyricsUrls": ["https://genius.com/The-Yardbirds-Heartful-of-Soul-lyrics"]
     },
     "status": "retired",
@@ -1351,7 +1354,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/hit-me-with-your-best-shot.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/hit-me-with-your-best-shot.pdf",
       "lyricsUrls": [
         "https://genius.com/Pat-Benatar-Hit-Me-with-Your-Best-Shot-lyrics"
       ]
@@ -1379,7 +1382,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/hold-on-im-coming.pdf",
       "lyricsUrls": ["https://genius.com/Sam-and-Dave-Hold-On-Im-Coming-lyrics"]
     },
     "status": "retired",
@@ -1405,7 +1408,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/hot-child-in-the-city.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/hot-child-in-the-city.pdf",
       "lyricsUrls": [
         "https://genius.com/Nick-Gilder-Hot-Child-in-the-City-lyrics"
       ]
@@ -1433,7 +1436,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/how-long.pdf",
       "lyricsUrls": ["https://genius.com/Ace-How-Long-lyrics"]
     },
     "status": "retired",
@@ -1459,7 +1462,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/hush.pdf",
       "lyricsUrls": ["https://genius.com/Deep-Purple-Hush-lyrics"]
     },
     "status": "retired",
@@ -1485,7 +1488,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/i-cant-go-for-that-no-can-do.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-cant-go-for-that-no-can-do.pdf",
       "lyricsUrls": [
         "https://genius.com/Hall-and-oates-I-cant-go-for-that-no-can-do-lyrics"
       ]
@@ -1513,7 +1516,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-saw-her-standing-there.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Beatles-I-Saw-Her-Standing-There-lyrics"
       ]
@@ -1541,7 +1544,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-saw-the-light.pdf",
       "lyricsUrls": ["https://genius.com/Todd-Rundgren-I-Saw-the-Light-lyrics"]
     },
     "status": "retired",
@@ -1567,7 +1570,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/i-thank-you.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-thank-you.pdf",
       "lyricsUrls": ["https://genius.com/Zz-top-I-Thank-You-lyrics"]
     },
     "status": "active",
@@ -1593,7 +1596,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-want-you-to-want-me.pdf",
       "lyricsUrls": [
         "https://genius.com/Cheap-Trick-I-Want-You-to-Want-Me-lyrics"
       ]
@@ -1621,7 +1624,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/i-will-survive.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/i-will-survive.pdf",
       "lyricsUrls": ["https://genius.com/Gloria-Gaynor-I-Will-Survive-lyrics"]
     },
     "status": "active",
@@ -1647,7 +1650,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/im-shakin.pdf",
       "lyricsUrls": ["https://genius.com/Jack-White-Im-shakin-lyrics"]
     },
     "status": "retired",
@@ -1673,7 +1676,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/in-your-eyes.pdf",
       "lyricsUrls": ["https://genius.com/Peter-Gabriel-In-Your-Eyes-lyrics"]
     },
     "status": "retired",
@@ -1699,7 +1702,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/into-the-groove.pdf",
       "lyricsUrls": ["https://genius.com/Madonna-Into-the-Groove-lyrics"]
     },
     "status": "retired",
@@ -1725,7 +1728,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/is-she-really-going-out-with-him.pdf",
       "lyricsUrls": [
         "https://genius.com/Joe-Jackson-Is-she-really-going-out-with-him-lyrics"
       ]
@@ -1753,7 +1756,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/its-my-life.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/its-my-life.pdf",
       "lyricsUrls": ["https://genius.com/No-Doubt-Its-My-Life-lyrics"]
     },
     "status": "active",
@@ -1779,7 +1782,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/jessies-girl.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/jessies-girl.pdf",
       "lyricsUrls": ["https://genius.com/Rick-Springfield-Jessies-Girl-lyrics"]
     },
     "status": "active",
@@ -1805,7 +1808,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Josie.pdf",
       "lyricsUrls": ["https://genius.com/Steely-Dan-Josie-lyrics"]
     },
     "status": "retired",
@@ -1831,7 +1834,10 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/kc-medley.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": [
+        "https://fortyfive-charts.s3.amazonaws.com/get-down-tonight.pdf",
+        "https://fortyfive-charts.s3.amazonaws.com/thats-the-way-i-like-it.pdf"
+      ],
       "lyricsUrls": [
         "https://genius.com/Kc-and-the-sunshine-band-Thats-the-way-i-like-it-lyrics",
         "https://genius.com/Kc-and-the-sunshine-band-Get-Down-Tonight-lyrics"
@@ -1860,7 +1866,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/kryptonite.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/kryptonite.pdf",
       "lyricsUrls": ["https://genius.com/3-Doors-Down-Kryptonite-lyrics"]
     },
     "status": "active",
@@ -1886,7 +1892,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/ladies-night.pdf",
       "lyricsUrls": ["https://genius.com/Kool-and-The-Gang-Ladies-Night-lyrics"]
     },
     "status": "retired",
@@ -1912,7 +1918,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/lets-dance.pdf",
       "lyricsUrls": ["https://genius.com/David-Bowie-Lets-Dance-lyrics"]
     },
     "status": "active",
@@ -1938,7 +1944,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/living-on-a-prayer.pdf",
       "lyricsUrls": ["https://genius.com/Bon-Jovi-Livin-on-a-prayer-lyrics"]
     },
     "status": "retired",
@@ -1964,7 +1970,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/lonely-boy.pdf",
       "lyricsUrls": ["https://genius.com/The-Black-Keys-Lonely-Boy-lyrics"]
     },
     "status": "retired",
@@ -1990,7 +1996,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/long-cool-woman-in-a-black-dress.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Hollies-Long-Cool-Woman-In-a-Black-Dress-lyrics"
       ]
@@ -2018,7 +2024,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/long-train-running.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Doobie-Brothers-Long-train-runnin-lyrics"
       ]
@@ -2046,7 +2052,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/love-on-the-brain.pdf",
       "lyricsUrls": ["https://genius.com/Rihanna-Love-on-the-Brain-lyrics"]
     },
     "status": "retired",
@@ -2072,7 +2078,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/love-shack.pdf",
       "lyricsUrls": ["https://genius.com/The-b-52s-Love-Shack-lyrics"]
     },
     "status": "retired",
@@ -2098,7 +2104,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/love-yourself.pdf",
       "lyricsUrls": ["https://genius.com/Justin-Bieber-Love-Yourself-lyrics"]
     },
     "status": "retired",
@@ -2124,7 +2130,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/magic-carpet-ride.pdf",
       "lyricsUrls": ["https://genius.com/Steppenwolf-Magic-Carpet-Ride-lyrics"]
     },
     "status": "retired",
@@ -2150,7 +2156,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/mama-told-me-not-to-come.pdf",
       "lyricsUrls": [
         "https://genius.com/Three-Dog-Night-Mama-Told-Me-Not-to-Come-lyrics"
       ]
@@ -2206,7 +2212,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Man I Need.pdf",
       "lyricsUrls": []
     },
     "status": "learning",
@@ -2232,7 +2238,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/maneater.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/maneater.pdf",
       "lyricsUrls": ["https://genius.com/Hall-and-oates-Maneater-lyrics"]
     },
     "status": "active",
@@ -2258,7 +2264,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/marina-del-rey.pdf",
       "lyricsUrls": []
     },
     "status": "retired",
@@ -2284,7 +2290,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/maybe-im-amazed.pdf",
       "lyricsUrls": ["https://genius.com/Paul-McCartney-Maybe-im-amazed-lyrics"]
     },
     "status": "retired",
@@ -2310,7 +2316,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/middle-of-the-road.pdf",
       "lyricsUrls": ["https://genius.com/Pretenders-Middle-of-the-Road-lyrics"]
     },
     "status": "retired",
@@ -2336,7 +2342,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/minute-by-minute.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Doobie-Brothers-Minute-by-Minute-lyrics"
       ]
@@ -2364,7 +2370,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/miss-you.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/miss-you.pdf",
       "lyricsUrls": ["https://genius.com/The-Rolling-Stones-Miss-You-lyrics"]
     },
     "status": "active",
@@ -2390,7 +2396,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/misty-mountain-hop.pdf",
       "lyricsUrls": [
         "https://genius.com/Led-Zeppelin-Misty-Mountain-Hop-lyrics"
       ]
@@ -2418,7 +2424,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/modern-love.pdf",
       "lyricsUrls": ["https://genius.com/David-Bowie-Modern-Love-lyrics"]
     },
     "status": "active",
@@ -2444,7 +2450,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/move-over.pdf",
       "lyricsUrls": ["https://genius.com/Janis-Joplin-Move-Over-lyrics"]
     },
     "status": "retired",
@@ -2496,7 +2502,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/one-way-or-another.pdf",
       "lyricsUrls": ["https://genius.com/Blondie-One-Way-or-Another-lyrics"]
     },
     "status": "retired",
@@ -2522,7 +2528,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/peg.pdf",
       "lyricsUrls": ["https://genius.com/Steely-Dan-Peg-lyrics"]
     },
     "status": "retired",
@@ -2548,7 +2554,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/play-something-sweet.pdf",
       "lyricsUrls": []
     },
     "status": "retired",
@@ -2574,7 +2580,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/put-your-records-on.pdf",
       "lyricsUrls": [
         "https://genius.com/Corinne-Bailey-Rae-Put-Your-Records-On-lyrics"
       ]
@@ -2602,7 +2608,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/raise-your-glass.pdf",
       "lyricsUrls": ["https://genius.com/Pink-Raise-Your-Glass-lyrics"]
     },
     "status": "retired",
@@ -2628,7 +2634,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/ramble-on.pdf",
       "lyricsUrls": ["https://genius.com/Led-Zeppelin-Ramble-On-lyrics"]
     },
     "status": "retired",
@@ -2654,7 +2660,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/reelin-in-the-years.pdf",
       "lyricsUrls": ["https://genius.com/Steely-Dan-Reelin-in-the-Years-lyrics"]
     },
     "status": "retired",
@@ -2680,7 +2686,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/rhiannon.pdf",
       "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Rhiannon-lyrics"]
     },
     "status": "active",
@@ -2706,7 +2712,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/runaway-baby.pdf",
       "lyricsUrls": ["https://genius.com/Bruno-Mars-Runaway-Baby-lyrics"]
     },
     "status": "retired",
@@ -2732,7 +2738,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/saturday-nights-alright-for-fighting.pdf",
       "lyricsUrls": [
         "https://genius.com/Elton-John-Saturday-nights-alright-for-fighting-lyrics"
       ]
@@ -2760,7 +2766,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/say-you-love-me.pdf",
       "lyricsUrls": ["https://genius.com/Fleetwood-Mac-Say-You-Love-Me-lyrics"]
     },
     "status": "retired",
@@ -2786,7 +2792,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/sgt-peppers-lonely-hearts-club-band.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Beatles-Sgt-peppers-lonely-hearts-club-band-lyrics"
       ]
@@ -2814,7 +2820,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/shake-it-off.pdf",
       "lyricsUrls": ["https://genius.com/Taylor-Swift-Shake-It-Off-lyrics"]
     },
     "status": "retired",
@@ -2840,7 +2846,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/shakin-all-over.pdf",
       "lyricsUrls": ["https://genius.com/The-Guess-Who-Shakin-all-over-lyrics"]
     },
     "status": "retired",
@@ -2866,7 +2872,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/the-shape-of-you.pdf",
       "lyricsUrls": ["https://genius.com/Ed-Sheeran-Shape-of-You-lyrics"]
     },
     "status": "active",
@@ -2892,7 +2898,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/she-drives-me-crazy.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/she-drives-me-crazy.pdf",
       "lyricsUrls": [
         "https://genius.com/Fine-Young-Cannibals-She-Drives-Me-Crazy-lyrics"
       ]
@@ -2920,7 +2926,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/shut-up-and-dance.pdf",
       "lyricsUrls": [
         "https://genius.com/WALK-THE-MOON-Shut-Up-and-Dance-lyrics"
       ]
@@ -2976,7 +2982,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/spooky.pdf",
       "lyricsUrls": ["https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics"]
     },
     "status": "retired",
@@ -3002,7 +3008,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/stitches.pdf",
       "lyricsUrls": ["https://genius.com/Shawn-Mendes-Stitches-lyrics"]
     },
     "status": "retired",
@@ -3028,7 +3034,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/suit-and-tie.pdf",
       "lyricsUrls": ["https://genius.com/Justin-Timberlake-Suit-and-tie-lyrics"]
     },
     "status": "retired",
@@ -3054,7 +3060,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/sunglasses-at-night.pdf",
       "lyricsUrls": ["https://genius.com/Corey-Hart-Sunglasses-at-Night-lyrics"]
     },
     "status": "retired",
@@ -3080,7 +3086,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/super-freak.pdf",
       "lyricsUrls": ["https://genius.com/Rick-James-Super-Freak-lyrics"]
     },
     "status": "retired",
@@ -3106,7 +3112,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/hERutbyNmW8?si=p-tVyp-VAELg3Tpg",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/mashup.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/sweet-dreams-are-made-of-this.pdf",
       "lyricsUrls": [
         "https://genius.com/Pomplamoose-sweet-dreams-seven-nation-army-mashup-lyrics"
       ]
@@ -3134,38 +3140,12 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/sympathy-for-the-devil.pdf",
       "lyricsUrls": [
         "https://genius.com/The-Rolling-Stones-Sympathy-for-the-Devil-lyrics"
       ]
     },
     "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "the-boys-of-summer",
-    "title": "The Boys of Summer",
-    "artistInfo": {
-      "performanceVersion": "Don Henley",
-      "originalArtist": "Don Henley"
-    },
-    "musicalDetails": {
-      "key": null
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": null,
-      "lyricsUrls": ["https://genius.com/Don-Henley-The-Boys-of-Summer-lyrics"]
-    },
-    "status": "active",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -3188,7 +3168,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/the-heat-is-on.pdf",
       "lyricsUrls": ["https://genius.com/Glenn-Frey-The-Heat-Is-On-lyrics"]
     },
     "status": "on-hold",
@@ -3214,7 +3194,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/the-wind-cries-mary.pdf",
       "lyricsUrls": [
         "https://genius.com/Jimi-Hendrix-The-Wind-Cries-Mary-lyrics"
       ]
@@ -3242,7 +3222,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/this-love.pdf",
       "lyricsUrls": ["https://genius.com/Maroon-5-This-Love-lyrics"]
     },
     "status": "retired",
@@ -3268,7 +3248,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/uptown-funk.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/uptown-funk.pdf",
       "lyricsUrls": ["https://genius.com/Mark-Ronson-Uptown-Funk-lyrics"]
     },
     "status": "active",
@@ -3294,7 +3274,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/Q3mgapAcVdU?si=dDCjIXKks-NqhACl",
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/we-gotta-get-out-of-this-place.pdf",
       "lyricsUrls": [
         "https://genius.com/The-animals-we-gotta-get-out-of-this-place-lyrics"
       ]
@@ -3322,7 +3302,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/white-rabbit.pdf",
       "lyricsUrls": [
         "https://genius.com/Jefferson-Airplane-White-Rabbit-lyrics"
       ]
@@ -3350,7 +3330,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/with-a-little-help-from-my-friends.pdf",
       "lyricsUrls": [
         "https://genius.com/Joe-Cocker-With-a-Little-Help-from-My-Friends-lyrics"
       ]
@@ -3378,7 +3358,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/you-oughta-know.pdf",
       "lyricsUrls": [
         "https://genius.com/Alanis-Morissette-You-Oughta-Know-lyrics"
       ]
@@ -3406,7 +3386,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/_bj_32QeAaU?si=ZzLuyeSlpNLyNNWE",
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/youre-no-good.pdf",
       "lyricsUrls": ["https://genius.com/Linda-Ronstadt-Youre-no-good-lyrics"]
     },
     "status": "learning",
@@ -3414,4 +3394,3 @@
     "lastUpdated": "2025-06-22"
   }
 ]
-

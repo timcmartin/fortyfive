@@ -107,6 +107,8 @@ Songs live in `public/songs.json`. Each song is a JSON object:
 }
 ```
 
+`chartPdfUrl` may be either a single URL string or an array of chart URLs for medleys/mashups that need more than one PDF.
+
 ### Status Values
 
 | Status | Meaning |
@@ -127,4 +129,3 @@ https://genius.com/Artist-name-song-title-lyrics
 ```
 
 Use the version the band performs (e.g. a cover version) rather than the original if the performance differs meaningfully.
-
