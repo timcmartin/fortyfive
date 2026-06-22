@@ -1,5 +1,577 @@
 [
   {
+    "id": "50-ways-to-say-goodbye",
+    "title": "50 Ways to Say Goodbye",
+    "artistInfo": {
+      "performanceVersion": "Train",
+      "originalArtist": "Train"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Train-50-Ways-to-Say-Goodbye-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "867-5309-jenny",
+    "title": "867-5309/Jenny",
+    "artistInfo": {
+      "performanceVersion": "Tommy Tutone",
+      "originalArtist": "Tommy Tutone"
+    },
+    "musicalDetails": {
+      "key": "F# minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "Richard",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "adventure-of-a-lifetime",
+    "title": "Adventure of a Lifetime",
+    "artistInfo": {
+      "performanceVersion": "Coldplay",
+      "originalArtist": "Coldplay"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Coldplay-Adventure-of-a-Lifetime-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "all-along-the-watchtower",
+    "title": "All Along the Watchtower",
+    "artistInfo": {
+      "performanceVersion": "Jimi Hendrix",
+      "originalArtist": "Bob Dylan"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Jimi-Hendrix-All-Along-the-Watchtower-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "any-man-of-mine",
+    "title": "Any Man of Mine",
+    "artistInfo": {
+      "performanceVersion": "Shania Twain",
+      "originalArtist": "Shania Twain"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Shania-Twain-Any-Man-of-Mine-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "baby-one-more-time",
+    "title": "...Baby One More Time",
+    "artistInfo": {
+      "performanceVersion": "Britney Spears",
+      "originalArtist": "Britney Spears"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Britney-Spears-Baby-One-More-Time-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "bang-a-gong-get-it-on",
+    "title": "Bang a Gong (Get It On)",
+    "artistInfo": {
+      "performanceVersion": "T. Rex",
+      "originalArtist": "T. Rex"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/T-rex-Bang-a-Gong-Get-It-On-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "believe",
+    "title": "Believe",
+    "artistInfo": {
+      "performanceVersion": "Cher",
+      "originalArtist": "Cher"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Cher-Believe-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "better-to-be-loved",
+    "title": "Better to Be Loved",
+    "artistInfo": {
+      "performanceVersion": "Francesco Yates",
+      "originalArtist": "Francesco Yates"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "billie-jean",
+    "title": "Billie Jean",
+    "artistInfo": {
+      "performanceVersion": "Michael Jackson",
+      "originalArtist": "Michael Jackson"
+    },
+    "musicalDetails": {
+      "key": "F# minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Michael-Jackson-Billie-Jean-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "boogie-on-reggae-woman",
+    "title": "Boogie On Reggae Woman",
+    "artistInfo": {
+      "performanceVersion": "Stevie Wonder",
+      "originalArtist": "Stevie Wonder"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Stevie-Wonder-Boogie-On-Reggae-Woman-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "cake-by-the-ocean",
+    "title": "Cake by the Ocean",
+    "artistInfo": {
+      "performanceVersion": "DNCE",
+      "originalArtist": "DNCE"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Dnce-Cake-by-the-Ocean-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "call-me-al",
+    "title": "Call Me Al",
+    "artistInfo": {
+      "performanceVersion": "Paul Simon",
+      "originalArtist": "Paul Simon"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Paul-Simon-Call-Me-Al-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "china-grove",
+    "title": "China Grove",
+    "artistInfo": {
+      "performanceVersion": "The Doobie Brothers",
+      "originalArtist": "The Doobie Brothers"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-China-Grove-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "cold-cold-heart",
+    "title": "Cold, Cold Heart",
+    "artistInfo": {
+      "performanceVersion": "Dua Lipa",
+      "originalArtist": "Dua Lipa"
+    },
+    "musicalDetails": {
+      "key": "B Flat minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "copacabana",
+    "title": "Copacabana",
+    "artistInfo": {
+      "performanceVersion": "Barry Manilow",
+      "originalArtist": "Barry Manilow"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Barry-Manilow-Copacabana-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "couldnt-get-it-right",
+    "title": "Couldn't Get It Right",
+    "artistInfo": {
+      "performanceVersion": "Climax Blues Band",
+      "originalArtist": "Climax Blues Band"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Climax-Blues-Band-Couldnt-Get-It-Right-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "crazy",
+    "title": "Crazy",
+    "artistInfo": {
+      "performanceVersion": "Gnarls Barkley",
+      "originalArtist": "Gnarls Barkley"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Gnarls-Barkley-Crazy-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "crazy-little-thing-called-love",
+    "title": "Crazy Little Thing Called Love",
+    "artistInfo": {
+      "performanceVersion": "Queen",
+      "originalArtist": "Queen"
+    },
+    "musicalDetails": {
+      "key": "D major"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Queen-Crazy-Little-Thing-Called-Love-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "disco-inferno",
+    "title": "Disco Inferno",
+    "artistInfo": {
+      "performanceVersion": "The Trammps",
+      "originalArtist": "The Trammps"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Trammps-Disco-Inferno-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dog-days-are-over",
+    "title": "Dog Days Are Over",
+    "artistInfo": {
+      "performanceVersion": "Florence + The Machine",
+      "originalArtist": "Florence + The Machine"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Florence-The-Machine-Dog-Days-Are-Over-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dont",
+    "title": "Don't",
+    "artistInfo": {
+      "performanceVersion": "Ed Sheeran",
+      "originalArtist": "Ed Sheeran"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Ed-Sheeran-Dont-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
     "id": "dont-dream-its-over",
     "title": "Don't Dream It's Over",
     "artistInfo": {
@@ -26,6 +598,2528 @@
     "lastUpdated": "2025-06-15"
   },
   {
+    "id": "dont-start-now",
+    "title": "Don't Start Now",
+    "artistInfo": {
+      "performanceVersion": "Dua Lipa",
+      "originalArtist": "Dua Lipa"
+    },
+    "musicalDetails": {
+      "key": "B minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Dua-Lipa-Dont-Start-Now-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dont-stop",
+    "title": "Don't Stop",
+    "artistInfo": {
+      "performanceVersion": "Fleetwood Mac",
+      "originalArtist": "Fleetwood Mac"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Dont-Stop-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dont-stop-believing-lovin-touchin-squeezin-medley",
+    "title": "Don't Stop Believing / Lovin' Touchin' Squeezin' (Medley)",
+    "artistInfo": {
+      "performanceVersion": "Journey",
+      "originalArtist": "Journey"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Journey-Dont-stop-believin-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "on-hold",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dont-you-want-me",
+    "title": "Don't You Want Me",
+    "artistInfo": {
+      "performanceVersion": "The Human League",
+      "originalArtist": "The Human League"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Human-League-Dont-You-Want-Me-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "dreams",
+    "title": "Dreams",
+    "artistInfo": {
+      "performanceVersion": "Fleetwood Mac",
+      "originalArtist": "Fleetwood Mac"
+    },
+    "musicalDetails": {
+      "key": "F major"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Dreams-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "drive-by",
+    "title": "Drive By",
+    "artistInfo": {
+      "performanceVersion": "Train",
+      "originalArtist": "Train"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Train-Drive-By-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "edge-of-seventeen",
+    "title": "Edge of Seventeen",
+    "artistInfo": {
+      "performanceVersion": "Stevie Nicks",
+      "originalArtist": "Stevie Nicks"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Stevie-Nicks-Edge-of-Seventeen-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "everybody-wants-to-rule-the-world",
+    "title": "Everybody Wants to Rule the World",
+    "artistInfo": {
+      "performanceVersion": "Tears for Fears",
+      "originalArtist": "Tears for Fears"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Tears-for-Fears-Everybody-Wants-to-Rule-the-World-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "evil-ways",
+    "title": "Evil Ways",
+    "artistInfo": {
+      "performanceVersion": "Santana",
+      "originalArtist": "Willie Bobo"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Santana-Evil-Ways-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "exs-and-ohs",
+    "title": "Ex's & Oh's",
+    "artistInfo": {
+      "performanceVersion": "Elle King",
+      "originalArtist": "Elle King"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Elle-King-Exs-and-ohs-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "flowers",
+    "title": "Flowers",
+    "artistInfo": {
+      "performanceVersion": "Miley Cyrus",
+      "originalArtist": "Miley Cyrus"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Miley-Cyrus-Flowers-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "forget-you",
+    "title": "Forget You",
+    "artistInfo": {
+      "performanceVersion": "CeeLo Green",
+      "originalArtist": "CeeLo Green"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Ceelo-Green-Forget-You-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "fourfiveseconds",
+    "title": "FourFiveSeconds",
+    "artistInfo": {
+      "performanceVersion": "Rihanna",
+      "originalArtist": "Rihanna"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "get-down-tonight",
+    "title": "Get Down Tonight",
+    "artistInfo": {
+      "performanceVersion": "KC & The Sunshine Band",
+      "originalArtist": "KC & The Sunshine Band"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Kc-and-the-sunshine-band-Get-Down-Tonight-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "get-lucky",
+    "title": "Get Lucky",
+    "artistInfo": {
+      "performanceVersion": "Daft Punk",
+      "originalArtist": "Daft Punk"
+    },
+    "musicalDetails": {
+      "key": "F# minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Daft-Punk-Get-Lucky-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "ghost",
+    "title": "Ghost",
+    "artistInfo": {
+      "performanceVersion": "Ella Henderson",
+      "originalArtist": "Ella Henderson"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "https://youtu.be/dcod-Gq-U3A?si=8FcjG_E2nGanQJM0",
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Ella-henderson-ghost-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "gimme-some-lovin",
+    "title": "Gimme Some Lovin'",
+    "artistInfo": {
+      "performanceVersion": "The Spencer Davis Group",
+      "originalArtist": "The Spencer Davis Group"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Spencer-Davis-Group-Gimme-Some-Lovin-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "gimme-gimme-gimme-a-man-after-midnight",
+    "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+    "artistInfo": {
+      "performanceVersion": "ABBA",
+      "originalArtist": "ABBA"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Abba-Gimme-gimme-gimme-a-man-after-midnight-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "gold-on-the-ceiling",
+    "title": "Gold on the Ceiling",
+    "artistInfo": {
+      "performanceVersion": "The Black Keys",
+      "originalArtist": "The Black Keys"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Black-Keys-Gold-on-the-Ceiling-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "groove-is-in-the-heart",
+    "title": "Groove Is in the Heart",
+    "artistInfo": {
+      "performanceVersion": "Deee-Lite",
+      "originalArtist": "Deee-Lite"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Deee-lite-Groove-Is-in-the-Heart-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "happy",
+    "title": "Happy",
+    "artistInfo": {
+      "performanceVersion": "Pharrell Williams",
+      "originalArtist": "Pharrell Williams"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Pharrell-Williams-Happy-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "happy-anniversary",
+    "title": "Happy Anniversary",
+    "artistInfo": {
+      "performanceVersion": "Little River Band",
+      "originalArtist": "Little River Band"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "heart-of-glass",
+    "title": "Heart of Glass",
+    "artistInfo": {
+      "performanceVersion": "Blondie",
+      "originalArtist": "Blondie"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Blondie-Heart-of-Glass-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "heartful-of-soul",
+    "title": "Heartful of Soul",
+    "artistInfo": {
+      "performanceVersion": "The Yardbirds",
+      "originalArtist": "The Yardbirds"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Yardbirds-Heartful-of-Soul-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "hit-me-with-your-best-shot",
+    "title": "Hit Me with Your Best Shot",
+    "artistInfo": {
+      "performanceVersion": "Pat Benatar",
+      "originalArtist": "Pat Benatar"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Pat-Benatar-Hit-Me-with-Your-Best-Shot-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "hold-on-im-coming",
+    "title": "Hold On, I'm Coming",
+    "artistInfo": {
+      "performanceVersion": "Sam & Dave",
+      "originalArtist": "Sam & Dave"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Sam-and-Dave-Hold-On-Im-Coming-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "hot-child-in-the-city",
+    "title": "Hot Child in the City",
+    "artistInfo": {
+      "performanceVersion": "Nick Gilder",
+      "originalArtist": "Nick Gilder"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Nick-Gilder-Hot-Child-in-the-City-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "how-long",
+    "title": "How Long",
+    "artistInfo": {
+      "performanceVersion": "Ace",
+      "originalArtist": "Ace"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Ace-How-Long-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "hush",
+    "title": "Hush",
+    "artistInfo": {
+      "performanceVersion": "Deep Purple",
+      "originalArtist": "Billy Joe Royal"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Deep-Purple-Hush-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-cant-go-for-that-no-can-do",
+    "title": "I Can't Go for That (No Can Do)",
+    "artistInfo": {
+      "performanceVersion": "Daryl Hall & John Oates",
+      "originalArtist": "Daryl Hall & John Oates"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Hall-and-oates-I-cant-go-for-that-no-can-do-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-saw-her-standing-there",
+    "title": "I Saw Her Standing There",
+    "artistInfo": {
+      "performanceVersion": "The Beatles",
+      "originalArtist": "The Beatles"
+    },
+    "musicalDetails": {
+      "key": "E major"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Beatles-I-Saw-Her-Standing-There-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-saw-the-light",
+    "title": "I Saw the Light",
+    "artistInfo": {
+      "performanceVersion": "Todd Rundgren",
+      "originalArtist": "Todd Rundgren"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Todd-Rundgren-I-Saw-the-Light-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-thank-you",
+    "title": "I Thank You",
+    "artistInfo": {
+      "performanceVersion": "ZZ Top",
+      "originalArtist": "Sam & Dave"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "Richard",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Zz-top-I-Thank-You-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-want-you-to-want-me",
+    "title": "I Want You to Want Me",
+    "artistInfo": {
+      "performanceVersion": "Cheap Trick",
+      "originalArtist": "Cheap Trick"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Cheap-Trick-I-Want-You-to-Want-Me-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "i-will-survive",
+    "title": "I Will Survive",
+    "artistInfo": {
+      "performanceVersion": "Gloria Gaynor",
+      "originalArtist": "Gloria Gaynor"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Gloria-Gaynor-I-Will-Survive-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "im-shakin",
+    "title": "I'm Shakin'",
+    "artistInfo": {
+      "performanceVersion": "Jack White",
+      "originalArtist": "Little Willie John"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Jack-White-Im-shakin-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "in-your-eyes",
+    "title": "In Your Eyes",
+    "artistInfo": {
+      "performanceVersion": "Peter Gabriel",
+      "originalArtist": "Peter Gabriel"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Peter-Gabriel-In-Your-Eyes-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "into-the-groove",
+    "title": "Into the Groove",
+    "artistInfo": {
+      "performanceVersion": "Madonna",
+      "originalArtist": "Madonna"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Madonna-Into-the-Groove-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "is-she-really-going-out-with-him",
+    "title": "Is She Really Going Out with Him?",
+    "artistInfo": {
+      "performanceVersion": "Joe Jackson",
+      "originalArtist": "Joe Jackson"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Joe-Jackson-Is-she-really-going-out-with-him-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "its-my-life",
+    "title": "It's My Life",
+    "artistInfo": {
+      "performanceVersion": "No Doubt",
+      "originalArtist": "Talk Talk"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/No-Doubt-Its-My-Life-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "jessies-girl",
+    "title": "Jessie's Girl",
+    "artistInfo": {
+      "performanceVersion": "Rick Springfield",
+      "originalArtist": "Rick Springfield"
+    },
+    "musicalDetails": {
+      "key": "D major"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Rick-Springfield-Jessies-Girl-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "josie",
+    "title": "Josie",
+    "artistInfo": {
+      "performanceVersion": "Steely Dan",
+      "originalArtist": "Steely Dan"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Steely-Dan-Josie-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "just-dance",
+    "title": "Just Dance",
+    "artistInfo": {
+      "performanceVersion": "Lady Gaga",
+      "originalArtist": "Lady Gaga"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Lady-Gaga-Just-Dance-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "kryptonite",
+    "title": "Kryptonite",
+    "artistInfo": {
+      "performanceVersion": "3 Doors Down",
+      "originalArtist": "3 Doors Down"
+    },
+    "musicalDetails": {
+      "key": "B minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/3-Doors-Down-Kryptonite-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "ladies-night",
+    "title": "Ladies Night",
+    "artistInfo": {
+      "performanceVersion": "Kool & The Gang",
+      "originalArtist": "Kool & The Gang"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Kool-and-The-Gang-Ladies-Night-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "lets-dance",
+    "title": "Let's Dance",
+    "artistInfo": {
+      "performanceVersion": "David Bowie",
+      "originalArtist": "David Bowie"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/David-Bowie-Lets-Dance-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "livin-on-a-prayer",
+    "title": "Livin' on a Prayer",
+    "artistInfo": {
+      "performanceVersion": "Bon Jovi",
+      "originalArtist": "Bon Jovi"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Bon-Jovi-Livin-on-a-prayer-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "lonely-boy",
+    "title": "Lonely Boy",
+    "artistInfo": {
+      "performanceVersion": "The Black Keys",
+      "originalArtist": "The Black Keys"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Black-Keys-Lonely-Boy-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "long-cool-woman-in-a-black-dress",
+    "title": "Long Cool Woman (In a Black Dress)",
+    "artistInfo": {
+      "performanceVersion": "The Hollies",
+      "originalArtist": "The Hollies"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Hollies-Long-Cool-Woman-In-a-Black-Dress-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "long-train-runnin",
+    "title": "Long Train Runnin'",
+    "artistInfo": {
+      "performanceVersion": "The Doobie Brothers",
+      "originalArtist": "The Doobie Brothers"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-Long-train-runnin-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "love-on-the-brain",
+    "title": "Love on the Brain",
+    "artistInfo": {
+      "performanceVersion": "Rihanna",
+      "originalArtist": "Rihanna"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Rihanna-Love-on-the-Brain-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "love-shack",
+    "title": "Love Shack",
+    "artistInfo": {
+      "performanceVersion": "The B-52's",
+      "originalArtist": "The B-52's"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-b-52s-Love-Shack-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "love-yourself",
+    "title": "Love Yourself",
+    "artistInfo": {
+      "performanceVersion": "Justin Bieber",
+      "originalArtist": "Justin Bieber"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Justin-Bieber-Love-Yourself-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "magic-carpet-ride",
+    "title": "Magic Carpet Ride",
+    "artistInfo": {
+      "performanceVersion": "Steppenwolf",
+      "originalArtist": "Steppenwolf"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Steppenwolf-Magic-Carpet-Ride-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "mama-told-me-not-to-come",
+    "title": "Mama Told Me (Not to Come)",
+    "artistInfo": {
+      "performanceVersion": "Three Dog Night",
+      "originalArtist": "Randy Newman"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Three-Dog-Night-Mama-Told-Me-Not-to-Come-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "man-i-need",
+    "title": "Man I Need",
+    "artistInfo": {
+      "performanceVersion": "Olivia Dean",
+      "originalArtist": "Olivia Dean"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "learning",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "maneater",
+    "title": "Maneater",
+    "artistInfo": {
+      "performanceVersion": "Daryl Hall & John Oates",
+      "originalArtist": "Daryl Hall & John Oates"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Hall-and-oates-Maneater-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "marina-del-rey",
+    "title": "Marina Del Rey",
+    "artistInfo": {
+      "performanceVersion": "George Strait",
+      "originalArtist": "George Strait"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "maybe-im-amazed",
+    "title": "Maybe I'm Amazed",
+    "artistInfo": {
+      "performanceVersion": "Paul McCartney",
+      "originalArtist": "Paul McCartney"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Paul-McCartney-Maybe-im-amazed-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "middle-of-the-road",
+    "title": "Middle of the Road",
+    "artistInfo": {
+      "performanceVersion": "Pretenders",
+      "originalArtist": "Pretenders"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Pretenders-Middle-of-the-Road-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "minute-by-minute",
+    "title": "Minute by Minute",
+    "artistInfo": {
+      "performanceVersion": "The Doobie Brothers",
+      "originalArtist": "The Doobie Brothers"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Doobie-Brothers-Minute-by-Minute-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "miss-you",
+    "title": "Miss You",
+    "artistInfo": {
+      "performanceVersion": "The Rolling Stones",
+      "originalArtist": "The Rolling Stones"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Rolling-Stones-Miss-You-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "misty-mountain-hop",
+    "title": "Misty Mountain Hop",
+    "artistInfo": {
+      "performanceVersion": "Led Zeppelin",
+      "originalArtist": "Led Zeppelin"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Led-Zeppelin-Misty-Mountain-Hop-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "modern-love",
+    "title": "Modern Love",
+    "artistInfo": {
+      "performanceVersion": "David Bowie",
+      "originalArtist": "David Bowie"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/David-Bowie-Modern-Love-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "move-over",
+    "title": "Move Over",
+    "artistInfo": {
+      "performanceVersion": "Janis Joplin",
+      "originalArtist": "Janis Joplin"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Janis-Joplin-Move-Over-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "one-way-or-another",
+    "title": "One Way or Another",
+    "artistInfo": {
+      "performanceVersion": "Blondie",
+      "originalArtist": "Blondie"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Blondie-One-Way-or-Another-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "peg",
+    "title": "Peg",
+    "artistInfo": {
+      "performanceVersion": "Steely Dan",
+      "originalArtist": "Steely Dan"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Steely-Dan-Peg-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "play-something-sweet-brickyard-blues",
+    "title": "Play Something Sweet (Brickyard Blues)",
+    "artistInfo": {
+      "performanceVersion": "Three Dog Night",
+      "originalArtist": "Allen Toussaint"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": null,
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "poker-face",
+    "title": "Poker Face",
+    "artistInfo": {
+      "performanceVersion": "Lady Gaga",
+      "originalArtist": "Lady Gaga"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Lady-Gaga-Poker-Face-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "put-your-records-on",
+    "title": "Put Your Records On",
+    "artistInfo": {
+      "performanceVersion": "Corinne Bailey Rae",
+      "originalArtist": "Corinne Bailey Rae"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Corinne-Bailey-Rae-Put-Your-Records-On-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "raise-your-glass",
+    "title": "Raise Your Glass",
+    "artistInfo": {
+      "performanceVersion": "P!nk",
+      "originalArtist": "P!nk"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Pink-Raise-Your-Glass-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "ramble-on",
+    "title": "Ramble On",
+    "artistInfo": {
+      "performanceVersion": "Led Zeppelin",
+      "originalArtist": "Led Zeppelin"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Led-Zeppelin-Ramble-On-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "reelin-in-the-years",
+    "title": "Reelin' in the Years",
+    "artistInfo": {
+      "performanceVersion": "Steely Dan",
+      "originalArtist": "Steely Dan"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Steely-Dan-Reelin-in-the-Years-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "rhiannon",
+    "title": "Rhiannon",
+    "artistInfo": {
+      "performanceVersion": "Fleetwood Mac",
+      "originalArtist": "Fleetwood Mac"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Rhiannon-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "runaway-baby",
+    "title": "Runaway Baby",
+    "artistInfo": {
+      "performanceVersion": "Bruno Mars",
+      "originalArtist": "Bruno Mars"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Bruno-Mars-Runaway-Baby-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "saturday-nights-alright-for-fighting",
+    "title": "Saturday Night's Alright for Fighting",
+    "artistInfo": {
+      "performanceVersion": "Elton John",
+      "originalArtist": "Elton John"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Elton-John-Saturday-nights-alright-for-fighting-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "say-you-love-me",
+    "title": "Say You Love Me",
+    "artistInfo": {
+      "performanceVersion": "Fleetwood Mac",
+      "originalArtist": "Fleetwood Mac"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Fleetwood-Mac-Say-You-Love-Me-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "sgt-peppers-lonely-hearts-club-band",
+    "title": "Sgt. Pepper's Lonely Hearts Club Band",
+    "artistInfo": {
+      "performanceVersion": "The Beatles",
+      "originalArtist": "The Beatles"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Beatles-Sgt-peppers-lonely-hearts-club-band-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "shake-it-off",
+    "title": "Shake It Off",
+    "artistInfo": {
+      "performanceVersion": "Taylor Swift",
+      "originalArtist": "Taylor Swift"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Taylor-Swift-Shake-It-Off-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "shakin-all-over",
+    "title": "Shakin' All Over",
+    "artistInfo": {
+      "performanceVersion": "The Guess Who",
+      "originalArtist": "Johnny Kidd & The Pirates"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Guess-Who-Shakin-all-over-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "shape-of-you",
+    "title": "Shape of You",
+    "artistInfo": {
+      "performanceVersion": "Ed Sheeran",
+      "originalArtist": "Ed Sheeran"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Ed-Sheeran-Shape-of-You-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "she-drives-me-crazy",
+    "title": "She Drives Me Crazy",
+    "artistInfo": {
+      "performanceVersion": "Fine Young Cannibals",
+      "originalArtist": "Fine Young Cannibals"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Fine-Young-Cannibals-She-Drives-Me-Crazy-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "shut-up-and-dance",
+    "title": "Shut Up and Dance",
+    "artistInfo": {
+      "performanceVersion": "WALK THE MOON",
+      "originalArtist": "WALK THE MOON"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/WALK-THE-MOON-Shut-Up-and-Dance-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "something-to-talk-about",
+    "title": "Something To Talk About",
+    "artistInfo": {
+      "performanceVersion": "Bonnie Raitt",
+      "originalArtist": "Bonnie Raitt"
+    },
+    "musicalDetails": {
+      "key": "A Flat"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "https://youtu.be/mJ58TVYNFro?si=shkZZ0NvrzAFktBJ",
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Bonnie-raitt-something-to-talk-about-51-mix-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "spooky",
+    "title": "Spooky",
+    "artistInfo": {
+      "performanceVersion": "Atlanta Rhythm Section",
+      "originalArtist": "Classics IV"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "stitches",
+    "title": "Stitches",
+    "artistInfo": {
+      "performanceVersion": "Shawn Mendes",
+      "originalArtist": "Shawn Mendes"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Shawn-Mendes-Stitches-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "suit-and-tie",
+    "title": "Suit & Tie",
+    "artistInfo": {
+      "performanceVersion": "Justin Timberlake",
+      "originalArtist": "Justin Timberlake"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Justin-Timberlake-Suit-and-tie-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "sunglasses-at-night",
+    "title": "Sunglasses at Night",
+    "artistInfo": {
+      "performanceVersion": "Corey Hart",
+      "originalArtist": "Corey Hart"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Corey-Hart-Sunglasses-at-Night-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "super-freak",
+    "title": "Super Freak",
+    "artistInfo": {
+      "performanceVersion": "Rick James",
+      "originalArtist": "Rick James"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Rick-James-Super-Freak-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "sweet-dreams-are-made-of-this",
+    "title": "Sweet Dreams (Are Made of This)",
+    "artistInfo": {
+      "performanceVersion": "Eurythmics",
+      "originalArtist": "Eurythmics"
+    },
+    "musicalDetails": {
+      "key": "C minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Eurythmics-Sweet-Dreams-Are-Made-of-This-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "sympathy-for-the-devil",
+    "title": "Sympathy for the Devil",
+    "artistInfo": {
+      "performanceVersion": "The Rolling Stones",
+      "originalArtist": "The Rolling Stones"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/The-Rolling-Stones-Sympathy-for-the-Devil-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "thats-the-way-i-like-it",
+    "title": "That's the Way (I Like It)",
+    "artistInfo": {
+      "performanceVersion": "KC & The Sunshine Band",
+      "originalArtist": "KC & The Sunshine Band"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Kc-and-the-sunshine-band-Thats-the-way-i-like-it-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "the-boys-of-summer",
+    "title": "The Boys of Summer",
+    "artistInfo": {
+      "performanceVersion": "Don Henley",
+      "originalArtist": "Don Henley"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Don-Henley-The-Boys-of-Summer-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "the-heat-is-on",
+    "title": "The Heat Is On",
+    "artistInfo": {
+      "performanceVersion": "Glenn Frey",
+      "originalArtist": "Glenn Frey"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Glenn-Frey-The-Heat-Is-On-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "on-hold",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "the-wind-cries-mary",
+    "title": "The Wind Cries Mary",
+    "artistInfo": {
+      "performanceVersion": "Jimi Hendrix",
+      "originalArtist": "Jimi Hendrix"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Jimi-Hendrix-The-Wind-Cries-Mary-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "this-love",
+    "title": "This Love",
+    "artistInfo": {
+      "performanceVersion": "Maroon 5",
+      "originalArtist": "Maroon 5"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Maroon-5-This-Love-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "uptown-funk",
+    "title": "Uptown Funk",
+    "artistInfo": {
+      "performanceVersion": "Mark Ronson",
+      "originalArtist": "Mark Ronson"
+    },
+    "musicalDetails": {
+      "key": "D minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Mark-Ronson-Uptown-Funk-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
     "id": "we-gotta-get-out-of-this-place",
     "title": "We Gotta Get Out Of This Place",
     "artistInfo": {
@@ -50,5 +3144,109 @@
     "status": "filler",
     "dateAdded": "2025-02-10",
     "lastUpdated": "2025-06-15"
+  },
+  {
+    "id": "white-rabbit",
+    "title": "White Rabbit",
+    "artistInfo": {
+      "performanceVersion": "Jefferson Airplane",
+      "originalArtist": "Jefferson Airplane"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Jefferson-Airplane-White-Rabbit-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "with-a-little-help-from-my-friends",
+    "title": "With a Little Help from My Friends",
+    "artistInfo": {
+      "performanceVersion": "Joe Cocker",
+      "originalArtist": "The Beatles"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Joe-Cocker-With-a-Little-Help-from-My-Friends-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "you-oughta-know",
+    "title": "You Oughta Know",
+    "artistInfo": {
+      "performanceVersion": "Alanis Morissette",
+      "originalArtist": "Alanis Morissette"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Alanis-Morissette-You-Oughta-Know-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "retired",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "youre-no-good",
+    "title": "You're No Good",
+    "artistInfo": {
+      "performanceVersion": "Linda Ronstadt",
+      "originalArtist": "Dee Dee Warwick"
+    },
+    "musicalDetails": {
+      "key": null
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": null,
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Linda-Ronstadt-Youre-no-good-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "learning",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
   }
 ]
