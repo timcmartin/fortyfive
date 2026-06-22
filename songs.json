@@ -1,0 +1,54 @@
+[
+  {
+    "id": "hallelujah",
+    "title": "Hallelujah",
+    "artistInfo": {
+      "performanceVersion": "Jeff Buckley",
+      "originalArtist": "Leonard Cohen"
+    },
+    "musicalDetails": {
+      "key": "C major"
+    },
+    "performanceNotes": {
+      "arrangement": "Acoustic, stripped down",
+      "leadSinger": null,
+      "specialNotes": "High vocal range",
+      "generalNotes": "Crowd favorite"
+    },
+    "resources": {
+      "youtubeUrl": "https://www.youtube.com/watch?v=y8AWFf7EAc4",
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Leonard-cohen-hallelujah-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "active",
+    "dateAdded": "2025-01-15",
+    "lastUpdated": "2025-06-15"
+  },
+  {
+    "id": "bohemian-rhapsody",
+    "title": "Bohemian Rhapsody",
+    "artistInfo": {
+      "performanceVersion": "Queen",
+      "originalArtist": "Queen"
+    },
+    "musicalDetails": {
+      "key": "B major"
+    },
+    "performanceNotes": {
+      "arrangement": "Full arrangement, multi-part",
+      "leadSinger": "Person A",
+      "specialNotes": "Requires strong vocal harmonies, multiple key changes",
+      "generalNotes": "Complex arrangement, rehearse regularly"
+    },
+    "resources": {
+      "youtubeUrl": "https://www.youtube.com/watch?v=fJ9rUzIMt7o",
+      "mp3Url": null,
+      "lyricsUrl": "https://genius.com/Queen-bohemian-rhapsody-lyrics",
+      "chartPdfUrl": null
+    },
+    "status": "learning",
+    "dateAdded": "2025-02-10",
+    "lastUpdated": "2025-06-15"
+  }
+]
