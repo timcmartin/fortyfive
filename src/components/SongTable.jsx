@@ -1,4 +1,30 @@
+import { Play, FileText, FileMusic, Music } from 'lucide-react';
 import { getStatus } from '@/lib/statuses';
+
+const RESOURCES = [
+  { key: 'youtubeUrl',  Icon: Play,       label: 'YouTube' },
+  { key: 'lyricsUrl',   Icon: FileText,   label: 'Lyrics'  },
+  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart'   },
+  { key: 'mp3Url',      Icon: Music,      label: 'MP3'     },
+];
+
+function ResourceCell({ url, Icon, label }) {
+  if (url) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={label}
+        onClick={(e) => e.stopPropagation()}
+        className="text-primary hover:text-primary/70 transition-colors"
+      >
+        <Icon className="size-4" />
+      </a>
+    );
+  }
+  return <Icon className="size-4 text-base-content/15" />;
+}
 
 export function SongTable({ songs, onSelectSong }) {
   if (songs.length === 0) {
@@ -18,7 +44,9 @@ export function SongTable({ songs, onSelectSong }) {
             <th>Artist</th>
             <th>Key</th>
             <th>Status</th>
-            <th>Action</th>
+            {RESOURCES.map(({ key, label }) => (
+              <th key={key} className="text-center">{label}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -36,14 +64,13 @@ export function SongTable({ songs, onSelectSong }) {
                 <td>
                   <span className={`badge ${status.badge}`}>{status.label}</span>
                 </td>
-                <td>
-                  <button
-                    className="btn btn-ghost btn-xs"
-                    onClick={(e) => { e.stopPropagation(); onSelectSong(song); }}
-                  >
-                    Details
-                  </button>
-                </td>
+                {RESOURCES.map(({ key, Icon, label }) => (
+                  <td key={key}>
+                    <div className="flex justify-center">
+                      <ResourceCell url={song.resources[key]} Icon={Icon} label={label} />
+                    </div>
+                  </td>
+                ))}
               </tr>
             );
           })}
