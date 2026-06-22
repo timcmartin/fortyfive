@@ -51,6 +51,7 @@ export default function App() {
               <StatusFilter
                 selectedStatus={selectedStatus}
                 onChange={setSelectedStatus}
+                songs={songs}
               />
               <p className="text-sm text-base-content/50">
                 Showing {filteredSongs.length} of {songs.length} songs
