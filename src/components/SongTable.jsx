@@ -1,60 +1,52 @@
+const STATUS_BADGE = {
+  active: 'badge-success',
+  learning: 'badge-warning',
+  retired: 'badge-ghost',
+  'on-hold': 'badge-neutral',
+};
+
 export function SongTable({ songs, onSelectSong }) {
   if (songs.length === 0) {
     return (
-      <div className="text-center py-12 text-gray-500">
+      <div className="text-center py-12 text-base-content/50">
         <p className="text-lg">No songs found</p>
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-gray-200">
-      <table className="w-full">
-        <thead className="bg-gray-100 border-b border-gray-200">
+    <div className="overflow-x-auto rounded-box border border-base-300">
+      <table className="table table-zebra w-full">
+        <thead>
           <tr>
-            <th className="text-left px-4 py-3 font-semibold">Title</th>
-            <th className="text-left px-4 py-3 font-semibold">Artist</th>
-            <th className="text-left px-4 py-3 font-semibold">Key</th>
-            <th className="text-left px-4 py-3 font-semibold">Status</th>
-            <th className="text-left px-4 py-3 font-semibold">Action</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Key</th>
+            <th>Status</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {songs.map((song) => (
             <tr
               key={song.id}
-              className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer"
+              className="hover cursor-pointer"
               onClick={() => onSelectSong(song)}
             >
-              <td className="px-4 py-3">{song.title}</td>
-              <td className="px-4 py-3 text-gray-600">
-                {song.artistInfo.performanceVersion}
-              </td>
-              <td className="px-4 py-3 text-gray-600">{song.musicalDetails.key}</td>
-              <td className="px-4 py-3">
-                <span
-                  className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                    song.status === 'active'
-                      ? 'bg-green-100 text-green-800'
-                      : song.status === 'learning'
-                      ? 'bg-blue-100 text-blue-800'
-                      : song.status === 'retired'
-                      ? 'bg-gray-100 text-gray-800'
-                      : 'bg-yellow-100 text-yellow-800'
-                  }`}
-                >
+              <td className="font-medium">{song.title}</td>
+              <td>{song.artistInfo.performanceVersion}</td>
+              <td>{song.musicalDetails.key}</td>
+              <td>
+                <span className={`badge ${STATUS_BADGE[song.status] ?? 'badge-ghost'}`}>
                   {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
                 </span>
               </td>
-              <td className="px-4 py-3">
+              <td>
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectSong(song);
-                  }}
-                  className="text-blue-500 hover:underline font-medium"
+                  className="btn btn-ghost btn-xs"
+                  onClick={(e) => { e.stopPropagation(); onSelectSong(song); }}
                 >
-                  View Details
+                  Details
                 </button>
               </td>
             </tr>

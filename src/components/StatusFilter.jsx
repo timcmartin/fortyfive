@@ -13,11 +13,7 @@ export function StatusFilter({ selectedStatus, onChange }) {
         <button
           key={status.value}
           onClick={() => onChange(status.value)}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-            selectedStatus === status.value
-              ? 'bg-blue-500 text-white'
-              : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-          }`}
+          className={`btn btn-sm ${selectedStatus === status.value ? 'btn-primary' : 'btn-ghost'}`}
         >
           {status.label}
         </button>

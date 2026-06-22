@@ -1,157 +1,121 @@
+import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 
+const STATUS_BADGE = {
+  active: 'badge-success',
+  learning: 'badge-warning',
+  retired: 'badge-ghost',
+  'on-hold': 'badge-neutral',
+};
+
 export function SongModal({ song, onClose }) {
-  if (!song) return null;
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    if (song) {
+      dialogRef.current?.showModal();
+    } else {
+      dialogRef.current?.close();
+    }
+  }, [song]);
+
+  if (!song) return <dialog ref={dialogRef} className="modal" />;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b border-gray-200 sticky top-0 bg-white">
-          <h2 className="text-2xl font-bold">{song.title}</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
-          >
-            <X size={24} />
+    <dialog ref={dialogRef} className="modal" onClose={onClose}>
+      <div className="modal-box max-w-2xl">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-6">
+          <button className="btn btn-sm btn-circle btn-ghost" onClick={onClose}>
+            <X className="size-4" />
           </button>
+          <h2 className="text-xl font-bold truncate">{song.title}</h2>
+          <span className={`badge ml-auto ${STATUS_BADGE[song.status] ?? 'badge-ghost'}`}>
+            {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
+          </span>
         </div>
 
-        <div className="p-6 space-y-6">
-          {/* Artist Info */}
+        <div className="space-y-5">
+          {/* Artist */}
           <div>
-            <h3 className="text-lg font-semibold mb-2">Artist Information</h3>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Artist</p>
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-gray-600">Performance Version</p>
+                <p className="text-xs opacity-60 mb-0.5">Performance Version</p>
                 <p className="font-medium">{song.artistInfo.performanceVersion}</p>
               </div>
               <div>
-                <p className="text-gray-600">Original Artist</p>
+                <p className="text-xs opacity-60 mb-0.5">Original Artist</p>
                 <p className="font-medium">{song.artistInfo.originalArtist}</p>
               </div>
             </div>
           </div>
 
+          <div className="divider my-0" />
+
           {/* Musical Details */}
           <div>
-            <h3 className="text-lg font-semibold mb-2">Musical Details</h3>
-            <p className="text-sm">
-              <span className="text-gray-600">Key:</span>{' '}
-              <span className="font-medium">{song.musicalDetails.key}</span>
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Musical Details</p>
+            <p><span className="opacity-60">Key: </span><span className="font-medium">{song.musicalDetails.key}</span></p>
           </div>
 
           {/* Performance Notes */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Performance Notes</h3>
-            <div className="space-y-2 text-sm">
-              {song.performanceNotes.arrangement && (
-                <div>
-                  <p className="text-gray-600">Arrangement</p>
-                  <p>{song.performanceNotes.arrangement}</p>
+          {(song.performanceNotes.arrangement || song.performanceNotes.leadSinger ||
+            song.performanceNotes.specialNotes || song.performanceNotes.generalNotes) && (
+            <>
+              <div className="divider my-0" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Performance Notes</p>
+                <div className="space-y-2 text-sm">
+                  {song.performanceNotes.arrangement && <p><span className="opacity-60">Arrangement: </span>{song.performanceNotes.arrangement}</p>}
+                  {song.performanceNotes.leadSinger && <p><span className="opacity-60">Lead Singer: </span>{song.performanceNotes.leadSinger}</p>}
+                  {song.performanceNotes.specialNotes && <p><span className="opacity-60">Special Notes: </span>{song.performanceNotes.specialNotes}</p>}
+                  {song.performanceNotes.generalNotes && <p><span className="opacity-60">General Notes: </span>{song.performanceNotes.generalNotes}</p>}
                 </div>
-              )}
-              {song.performanceNotes.leadSinger && (
-                <div>
-                  <p className="text-gray-600">Lead Singer</p>
-                  <p>{song.performanceNotes.leadSinger}</p>
-                </div>
-              )}
-              {song.performanceNotes.specialNotes && (
-                <div>
-                  <p className="text-gray-600">Special Notes</p>
-                  <p>{song.performanceNotes.specialNotes}</p>
-                </div>
-              )}
-              {song.performanceNotes.generalNotes && (
-                <div>
-                  <p className="text-gray-600">General Notes</p>
-                  <p>{song.performanceNotes.generalNotes}</p>
-                </div>
-              )}
-            </div>
-          </div>
+              </div>
+            </>
+          )}
 
           {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Resources</h3>
-            <div className="space-y-2">
-              {song.resources.youtubeUrl && (
-                <a
-                  href={song.resources.youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-blue-500 hover:underline"
-                >
-                  🎥 Watch on YouTube
-                </a>
-              )}
-              {song.resources.lyricsUrl && (
-                <a
-                  href={song.resources.lyricsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-blue-500 hover:underline"
-                >
-                  📝 View Lyrics
-                </a>
-              )}
-              {song.resources.mp3Url && (
-                <a
-                  href={song.resources.mp3Url}
-                  download
-                  className="block text-blue-500 hover:underline"
-                >
-                  🎵 Download MP3
-                </a>
-              )}
-              {song.resources.chartPdfUrl && (
-                <a
-                  href={song.resources.chartPdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-blue-500 hover:underline"
-                >
-                  📄 View Sheet Music
-                </a>
-              )}
-              {!song.resources.youtubeUrl &&
-                !song.resources.lyricsUrl &&
-                !song.resources.mp3Url &&
-                !song.resources.chartPdfUrl && (
-                  <p className="text-gray-500 text-sm">No resources available</p>
-                )}
-            </div>
-          </div>
-
-          {/* Status */}
-          <div className="pt-4 border-t border-gray-200">
-            <p className="text-sm text-gray-600">Status</p>
-            <span
-              className={`inline-block mt-1 px-3 py-1 rounded-full text-sm font-medium ${
-                song.status === 'active'
-                  ? 'bg-green-100 text-green-800'
-                  : song.status === 'learning'
-                  ? 'bg-blue-100 text-blue-800'
-                  : song.status === 'retired'
-                  ? 'bg-gray-100 text-gray-800'
-                  : 'bg-yellow-100 text-yellow-800'
-              }`}
-            >
-              {song.status.charAt(0).toUpperCase() + song.status.slice(1)}
-            </span>
-          </div>
+          {(song.resources.youtubeUrl || song.resources.lyricsUrl || song.resources.mp3Url || song.resources.chartPdfUrl) && (
+            <>
+              <div className="divider my-0" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Resources</p>
+                <div className="flex flex-wrap gap-2">
+                  {song.resources.youtubeUrl && (
+                    <a href={song.resources.youtubeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                      🎥 YouTube
+                    </a>
+                  )}
+                  {song.resources.lyricsUrl && (
+                    <a href={song.resources.lyricsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                      📝 Lyrics
+                    </a>
+                  )}
+                  {song.resources.mp3Url && (
+                    <a href={song.resources.mp3Url} download className="btn btn-sm btn-outline">
+                      🎵 MP3
+                    </a>
+                  )}
+                  {song.resources.chartPdfUrl && (
+                    <a href={song.resources.chartPdfUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                      📄 Sheet Music
+                    </a>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
-        <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
-          <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-medium"
-          >
-            Close
-          </button>
+        <div className="modal-action">
+          <button className="btn" onClick={onClose}>Close</button>
         </div>
       </div>
-    </div>
+      <form method="dialog" className="modal-backdrop">
+        <button onClick={onClose}>close</button>
+      </form>
+    </dialog>
   );
 }

@@ -15,61 +15,44 @@ export default function App() {
     return songs.filter((song) => {
       const matchesSearch =
         song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        song.artistInfo.performanceVersion
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase());
-
-      const matchesStatus =
-        selectedStatus === 'all' || song.status === selectedStatus;
-
+        song.artistInfo.performanceVersion.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesStatus = selectedStatus === 'all' || song.status === selectedStatus;
       return matchesSearch && matchesStatus;
     });
   }, [songs, searchTerm, selectedStatus]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-2">Band Song Catalog</h1>
-        <p className="text-gray-600 mb-8">
-          Browse and learn about all the songs in our repertoire
-        </p>
+    <div className="min-h-screen bg-base-200">
+      <div className="max-w-5xl mx-auto px-4 py-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold">Band Song Catalog</h1>
+          <p className="text-base-content/60 mt-2">Browse and learn about all the songs in our repertoire</p>
+        </div>
 
         {error && (
-          <div className="mb-6 p-4 bg-red-100 text-red-800 rounded-lg">
-            Error loading songs: {error}
+          <div className="alert alert-error mb-6">
+            <span>Error loading songs: {error}</span>
           </div>
         )}
 
         {loading ? (
-          <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">Loading songs...</p>
+          <div className="flex justify-center py-12">
+            <span className="loading loading-spinner loading-lg" />
           </div>
         ) : (
-          <div className="space-y-6">
-            {/* Search Bar */}
-            <SearchBar value={searchTerm} onChange={setSearchTerm} />
-
-            {/* Status Filter */}
-            <StatusFilter
-              selectedStatus={selectedStatus}
-              onChange={setSelectedStatus}
-            />
-
-            {/* Song Count */}
-            <div className="text-sm text-gray-600">
-              Showing {filteredSongs.length} of {songs.length} songs
+          <div className="card bg-base-100 shadow-sm">
+            <div className="card-body gap-4">
+              <SearchBar value={searchTerm} onChange={setSearchTerm} />
+              <StatusFilter selectedStatus={selectedStatus} onChange={setSelectedStatus} />
+              <p className="text-sm text-base-content/50">
+                Showing {filteredSongs.length} of {songs.length} songs
+              </p>
+              <SongTable songs={filteredSongs} onSelectSong={setSelectedSong} />
             </div>
-
-            {/* Song Table */}
-            <SongTable
-              songs={filteredSongs}
-              onSelectSong={setSelectedSong}
-            />
           </div>
         )}
       </div>
 
-      {/* Song Modal */}
       <SongModal song={selectedSong} onClose={() => setSelectedSong(null)} />
     </div>
   );
