@@ -43,7 +43,7 @@
     },
     "resources": {
       "youtubeUrl": null,
-      "mp3Url": null,
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/8675309.mp3",
       "lyricsUrl": "https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics",
       "chartPdfUrl": null
     },
