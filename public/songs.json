@@ -36,7 +36,7 @@
       "key": "F# minor"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "We double the length of the guitar solo.",
       "leadSinger": "Richard",
       "specialNotes": "",
       "generalNotes": ""
@@ -103,7 +103,7 @@
         "https://genius.com/Jimi-Hendrix-All-Along-the-Watchtower-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -115,10 +115,10 @@
       "originalArtist": "Shania Twain"
     },
     "musicalDetails": {
-      "key": null
+      "key": "E Flat"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Same key as recording.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
@@ -173,7 +173,7 @@
     },
     "performanceNotes": {
       "arrangement": "",
-      "leadSinger": null,
+      "leadSinger": "Richard",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -201,7 +201,7 @@
       "arrangement": "",
       "leadSinger": null,
       "specialNotes": "",
-      "generalNotes": ""
+      "generalNotes": "We have been skipping it pretty much all the time lately."
     },
     "resources": {
       "youtubeUrl": null,
@@ -301,10 +301,10 @@
       "originalArtist": "Don Henley"
     },
     "musicalDetails": {
-      "key": null
+      "key": "E Flat minor"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Jam out at the end.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
@@ -462,8 +462,8 @@
       "key": null
     },
     "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
+      "arrangement": "Vocal harmonies in the chorus.",
+      "leadSinger": "Richard",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -731,7 +731,7 @@
     },
     "performanceNotes": {
       "arrangement": "",
-      "leadSinger": null,
+      "leadSinger": "Steve and lead swap",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -821,7 +821,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Edge Of Seventeen.pdf",
       "lyricsUrls": ["https://genius.com/Stevie-Nicks-Edge-of-Seventeen-lyrics"]
     },
-    "status": "retired",
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -833,10 +833,10 @@
       "originalArtist": "Tears for Fears"
     },
     "musicalDetails": {
-      "key": null
+      "key": "D major"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Jam out at the end.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
@@ -861,13 +861,13 @@
       "originalArtist": "Willie Bobo"
     },
     "musicalDetails": {
-      "key": null
+      "key": "G minor"
     },
     "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
+      "arrangement": "Big ass keyboard solo first, guitar solo at end.",
+      "leadSinger": "Everybody",
       "specialNotes": "",
-      "generalNotes": ""
+      "generalNotes": "Gang vocals."
     },
     "resources": {
       "youtubeUrl": null,
@@ -1143,7 +1143,7 @@
         "https://genius.com/The-Spencer-Davis-Group-Gimme-Some-Lovin-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1155,10 +1155,10 @@
       "originalArtist": "ABBA"
     },
     "musicalDetails": {
-      "key": null
+      "key": "D minor"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Bass and guitar solos after the second chorus - come back in on PreChorus.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
@@ -1291,10 +1291,10 @@
       "originalArtist": "Blondie"
     },
     "musicalDetails": {
-      "key": null
+      "key": "E"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Slightly different than recorded version - mp3 is the best reference.",
       "leadSinger": null,
       "specialNotes": "",
       "generalNotes": ""
@@ -1375,7 +1375,7 @@
     },
     "performanceNotes": {
       "arrangement": "",
-      "leadSinger": null,
+      "leadSinger": "Steve",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -1385,7 +1385,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Hold On, I'm Coming.pdf",
       "lyricsUrls": ["https://genius.com/Sam-and-Dave-Hold-On-Im-Coming-lyrics"]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1477,16 +1477,16 @@
       "originalArtist": "Daryl Hall & John Oates"
     },
     "musicalDetails": {
-      "key": null
+      "key": "C minor"
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "Keyboard solo at end, Guitar melod cues.",
       "leadSinger": null,
       "specialNotes": "",
-      "generalNotes": ""
+      "generalNotes": "The version with CeeLo Green at Daryl's House is where we ripped this off from."
     },
     "resources": {
-      "youtubeUrl": null,
+      "youtubeUrl": "https://youtu.be/fSEm7ju8Ruo?si=j-WqUCHerO0d6xBv",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/i-cant-go-for-that-no-can-do.mp3",
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/I Can't Go For That.pdf",
       "lyricsUrls": [
@@ -1562,7 +1562,7 @@
       "key": null
     },
     "performanceNotes": {
-      "arrangement": "",
+      "arrangement": "All in on 'I Thank You' lyrics",
       "leadSinger": "Richard",
       "specialNotes": "",
       "generalNotes": ""
@@ -1601,7 +1601,7 @@
         "https://genius.com/Cheap-Trick-I-Want-You-to-Want-Me-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1911,7 +1911,7 @@
     },
     "performanceNotes": {
       "arrangement": "",
-      "leadSinger": null,
+      "leadSinger": "Steve",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -2001,7 +2001,7 @@
         "https://genius.com/The-Hollies-Long-Cool-Woman-In-a-Black-Dress-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2133,7 +2133,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Magic Carpet Ride.pdf",
       "lyricsUrls": ["https://genius.com/Steppenwolf-Magic-Carpet-Ride-lyrics"]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2505,7 +2505,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/One Way Or Another.pdf",
       "lyricsUrls": ["https://genius.com/Blondie-One-Way-or-Another-lyrics"]
     },
-    "status": "retired",
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2743,7 +2743,7 @@
         "https://genius.com/Elton-John-Saturday-nights-alright-for-fighting-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2849,7 +2849,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Shakin All Over.pdf",
       "lyricsUrls": ["https://genius.com/The-Guess-Who-Shakin-all-over-lyrics"]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2865,7 +2865,7 @@
     },
     "performanceNotes": {
       "arrangement": "",
-      "leadSinger": null,
+      "leadSinger": "Richard",
       "specialNotes": "",
       "generalNotes": ""
     },
@@ -2985,7 +2985,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Spooky.pdf",
       "lyricsUrls": ["https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics"]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -3063,7 +3063,7 @@
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Sunglasses At Night.pdf",
       "lyricsUrls": ["https://genius.com/Corey-Hart-Sunglasses-at-Night-lyrics"]
     },
-    "status": "retired",
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -3307,7 +3307,7 @@
         "https://genius.com/Jefferson-Airplane-White-Rabbit-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -3363,7 +3363,7 @@
         "https://genius.com/Alanis-Morissette-You-Oughta-Know-lyrics"
       ]
     },
-    "status": "retired",
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
