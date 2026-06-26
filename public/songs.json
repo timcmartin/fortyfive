@@ -1,31 +1,5 @@
 [
   {
-    "id": "50-ways-to-say-goodbye",
-    "title": "50 Ways to Say Goodbye",
-    "artistInfo": {
-      "performanceVersion": "Train",
-      "originalArtist": "Train"
-    },
-    "musicalDetails": {
-      "key": "Eb minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": "https://youtu.be/AYsUCFTfdVk?si=PeuVVDrt9I-Mg1am",
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/50 Ways To Say Goodbye.pdf",
-      "lyricsUrls": ["https://genius.com/Train-50-Ways-to-Say-Goodbye-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "867-5309-jenny",
     "title": "867-5309/Jenny",
     "artistInfo": {
@@ -48,34 +22,6 @@
       "lyricsUrls": ["https://genius.com/Tommy-Tutone-867-5309-jenny-lyrics"]
     },
     "status": "active",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "adventure-of-a-lifetime",
-    "title": "Adventure of a Lifetime",
-    "artistInfo": {
-      "performanceVersion": "Coldplay",
-      "originalArtist": "Coldplay"
-    },
-    "musicalDetails": {
-      "key": "A minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": "https://youtu.be/1D4YKwlhwFo?si=lJozIIHgL4TOLtg4",
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Adventure Of A Lifetime - Guitar.pdf",
-      "lyricsUrls": [
-        "https://genius.com/Coldplay-Adventure-of-a-Lifetime-lyrics"
-      ]
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -104,6 +50,32 @@
       ]
     },
     "status": "filler",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "All I Wanna Do",
+    "title": "All I Wanna Do",
+    "artistInfo": {
+      "performanceVersion": "Sheryl Crow",
+      "originalArtist": "Sheryl Crow"
+    },
+    "musicalDetails": {
+      "key": "A"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "",
+      "mp3Url": "",
+      "chartPdfUrl": "",
+      "lyricsUrls": []
+    },
+    "status": "on-hold",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -262,34 +234,6 @@
       "lyricsUrls": ["https://genius.com/Michael-Jackson-Billie-Jean-lyrics"]
     },
     "status": "active",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "boogie-on-reggae-woman",
-    "title": "Boogie On Reggae Woman",
-    "artistInfo": {
-      "performanceVersion": "Stevie Wonder",
-      "originalArtist": "Stevie Wonder"
-    },
-    "musicalDetails": {
-      "key": "Ab"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Boogie On Reggae Woman.pdf",
-      "lyricsUrls": [
-        "https://genius.com/Stevie-Wonder-Boogie-On-Reggae-Woman-lyrics"
-      ]
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -534,32 +478,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "disco-inferno",
-    "title": "Disco Inferno",
-    "artistInfo": {
-      "performanceVersion": "The Trammps",
-      "originalArtist": "The Trammps"
-    },
-    "musicalDetails": {
-      "key": "B minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Disco Inferno.pdf",
-      "lyricsUrls": ["https://genius.com/The-Trammps-Disco-Inferno-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "dog-days-are-over",
     "title": "Dog Days Are Over",
     "artistInfo": {
@@ -582,32 +500,6 @@
       "lyricsurls": [
         "https://genius.com/florence-the-machine-dog-days-are-over-lyrics"
       ]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "dont",
-    "title": "Don't",
-    "artistInfo": {
-      "performanceVersion": "Ed Sheeran",
-      "originalArtist": "Ed Sheeran"
-    },
-    "musicalDetails": {
-      "key": "F minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Don't.pdf",
-      "lyricsUrls": ["https://genius.com/Ed-Sheeran-Dont-lyrics"]
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -1258,32 +1150,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "happy-anniversary",
-    "title": "Happy Anniversary",
-    "artistInfo": {
-      "performanceVersion": "Little River Band",
-      "originalArtist": "Little River Band"
-    },
-    "musicalDetails": {
-      "key": "E minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Happy Anniversary.pdf",
-      "lyricsUrls": []
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "heart-of-glass",
     "title": "Heart of Glass",
     "artistInfo": {
@@ -1444,32 +1310,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "hush",
-    "title": "Hush",
-    "artistInfo": {
-      "performanceVersion": "Deep Purple",
-      "originalArtist": "Billy Joe Royal"
-    },
-    "musicalDetails": {
-      "key": "C minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Hush.pdf",
-      "lyricsUrls": ["https://genius.com/Deep-Purple-Hush-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "i-cant-go-for-that-no-can-do",
     "title": "I Can't Go for That (No Can Do)",
     "artistInfo": {
@@ -1494,34 +1334,6 @@
       ]
     },
     "status": "active",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "i-saw-her-standing-there",
-    "title": "I Saw Her Standing There",
-    "artistInfo": {
-      "performanceVersion": "The Beatles",
-      "originalArtist": "The Beatles"
-    },
-    "musicalDetails": {
-      "key": "E major"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/I Saw Her Standing There.pdf",
-      "lyricsUrls": [
-        "https://genius.com/The-Beatles-I-Saw-Her-Standing-There-lyrics"
-      ]
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1628,6 +1440,32 @@
       "lyricsUrls": ["https://genius.com/Gloria-Gaynor-I-Will-Survive-lyrics"]
     },
     "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "I'm The Only One",
+    "title": "I'm The Only One",
+    "artistInfo": {
+      "performanceVersion": "Melissa Ethridge",
+      "originalArtist": "Melissa Ethridge"
+    },
+    "musicalDetails": {
+      "key": "G"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "",
+      "mp3Url": "",
+      "chartPdfUrl": "",
+      "lyricsUrls": []
+    },
+    "status": "learning",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -1848,6 +1686,33 @@
     "lastUpdated": "2025-06-22"
   },
   {
+    "id": "Kiss",
+    "title": "Kiss",
+    "artistInfo": {
+      "performanceVersion": "Prince",
+      "originalArtist": "Tom Jones"
+    },
+    "musicalDetails": {
+      "key": "A"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "",
+      "mp3Url": "",
+      "chartPdfUrl": "",
+      "lyricsUrls": []
+    },
+    "status": "active",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+
+  {
     "id": "kryptonite",
     "title": "Kryptonite",
     "artistInfo": {
@@ -1870,32 +1735,6 @@
       "lyricsUrls": ["https://genius.com/3-Doors-Down-Kryptonite-lyrics"]
     },
     "status": "active",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "ladies-night",
-    "title": "Ladies Night",
-    "artistInfo": {
-      "performanceVersion": "Kool & The Gang",
-      "originalArtist": "Kool & The Gang"
-    },
-    "musicalDetails": {
-      "key": "E"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Ladies Night.pdf",
-      "lyricsUrls": ["https://genius.com/Kool-and-The-Gang-Ladies-Night-lyrics"]
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2138,34 +1977,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "mama-told-me-not-to-come",
-    "title": "Mama Told Me (Not to Come)",
-    "artistInfo": {
-      "performanceVersion": "Three Dog Night",
-      "originalArtist": "Randy Newman"
-    },
-    "musicalDetails": {
-      "key": "Ab"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Mama Told Me Not To Come.pdf",
-      "lyricsUrls": [
-        "https://genius.com/Three-Dog-Night-Mama-Told-Me-Not-to-Come-lyrics"
-      ]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "mamas-broken-heart",
     "title": "Mama's Broken Heart",
     "artistInfo": {
@@ -2242,32 +2053,6 @@
       "lyricsUrls": ["https://genius.com/Hall-and-oates-Maneater-lyrics"]
     },
     "status": "active",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "marina-del-rey",
-    "title": "Marina Del Rey",
-    "artistInfo": {
-      "performanceVersion": "Marc Jordan",
-      "originalArtist": "Marc Jordan"
-    },
-    "musicalDetails": {
-      "key": "E"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Marina Del Rey.pdf",
-      "lyricsUrls": []
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -2432,32 +2217,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "move-over",
-    "title": "Move Over",
-    "artistInfo": {
-      "performanceVersion": "Janis Joplin",
-      "originalArtist": "Janis Joplin"
-    },
-    "musicalDetails": {
-      "key": "F"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Move Over.pdf",
-      "lyricsUrls": ["https://genius.com/Janis-Joplin-Move-Over-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "no-roots",
     "title": "No Roots",
     "artistInfo": {
@@ -2530,32 +2289,6 @@
       "mp3Url": null,
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Peg.pdf",
       "lyricsUrls": ["https://genius.com/Steely-Dan-Peg-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "play-something-sweet-brickyard-blues",
-    "title": "Play Something Sweet (Brickyard Blues)",
-    "artistInfo": {
-      "performanceVersion": "Three Dog Night",
-      "originalArtist": "Allen Toussaint"
-    },
-    "musicalDetails": {
-      "key": "C"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Play Something Sweet.pdf",
-      "lyricsUrls": []
     },
     "status": "retired",
     "dateAdded": "2025-01-01",
@@ -2774,34 +2507,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "sgt-peppers-lonely-hearts-club-band",
-    "title": "Sgt. Pepper's Lonely Hearts Club Band",
-    "artistInfo": {
-      "performanceVersion": "The Beatles",
-      "originalArtist": "The Beatles"
-    },
-    "musicalDetails": {
-      "key": "G"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Sergeant Peppers.pdf",
-      "lyricsUrls": [
-        "https://genius.com/The-Beatles-Sgt-peppers-lonely-hearts-club-band-lyrics"
-      ]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "shake-it-off",
     "title": "Shake It Off",
     "artistInfo": {
@@ -2936,6 +2641,32 @@
     "lastUpdated": "2025-06-22"
   },
   {
+    "id": "Some Kind Of Wonderful",
+    "title": "Some Kind Of Wonderful",
+    "artistInfo": {
+      "performanceVersion": "Grand Funk Railroad",
+      "originalArtist": "Grand Funk Railroad"
+    },
+    "musicalDetails": {
+      "key": "D"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "",
+      "mp3Url": "",
+      "chartPdfUrl": "",
+      "lyricsUrls": []
+    },
+    "status": "learning",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
     "id": "something-to-talk-about",
     "title": "Something To Talk About",
     "artistInfo": {
@@ -2986,6 +2717,32 @@
       "lyricsUrls": ["https://genius.com/Atlanta-Rhythm-Section-Spooky-lyrics"]
     },
     "status": "filler",
+    "dateAdded": "2025-01-01",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "Stompa",
+    "title": "Stompa",
+    "artistInfo": {
+      "performanceVersion": "Serena Ryder",
+      "originalArtist": "Serena Ryder"
+    },
+    "musicalDetails": {
+      "key": "E"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": "",
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "",
+      "mp3Url": "",
+      "chartPdfUrl": "",
+      "lyricsUrls": []
+    },
+    "status": "learning",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
@@ -3068,32 +2825,6 @@
     "lastUpdated": "2025-06-22"
   },
   {
-    "id": "super-freak",
-    "title": "Super Freak",
-    "artistInfo": {
-      "performanceVersion": "Rick James",
-      "originalArtist": "Rick James"
-    },
-    "musicalDetails": {
-      "key": "A minor"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Super Freak.pdf",
-      "lyricsUrls": ["https://genius.com/Rick-James-Super-Freak-lyrics"]
-    },
-    "status": "retired",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
     "id": "mashup",
     "title": "Sweet Dreams / White Stripes Mashup",
     "artistInfo": {
@@ -3172,34 +2903,6 @@
       "lyricsUrls": ["https://genius.com/Glenn-Frey-The-Heat-Is-On-lyrics"]
     },
     "status": "on-hold",
-    "dateAdded": "2025-01-01",
-    "lastUpdated": "2025-06-22"
-  },
-  {
-    "id": "the-wind-cries-mary",
-    "title": "The Wind Cries Mary",
-    "artistInfo": {
-      "performanceVersion": "Jimi Hendrix",
-      "originalArtist": "Jimi Hendrix"
-    },
-    "musicalDetails": {
-      "key": "F"
-    },
-    "performanceNotes": {
-      "arrangement": "",
-      "leadSinger": null,
-      "specialNotes": "",
-      "generalNotes": ""
-    },
-    "resources": {
-      "youtubeUrl": null,
-      "mp3Url": null,
-      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/The Wind Cries Mary.pdf",
-      "lyricsUrls": [
-        "https://genius.com/Jimi-Hendrix-The-Wind-Cries-Mary-lyrics"
-      ]
-    },
-    "status": "retired",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
   },
