@@ -70,10 +70,10 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "",
+      "youtubeUrl": "https://youtu.be/ClbmWkbocoY?si=LXVmWlaUAXrvdLTy",
       "mp3Url": "",
-      "chartPdfUrl": "",
-      "lyricsUrls": []
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/All I Wanna Do.pdf",
+      "lyricsUrls": ["https://genius.com/Sheryl-crow-all-i-wanna-do-lyrics"]
     },
     "status": "on-hold",
     "dateAdded": "2025-01-01",
@@ -363,7 +363,9 @@
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/cold-cold-heart.mp3",
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Cold, Cold Heart.pdf",
-      "lyricsUrls": []
+      "lyricsUrls": [
+        "https://genius.com/Elton-john-and-dua-lipa-cold-heart-pnau-remix-lyrics"
+      ]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -816,7 +818,7 @@
     "resources": {
       "youtubeUrl": null,
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/feel-it-still.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Feel It Still - lead sheet.pdf",
       "lyricsUrls": ["https://genius.com/Portugal-the-man-feel-it-still-lyrics"]
     },
     "status": "active",
@@ -842,7 +844,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/K9S5EZgIJck?si=IeeC71SMH6l2uflL",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/fire.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Fire.pdf",
       "lyricsUrls": ["https://genius.com/The-pointer-sisters-fire-lyrics"]
     },
     "status": "active",
@@ -1460,10 +1462,12 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "",
+      "youtubeUrl": "https://youtu.be/xB-QQAM1GDM?si=cKpWGjcsO3TDu3Ed",
       "mp3Url": "",
-      "chartPdfUrl": "",
-      "lyricsUrls": []
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/I'm the Only One.pdf",
+      "lyricsUrls": [
+        "https://genius.com/Melissa-etheridge-im-the-only-one-lyrics"
+      ]
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
@@ -1702,10 +1706,10 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "",
+      "youtubeUrl": "https://youtu.be/H9tEvfIsDyo?si=yH9raYBDr7-dhLBc",
       "mp3Url": "",
-      "chartPdfUrl": "",
-      "lyricsUrls": []
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Kiss - Band.pdf",
+      "lyricsUrls": ["https://genius.com/Prince-and-the-revolution-kiss-lyrics"]
     },
     "status": "active",
     "dateAdded": "2025-01-01",
@@ -1993,12 +1997,12 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": null,
+      "youtubeUrl": "https://youtu.be/7yg05svXp98?si=0_9U3vnVuqyH3GX0",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/mamas-broken-heart.mp3",
       "lyricsUrls": [
         "https://genius.com/Miranda-Lambert-Mama-s-Broken-Heart-lyrics"
       ],
-      "chartPdfUrl": null
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Mama's Broken Heart.pdf"
     },
     "status": "active",
     "dateAdded": "2025-06-22",
@@ -2021,10 +2025,10 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": null,
+      "youtubeUrl": "https://youtu.be/oIv_Y2RPQ_A?si=8U3-PQmqJp3d0gUX",
       "mp3Url": null,
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Man I Need.pdf",
-      "lyricsUrls": []
+      "lyricsUrls": ["https://genius.com/Olivia-dean-man-i-need-lyrics"]
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
@@ -2233,10 +2237,10 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": null,
+      "youtubeUrl": "https://youtu.be/PUdyuKaGQd4?si=D2KyxtJZ8tAv3ahw",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/no-roots.mp3",
       "lyricsUrls": ["https://genius.com/Alice-Merton-No-Roots-lyrics"],
-      "chartPdfUrl": null
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/No Roots.pdf"
     },
     "status": "active",
     "dateAdded": "2025-06-22",
@@ -2657,10 +2661,12 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "",
+      "youtubeUrl": "https://youtu.be/TLi_snVfRqI?si=OBEkURZgQSul2DHx",
       "mp3Url": "",
-      "chartPdfUrl": "",
-      "lyricsUrls": []
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Some Kind Of Wonderful.pdf",
+      "lyricsUrls": [
+        "https://genius.com/Grand-funk-railroad-some-kind-of-wonderful-lyrics"
+      ]
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
@@ -2685,9 +2691,9 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/mJ58TVYNFro?si=shkZZ0NvrzAFktBJ",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/something-to-talk-about.mp3",
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Something To Talk About.pdf",
       "lyricsUrls": [
-        "https://genius.com/Bonnie-raitt-something-to-talk-about-51-mix-lyrics"
+        "https://genius.com/Bonnie-raitt-something-to-talk-about-lyrics"
       ]
     },
     "status": "active",
@@ -2737,10 +2743,10 @@
       "generalNotes": ""
     },
     "resources": {
-      "youtubeUrl": "",
+      "youtubeUrl": "https://youtu.be/Vz7jCY1cpHk?si=kspdXnM6GuZcoxe4",
       "mp3Url": "",
-      "chartPdfUrl": "",
-      "lyricsUrls": []
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Stompa.pdf",
+      "lyricsUrls": ["https://genius.com/Serena-ryder-stompa-lyrics"]
     },
     "status": "learning",
     "dateAdded": "2025-01-01",
@@ -2933,6 +2939,31 @@
     "lastUpdated": "2025-06-22"
   },
   {
+    "id": "thriller",
+    "title": "Thriller",
+    "artistInfo": {
+      "performanceVersion": "Michael Jackson"
+    },
+    "musicalDetails": {
+      "key": "D minor"
+    },
+    "performanceNotes": {
+      "arrangement": null,
+      "leadSinger": null,
+      "specialNotes": null,
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "https://youtu.be/4V90AmXnguw?si=KTMsueXMeHLDGoWC",
+      "mp3Url": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Thriller.pdf",
+      "lyricsUrls": ["https://genius.com/Michael-jackson-thriller-lyrics"]
+    },
+    "status": "learning",
+    "dateAdded": "2026-07-31",
+    "lastUpdated": "2026-07-31"
+  },
+  {
     "id": "uptown-funk",
     "title": "Uptown Funk",
     "artistInfo": {
@@ -3013,6 +3044,31 @@
     "status": "filler",
     "dateAdded": "2025-01-01",
     "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": "wild-child",
+    "title": "Wild Child",
+    "artistInfo": {
+      "performanceVersion": "The Black Keys"
+    },
+    "musicalDetails": {
+      "key": "G minor"
+    },
+    "performanceNotes": {
+      "arrangement": "",
+      "leadSinger": null,
+      "specialNotes": "",
+      "generalNotes": ""
+    },
+    "resources": {
+      "youtubeUrl": "https://youtu.be/KKSmHOUaqaQ?si=UzpUIxCj70fBrNcx",
+      "mp3Url": null,
+      "chartPdfUrl": null,
+      "lyricsUrls": ["https://genius.com/The-black-keys-wild-child-lyrics"]
+    },
+    "status": "learning",
+    "dateAdded": "2026-07-31",
+    "lastUpdated": "2026-07-31"
   },
   {
     "id": "with-a-little-help-from-my-friends",
