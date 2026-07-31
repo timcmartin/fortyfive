@@ -63,6 +63,7 @@ export default function App() {
               <LeadSingerFilter
                 selectedLeadSinger={selectedLeadSinger}
                 onChange={setSelectedLeadSinger}
+                selectedStatus={selectedStatus}
                 songs={songs}
               />
               <p className="text-sm text-base-content/50">

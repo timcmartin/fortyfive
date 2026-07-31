@@ -1,8 +1,11 @@
-export function LeadSingerFilter({ selectedLeadSinger, onChange, songs = [] }) {
+export function LeadSingerFilter({ selectedLeadSinger, onChange, songs = [], selectedStatus = 'all' }) {
+  // Only consider songs matching the current status so counts reflect the StatusFilter
+  const filteredSongs = songs.filter((s) => selectedStatus === 'all' || s.status === selectedStatus);
+
   const leadSingers = new Set();
   let leadCount = 0;
 
-  songs.forEach((s) => {
+  filteredSongs.forEach((s) => {
     if (s.performanceNotes?.leadSinger) {
       leadSingers.add(s.performanceNotes.leadSinger);
     } else {
@@ -10,14 +13,14 @@ export function LeadSingerFilter({ selectedLeadSinger, onChange, songs = [] }) {
     }
   });
 
-  const all = { value: 'all', label: 'All Singers', count: songs.length };
+  const all = { value: 'all', label: 'All Singers', count: filteredSongs.length };
   const leadOption = { value: 'lead', label: 'Lead', count: leadCount };
   const singerOptions = Array.from(leadSingers)
     .sort()
     .map((singer) => ({
       value: singer,
       label: singer,
-      count: songs.filter((s) => s.performanceNotes?.leadSinger === singer).length,
+      count: filteredSongs.filter((s) => s.performanceNotes?.leadSinger === singer).length,
     }));
 
   return (
