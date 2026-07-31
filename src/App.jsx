@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { useSongs } from "./hooks/useSongs";
 import { SearchBar } from "./components/SearchBar";
 import { StatusFilter } from "./components/StatusFilter";
+import { LeadSingerFilter } from "./components/LeadSingerFilter";
 import { SongTable } from "./components/SongTable";
 import { SongModal } from "./components/SongModal";
 
@@ -9,6 +10,7 @@ export default function App() {
   const { songs, loading, error } = useSongs();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
+  const [selectedLeadSinger, setSelectedLeadSinger] = useState("all");
   const [selectedSong, setSelectedSong] = useState(null);
 
   const filteredSongs = useMemo(() => {
@@ -20,9 +22,14 @@ export default function App() {
           .includes(searchTerm.toLowerCase());
       const matchesStatus =
         selectedStatus === "all" || song.status === selectedStatus;
-      return matchesSearch && matchesStatus;
+      const matchesLeadSinger =
+        selectedLeadSinger === "all" ||
+        (selectedLeadSinger === "lead"
+          ? !song.performanceNotes?.leadSinger
+          : song.performanceNotes?.leadSinger === selectedLeadSinger);
+      return matchesSearch && matchesStatus && matchesLeadSinger;
     });
-  }, [songs, searchTerm, selectedStatus]);
+  }, [songs, searchTerm, selectedStatus, selectedLeadSinger]);
 
   return (
     <div className="min-h-screen bg-base-200">
@@ -51,6 +58,11 @@ export default function App() {
               <StatusFilter
                 selectedStatus={selectedStatus}
                 onChange={setSelectedStatus}
+                songs={songs}
+              />
+              <LeadSingerFilter
+                selectedLeadSinger={selectedLeadSinger}
+                onChange={setSelectedLeadSinger}
                 songs={songs}
               />
               <p className="text-sm text-base-content/50">

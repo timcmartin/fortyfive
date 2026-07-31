@@ -51,6 +51,7 @@ export function SongTable({ songs, onSelectSong }) {
             <th>Title</th>
             <th>Artist</th>
             <th>Key</th>
+            <th>Lead Singer</th>
             <th>Status</th>
             {RESOURCES.map(({ key, label }) => (
               <th key={key} className="text-center">{label}</th>
@@ -69,6 +70,7 @@ export function SongTable({ songs, onSelectSong }) {
                 <td className="font-medium">{song.title}</td>
                 <td>{song.artistInfo.performanceVersion}</td>
                 <td>{song.musicalDetails.key}</td>
+                <td>{song.performanceNotes?.leadSinger || '-'}</td>
                 <td>
                   <span className={`badge whitespace-nowrap ${status.badge}`}>{status.label}</span>
                 </td>
