@@ -3063,7 +3063,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/KKSmHOUaqaQ?si=UzpUIxCj70fBrNcx",
       "mp3Url": null,
-      "chartPdfUrl": null,
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Wild Child.pdf",
       "lyricsUrls": ["https://genius.com/The-black-keys-wild-child-lyrics"]
     },
     "status": "learning",
