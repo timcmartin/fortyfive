@@ -100,7 +100,7 @@
     },
     "resources": {
       "youtubeUrl": "https://youtu.be/8N2k-gv6xNE?si=T9t7dRPcKhJA91sx",
-      "mp3Url": null,
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/any-man-of-mine.mp3",
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Any Man Of Mine.pdf",
       "lyricsUrls": ["https://genius.com/Shania-Twain-Any-Man-of-Mine-lyrics"]
     },
@@ -1828,7 +1828,7 @@
     },
     "resources": {
       "youtubeUrl": "https://www.youtube.com/watch?v=VbD_kBJc_gI",
-      "mp3Url": null,
+      "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/lets-dance.mp3",
       "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/Let's Dance - Lead Sheet.pdf",
       "lyricsUrls": ["https://genius.com/David-Bowie-Lets-Dance-lyrics"]
     },
