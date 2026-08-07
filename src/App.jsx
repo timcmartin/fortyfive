@@ -25,6 +25,11 @@ export default function App() {
       setSetsLoading(false);
       return;
     }
+
+    // Reset status and lead-singer filters when viewing a specific set
+    setSelectedStatus('all');
+    setSelectedLeadSinger('all');
+
     let mounted = true;
     setSetsLoading(true);
     setSetsError(null);
