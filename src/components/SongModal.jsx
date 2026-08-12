@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
-import { Music2, X } from 'lucide-react';
-import { getStatus } from '@/lib/statuses';
+import { useEffect, useRef } from "react";
+import { Music2, X } from "lucide-react";
+import { getStatus } from "@/lib/statuses";
 
 function getChartPdfUrls(chartPdfUrl) {
   if (!chartPdfUrl) {
@@ -8,6 +8,14 @@ function getChartPdfUrls(chartPdfUrl) {
   }
 
   return Array.isArray(chartPdfUrl) ? chartPdfUrl : [chartPdfUrl];
+}
+
+function getBpmUrl(bpm) {
+  if (!bpm) {
+    return null;
+  }
+
+  return `https://martin-stone.github.io/linkable-metronome/index.html?bpm=${bpm}`;
 }
 
 export function SongModal({
@@ -20,8 +28,7 @@ export function SongModal({
   const dialogRef = useRef(null);
   const chartPdfUrls = getChartPdfUrls(song?.resources?.chartPdfUrl);
   const lyricUrls = song?.resources?.lyricsUrls ?? [];
-  const hasLyricSheet =
-    song && lyricSheetIds.includes(song.id);
+  const hasLyricSheet = song && lyricSheetIds.includes(song.id);
 
   useEffect(() => {
     if (song) {
@@ -42,19 +49,26 @@ export function SongModal({
             <X className="size-4" />
           </button>
           <h2 className="text-xl font-bold truncate">{song.title}</h2>
-          {(() => { const s = getStatus(song.status); return (
-            <span className={`badge ml-auto ${s.badge}`}>{s.label}</span>
-          ); })()}
+          {(() => {
+            const s = getStatus(song.status);
+            return (
+              <span className={`badge ml-auto ${s.badge}`}>{s.label}</span>
+            );
+          })()}
         </div>
 
         <div className="space-y-5">
           {/* Artist */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Artist</p>
+            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">
+              Artist
+            </p>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-xs opacity-60 mb-0.5">Performance Version</p>
-                <p className="font-medium">{song.artistInfo.performanceVersion}</p>
+                <p className="font-medium">
+                  {song.artistInfo.performanceVersion}
+                </p>
               </div>
               <div>
                 <p className="text-xs opacity-60 mb-0.5">Original Artist</p>
@@ -67,36 +81,90 @@ export function SongModal({
 
           {/* Musical Details */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Musical Details</p>
-            <p><span className="opacity-60">Key: </span><span className="font-medium">{song.musicalDetails.key}</span></p>
+            <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">
+              Musical Details
+            </p>
+            <p>
+              <span className="opacity-60">Key: </span>
+              <span className="font-medium">{song.musicalDetails.key}</span>
+            </p>
+            {song.musicalDetails.bpm && (
+              <p>
+                <span className="opacity-60">BPM: </span>
+                <span className="font-medium">
+                  <a
+                    href={getBpmUrl(song.musicalDetails.bpm)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm btn-outline"
+                  >
+                    {song.musicalDetails.bpm}
+                  </a>
+                </span>
+              </p>
+            )}
           </div>
 
           {/* Performance Notes */}
-          {(song.performanceNotes.arrangement || song.performanceNotes.leadSinger ||
-            song.performanceNotes.specialNotes || song.performanceNotes.generalNotes) && (
+          {(song.performanceNotes.arrangement ||
+            song.performanceNotes.leadSinger ||
+            song.performanceNotes.specialNotes ||
+            song.performanceNotes.generalNotes) && (
             <>
               <div className="divider my-0" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Performance Notes</p>
+                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">
+                  Performance Notes
+                </p>
                 <div className="space-y-2 text-sm">
-                  {song.performanceNotes.arrangement && <p><span className="opacity-60">Arrangement: </span>{song.performanceNotes.arrangement}</p>}
-                  {song.performanceNotes.leadSinger && <p><span className="opacity-60">Lead Singer: </span>{song.performanceNotes.leadSinger}</p>}
-                  {song.performanceNotes.specialNotes && <p><span className="opacity-60">Special Notes: </span>{song.performanceNotes.specialNotes}</p>}
-                  {song.performanceNotes.generalNotes && <p><span className="opacity-60">General Notes: </span>{song.performanceNotes.generalNotes}</p>}
+                  {song.performanceNotes.arrangement && (
+                    <p>
+                      <span className="opacity-60">Arrangement: </span>
+                      {song.performanceNotes.arrangement}
+                    </p>
+                  )}
+                  {song.performanceNotes.leadSinger && (
+                    <p>
+                      <span className="opacity-60">Lead Singer: </span>
+                      {song.performanceNotes.leadSinger}
+                    </p>
+                  )}
+                  {song.performanceNotes.specialNotes && (
+                    <p>
+                      <span className="opacity-60">Special Notes: </span>
+                      {song.performanceNotes.specialNotes}
+                    </p>
+                  )}
+                  {song.performanceNotes.generalNotes && (
+                    <p>
+                      <span className="opacity-60">General Notes: </span>
+                      {song.performanceNotes.generalNotes}
+                    </p>
+                  )}
                 </div>
               </div>
             </>
           )}
 
           {/* Resources */}
-          {(song.resources.youtubeUrl || lyricUrls.length || song.resources.mp3Url || chartPdfUrls.length) && (
+          {(song.resources.youtubeUrl ||
+            lyricUrls.length ||
+            song.resources.mp3Url ||
+            chartPdfUrls.length) && (
             <>
               <div className="divider my-0" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">Resources</p>
+                <p className="text-xs font-semibold uppercase tracking-wider opacity-50 mb-2">
+                  Resources
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {song.resources.youtubeUrl && (
-                    <a href={song.resources.youtubeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                    <a
+                      href={song.resources.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline"
+                    >
                       🎥 YouTube
                     </a>
                   )}
@@ -109,8 +177,14 @@ export function SongModal({
                     </button>
                   ) : lyricSheetIndexLoaded ? (
                     lyricUrls.map((url, i) => (
-                      <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                        📝 Lyrics{lyricUrls.length > 1 ? ` ${i + 1}` : ''}
+                      <a
+                        key={i}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-outline"
+                      >
+                        📝 Lyrics{lyricUrls.length > 1 ? ` ${i + 1}` : ""}
                       </a>
                     ))
                   ) : lyricUrls.length > 0 ? (
@@ -119,13 +193,23 @@ export function SongModal({
                     </button>
                   ) : null}
                   {song.resources.mp3Url && (
-                    <a href={song.resources.mp3Url} download className="btn btn-sm btn-outline">
+                    <a
+                      href={song.resources.mp3Url}
+                      download
+                      className="btn btn-sm btn-outline"
+                    >
                       🎵 MP3
                     </a>
                   )}
                   {chartPdfUrls.map((url, i) => (
-                    <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                      📄 Sheet Music{chartPdfUrls.length > 1 ? ` ${i + 1}` : ''}
+                    <a
+                      key={url}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline"
+                    >
+                      📄 Sheet Music{chartPdfUrls.length > 1 ? ` ${i + 1}` : ""}
                     </a>
                   ))}
                 </div>
@@ -142,7 +226,9 @@ export function SongModal({
             <Music2 className="size-4" />
             Open performance sheet
           </button>
-          <button className="btn" onClick={onClose}>Close</button>
+          <button className="btn" onClick={onClose}>
+            Close
+          </button>
         </div>
       </div>
       <form method="dialog" className="modal-backdrop">
