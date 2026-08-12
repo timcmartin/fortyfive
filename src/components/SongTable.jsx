@@ -1,11 +1,11 @@
-import { Play, FileText, FileMusic, Music } from 'lucide-react';
-import { getStatus } from '@/lib/statuses';
+import { Play, FileText, FileMusic, Music } from "lucide-react";
+import { getStatus } from "@/lib/statuses";
 
 const RESOURCES = [
-  { key: 'youtubeUrl',  Icon: Play,       label: 'YouTube', array: false },
-  { key: 'lyricsUrls',  Icon: FileText,   label: 'Lyrics',  array: true  },
-  { key: 'chartPdfUrl', Icon: FileMusic,  label: 'Chart',   array: true  },
-  { key: 'mp3Url',      Icon: Music,      label: 'MP3',     array: false },
+  { key: "youtubeUrl", Icon: Play, label: "YouTube", array: false },
+  { key: "lyricsUrls", Icon: FileText, label: "Lyrics", array: true },
+  { key: "chartPdfUrl", Icon: FileMusic, label: "Chart", array: true },
+  { key: "mp3Url", Icon: Music, label: "MP3", array: false },
 ];
 
 function getPrimaryResourceUrl(value, array) {
@@ -83,10 +83,13 @@ export function SongTable({
             <th>Title</th>
             <th>Artist</th>
             <th>Key</th>
+            <th>BPM</th>
             <th>Lead Singer</th>
             <th>Status</th>
             {RESOURCES.map(({ key, label }) => (
-              <th key={key} className="text-center">{label}</th>
+              <th key={key} className="text-center">
+                {label}
+              </th>
             ))}
           </tr>
         </thead>
@@ -102,9 +105,12 @@ export function SongTable({
                 <td className="font-medium">{song.title}</td>
                 <td>{song.artistInfo.performanceVersion}</td>
                 <td>{song.musicalDetails.key}</td>
-                <td>{song.performanceNotes?.leadSinger || '-'}</td>
+                <td>{song.musicalDetails.bpm}</td>
+                <td>{song.performanceNotes?.leadSinger || "-"}</td>
                 <td>
-                  <span className={`badge whitespace-nowrap ${status.badge}`}>{status.label}</span>
+                  <span className={`badge whitespace-nowrap ${status.badge}`}>
+                    {status.label}
+                  </span>
                 </td>
                 {RESOURCES.map(({ key, Icon, label, array }) => {
                   const val = song.resources[key];
