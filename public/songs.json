@@ -7,7 +7,8 @@
       "originalArtist": "Tommy Tutone"
     },
     "musicalDetails": {
-      "key": "F# minor"
+      "key": "F# minor",
+      "bpm": "138"
     },
     "performanceNotes": {
       "arrangement": "We double the length of the guitar solo.",
@@ -90,7 +91,8 @@
       "originalArtist": "Shania Twain"
     },
     "musicalDetails": {
-      "key": "Ab"
+      "key": "Ab",
+      "bpm": "78/156"
     },
     "performanceNotes": {
       "arrangement": "Same key as recording.",
@@ -117,7 +119,8 @@
       "originalArtist": "Britney Spears"
     },
     "musicalDetails": {
-      "key": "C minor"
+      "key": "C minor",
+      "bpm": "93"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -146,7 +149,8 @@
       "originalArtist": "T. Rex"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "126"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -173,7 +177,8 @@
       "originalArtist": "Cher"
     },
     "musicalDetails": {
-      "key": "F#"
+      "key": "F#",
+      "bpm": "133"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -229,7 +234,8 @@
       "originalArtist": "Michael Jackson"
     },
     "musicalDetails": {
-      "key": "F# minor"
+      "key": "F# minor",
+      "bpm": "117"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -256,7 +262,8 @@
       "originalArtist": "Don Henley"
     },
     "musicalDetails": {
-      "key": "Eb minor"
+      "key": "Eb minor",
+      "bpm": "88/178"
     },
     "performanceNotes": {
       "arrangement": "Jam out at the end.",
@@ -366,7 +373,8 @@
       "originalArtist": "Dua Lipa"
     },
     "musicalDetails": {
-      "key": "Bb minor"
+      "key": "Bb minor",
+      "bpm": "116"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -422,7 +430,8 @@
       "originalArtist": "Climax Blues Band"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "102"
     },
     "performanceNotes": {
       "arrangement": "Vocal harmonies in the chorus.",
@@ -451,7 +460,8 @@
       "originalArtist": "Gnarls Barkley"
     },
     "musicalDetails": {
-      "key": "C minor"
+      "key": "C minor",
+      "bpm": "112"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -478,7 +488,8 @@
       "originalArtist": "Queen"
     },
     "musicalDetails": {
-      "key": "D major"
+      "key": "D major",
+      "bpm": "155"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -536,7 +547,8 @@
       "originalArtist": "Crowded House"
     },
     "musicalDetails": {
-      "key": "F major"
+      "key": "F major",
+      "bpm": "82"
     },
     "performanceNotes": {
       "arrangement": "Crowded House version is in Eb",
@@ -565,7 +577,8 @@
       "originalArtist": "Dua Lipa"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "124"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -592,7 +605,8 @@
       "originalArtist": "Fleetwood Mac"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "119"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -619,7 +633,8 @@
       "originalArtist": "Journey"
     },
     "musicalDetails": {
-      "key": "E / A"
+      "key": "E / A",
+      "bpm": "120/118"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -646,7 +661,8 @@
       "originalArtist": "The Human League"
     },
     "musicalDetails": {
-      "key": "A minor"
+      "key": "A minor",
+      "bpm": "128"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -675,7 +691,8 @@
       "originalArtist": "Fleetwood Mac"
     },
     "musicalDetails": {
-      "key": "F major"
+      "key": "F major",
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -756,7 +773,8 @@
       "originalArtist": "Tears for Fears"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "112"
     },
     "performanceNotes": {
       "arrangement": "Jam out at the end.",
@@ -785,7 +803,8 @@
       "originalArtist": "Willie Bobo"
     },
     "musicalDetails": {
-      "key": "G minor"
+      "key": "G minor",
+      "bpm": "118"
     },
     "performanceNotes": {
       "arrangement": "Big ass keyboard solo first, guitar solo at end.",
@@ -839,7 +858,8 @@
       "originalArtist": "Portugal, The Man"
     },
     "musicalDetails": {
-      "key": "C# minor"
+      "key": "C# minor",
+      "bpm": "158"
     },
     "performanceNotes": {
       "arrangement": "Same as recording - we loop the riff twice at the end.",
@@ -866,7 +886,8 @@
       "originalArtist": "Pointer Sisters"
     },
     "musicalDetails": {
-      "key": "Db"
+      "key": "Db",
+      "bpm": "118"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -893,7 +914,8 @@
       "originalArtist": "Miley Cyrus"
     },
     "musicalDetails": {
-      "key": "C"
+      "key": "C",
+      "bpm": "118"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -920,7 +942,8 @@
       "originalArtist": "CeeLo Green"
     },
     "musicalDetails": {
-      "key": "C"
+      "key": "C",
+      "bpm": "128"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -976,7 +999,8 @@
       "originalArtist": "Lady Gaga"
     },
     "musicalDetails": {
-      "key": "Ab / Db minor"
+      "key": "Ab / Db minor",
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "Mash up of Poker Face and Just Dance",
@@ -1092,7 +1116,8 @@
       "originalArtist": "ABBA"
     },
     "musicalDetails": {
-      "key": "D minor"
+      "key": "D minor",
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "Bass and guitar solos after the second chorus - come back in on PreChorus.",
@@ -1206,7 +1231,8 @@
       "originalArtist": "Blondie"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "115"
     },
     "performanceNotes": {
       "arrangement": "Slightly different than recorded version - mp3 is the best reference.",
@@ -1260,7 +1286,8 @@
       "originalArtist": "Pat Benatar"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "124"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1316,7 +1343,8 @@
       "originalArtist": "Nick Gilder"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "110"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1372,7 +1400,8 @@
       "originalArtist": "Daryl Hall & John Oates"
     },
     "musicalDetails": {
-      "key": "C minor"
+      "key": "C minor",
+      "bpm": "111-114"
     },
     "performanceNotes": {
       "arrangement": "Keyboard solo at end, Guitar melod cues.",
@@ -1428,13 +1457,14 @@
       "originalArtist": "Sam & Dave"
     },
     "musicalDetails": {
-      "key": "G"
+      "key": "G",
+      "bpm": "110"
     },
     "performanceNotes": {
       "arrangement": "All in on 'I Thank You' lyrics",
       "leadSinger": "Richard",
-      "specialNotes": "Original is in A.",
-      "generalNotes": ""
+      "specialNotes": "",
+      "generalNotes": "Original is in A."
     },
     "resources": {
       "youtubeUrl": "https://www.youtube.com/watch?v=1TO48Cnl66w",
@@ -1455,7 +1485,8 @@
       "originalArtist": "Cheap Trick"
     },
     "musicalDetails": {
-      "key": "A"
+      "key": "A",
+      "bpm": "130-134"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1484,7 +1515,8 @@
       "originalArtist": "Gloria Gaynor"
     },
     "musicalDetails": {
-      "key": "A minor"
+      "key": "A minor",
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1511,7 +1543,8 @@
       "originalArtist": "Melissa Ethridge"
     },
     "musicalDetails": {
-      "key": "G"
+      "key": "G",
+      "bpm": "85"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1650,7 +1683,8 @@
       "originalArtist": "Talk Talk"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "126"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1677,7 +1711,8 @@
       "originalArtist": "Rick Springfield"
     },
     "musicalDetails": {
-      "key": "D major"
+      "key": "D major",
+      "bpm": "134"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1731,7 +1766,8 @@
       "originalArtist": "KC & The Sunshine Band"
     },
     "musicalDetails": {
-      "key": "E / B"
+      "key": "E / B",
+      "bpm": "110/112"
     },
     "performanceNotes": {
       "arrangement": "Mashup of That's The Way I Like It and Get Down Tonight",
@@ -1764,7 +1800,8 @@
       "originalArtist": "Tom Jones"
     },
     "musicalDetails": {
-      "key": "A"
+      "key": "A",
+      "bpm": "112"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1791,7 +1828,8 @@
       "originalArtist": "3 Doors Down"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "100"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1818,7 +1856,8 @@
       "originalArtist": "David Bowie"
     },
     "musicalDetails": {
-      "key": "Bb minor"
+      "key": "Bb minor",
+      "bpm": "115"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1928,7 +1967,8 @@
       "originalArtist": "The Doobie Brothers"
     },
     "musicalDetails": {
-      "key": "G minor"
+      "key": "G minor",
+      "bpm": "117"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2065,7 +2105,8 @@
       "originalArtist": "Miranda Lambert"
     },
     "musicalDetails": {
-      "key": "E minor"
+      "key": "E minor",
+      "bpm": "112"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2094,7 +2135,8 @@
       "originalArtist": "Olivia Dean"
     },
     "musicalDetails": {
-      "key": "Db"
+      "key": "Db",
+      "bpm": "119"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2121,7 +2163,8 @@
       "originalArtist": "Daryl Hall & John Oates"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "89/178"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2231,7 +2274,8 @@
       "originalArtist": "The Rolling Stones"
     },
     "musicalDetails": {
-      "key": "A minor"
+      "key": "A minor",
+      "bpm": "110"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2287,7 +2331,8 @@
       "originalArtist": "David Bowie"
     },
     "musicalDetails": {
-      "key": "C"
+      "key": "C",
+      "bpm": "183"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2314,7 +2359,8 @@
       "originalArtist": "Alice Merton"
     },
     "musicalDetails": {
-      "key": "B minor"
+      "key": "B minor",
+      "bpm": "116"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2341,7 +2387,8 @@
       "originalArtist": "Blondie"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "160"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2505,7 +2552,8 @@
       "originalArtist": "Fleetwood Mac"
     },
     "musicalDetails": {
-      "key": "A minor"
+      "key": "A minor",
+      "bpm": "126"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2669,7 +2717,8 @@
       "originalArtist": "Ed Sheeran"
     },
     "musicalDetails": {
-      "key": "E"
+      "key": "E",
+      "bpm": "96"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2696,7 +2745,8 @@
       "originalArtist": "Fine Young Cannibals"
     },
     "musicalDetails": {
-      "key": "D"
+      "key": "D",
+      "bpm": "109"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2754,7 +2804,8 @@
       "originalArtist": "Grand Funk Railroad"
     },
     "musicalDetails": {
-      "key": "D"
+      "key": "D",
+      "bpm": "121"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2783,7 +2834,8 @@
       "originalArtist": "Bonnie Raitt"
     },
     "musicalDetails": {
-      "key": "Ab"
+      "key": "Ab",
+      "bpm": "106"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -2947,7 +2999,8 @@
       "originalArtist": "Pomplamoose"
     },
     "musicalDetails": {
-      "key": "C"
+      "key": "C",
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "Some parts are more stretched out - mp3 has details.",
@@ -3085,7 +3138,8 @@
       "originalArtist": "Mark Ronson"
     },
     "musicalDetails": {
-      "key": "D minor"
+      "key": "D minor",
+      "bpm": "115"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -3112,7 +3166,8 @@
       "originalArtist": "The Animals"
     },
     "musicalDetails": {
-      "key": "E major"
+      "key": "E major",
+      "bpm": "126"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -3254,7 +3309,8 @@
       "originalArtist": "Dee Dee Warwick"
     },
     "musicalDetails": {
-      "key": "A minor"
+      "key": "A minor",
+      "bpm": "108"
     },
     "performanceNotes": {
       "arrangement": "Original recording is in Ab",
@@ -3274,4 +3330,3 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=XxgwjC3Rxi4"
   }
 ]
-
