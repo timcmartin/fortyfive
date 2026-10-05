@@ -12,3 +12,30 @@
 body {
   font-family: 'Geist Variable', sans-serif;
 }
+
+.performance-section {
+  border-radius: 0.75rem;
+  border-left: 4px solid;
+  padding: 1rem;
+}
+
+.performance-lyrics {
+  border-left-color: var(--color-primary);
+  background: var(--color-base-200);
+}
+
+.performance-chorus {
+  border-left-color: #7c3aed;
+  background: color-mix(in oklab, #7c3aed 10%, var(--color-base-100));
+}
+
+.performance-cue {
+  border-left-color: var(--color-info);
+  background: color-mix(in oklab, var(--color-info) 12%, var(--color-base-100));
+}
+
+@media (max-width: 640px) {
+  .performance-section p.whitespace-pre-line {
+    font-size: 1.125rem;
+  }
+}
