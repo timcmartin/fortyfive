@@ -92,8 +92,12 @@ function LyricSection({ section }) {
 export function PerformanceView({
   songs,
   songsLoading,
+  lyricSheetIds,
   lyricSheets,
-  sheetsLoading,
+  loadingSheets,
+  sheetErrors,
+  loadLyricSheet,
+  sheetIndexLoading,
   initialSongId,
   onClose,
 }) {
@@ -195,6 +199,7 @@ export function PerformanceView({
   const song = individualSong ?? setSongs[currentIndex];
   const lyricSheet = song ? lyricSheets[song.id] : null;
   const sections = Array.isArray(lyricSheet?.sections) ? lyricSheet.sections : [];
+  const nextSong = !isIndividualSong ? setSongs[currentIndex + 1] : null;
   const chartUrls = song?.resources?.chartPdfUrl
     ? Array.isArray(song.resources.chartPdfUrl)
       ? song.resources.chartPdfUrl
@@ -202,6 +207,11 @@ export function PerformanceView({
     : [];
   const chartIndex = chartSelection.songId === song?.id ? chartSelection.index : 0;
   const chartUrl = chartUrls[chartIndex];
+
+  useEffect(() => {
+    if (song) void loadLyricSheet(song.id);
+    if (nextSong) void loadLyricSheet(nextSong.id);
+  }, [loadLyricSheet, nextSong, song]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -283,7 +293,7 @@ export function PerformanceView({
 
         {setError && <div className="alert alert-error mb-4">{setError}</div>}
         {initialSongError && <div className="alert alert-warning mb-4">{initialSongError}</div>}
-        {sheetsLoading && (
+        {sheetIndexLoading && (
           <div className="flex justify-center py-5">
             <span className="loading loading-spinner loading-md" />
           </div>
@@ -334,7 +344,13 @@ export function PerformanceView({
                   </button>
                 </div>
 
-                {viewMode === "lyrics" ? (
+                {viewMode === "lyrics" && song && loadingSheets[song.id] ? (
+                  <div className="flex justify-center py-12">
+                    <span className="loading loading-spinner loading-lg" />
+                  </div>
+                ) : viewMode === "lyrics" && song && sheetErrors[song.id] ? (
+                  <div className="alert alert-error">{sheetErrors[song.id]}</div>
+                ) : viewMode === "lyrics" ? (
                   sections.length > 0 ? (
                     <div className="space-y-4">
                       {sections.map((section, index) => (
@@ -346,7 +362,7 @@ export function PerformanceView({
                       <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
                       <p className="font-semibold">No performance sheet yet</p>
                       <p className="mt-1 text-sm text-base-content/60">
-                        Add this song&apos;s ordered sections to <code>public/lyric-sheets.json</code>.
+                        Add this song&apos;s ordered sections to <code>public/lyric-sheets/{song.id}.json</code>.
                       </p>
                       {song.resources?.lyricsUrls?.[0] && (
                         <a
@@ -465,7 +481,7 @@ export function PerformanceView({
           <nav className="flex-1 overflow-y-auto p-3" aria-label={`${selectedSetLabel} songs`}>
             {drawerSongs.map((setSong, index) => {
               const isCurrentSong = index === currentIndex;
-              const hasSheet = lyricSheets[setSong.id]?.sections?.length > 0;
+              const hasSheet = lyricSheetIds.includes(setSong.id);
               const hasChart = Boolean(setSong.resources?.chartPdfUrl?.length) ||
                 typeof setSong.resources?.chartPdfUrl === "string";
               return (

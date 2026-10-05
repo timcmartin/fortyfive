@@ -11,7 +11,15 @@ import { useLyricSheets } from "./hooks/useLyricSheets";
 
 export default function App() {
   const { songs, loading, error } = useSongs();
-  const { lyricSheets, loading: sheetsLoading, error: sheetsError } = useLyricSheets();
+  const {
+    lyricSheetIds,
+    lyricSheets,
+    loadingSheets,
+    sheetErrors,
+    loadLyricSheet,
+    loading: sheetsLoading,
+    error: sheetsError,
+  } = useLyricSheets();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedLeadSinger, setSelectedLeadSinger] = useState("all");
@@ -81,8 +89,12 @@ export default function App() {
       <PerformanceView
         songs={songs}
         songsLoading={loading}
+        lyricSheetIds={lyricSheetIds}
         lyricSheets={lyricSheets}
-        sheetsLoading={sheetsLoading}
+        loadingSheets={loadingSheets}
+        sheetErrors={sheetErrors}
+        loadLyricSheet={loadLyricSheet}
+        sheetIndexLoading={sheetsLoading}
         initialSongId={performanceSongId}
         onClose={() => {
           setShowPerformance(false);

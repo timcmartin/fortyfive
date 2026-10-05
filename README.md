@@ -124,18 +124,18 @@ To add a new status, edit `src/lib/statuses.js` — it controls the filter butto
 
 Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. Since the app fetches chart PDFs for rendering, configure the chart host's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
 
-Performance sheets are editable JSON in `public/lyric-sheets.json`, keyed by song ID. Sections render in the order listed. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+Performance sheets are editable JSON files in `public/lyric-sheets/`, one file per song named with its song ID. Register sheet IDs in `public/lyric-sheets/index.json`; Performance Mode loads that small index and fetches the current song's sheet, preloading the next song's sheet. Each file contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+
+For example, `public/lyric-sheets/index.json` contains an array of IDs such as `["867-5309-jenny", "mashup"]`, and `public/lyric-sheets/mashup.json` contains that song's sections:
 
 ```json
 {
-  "867-5309-jenny": {
-    "sections": [
-      { "part": "verse", "singer": "richard", "lyrics": "Add the band's lyric text here." },
-      { "part": "chorus", "singer": "gang", "lyrics": ["First line", "Second line"] },
-      { "part": "instrumental", "bars": 8, "notes": "Guitar solo" },
-      { "part": "bassSolo", "bars": 4 }
-    ]
-  }
+  "sections": [
+    { "part": "verse", "singer": "richard", "lyrics": "Add the band's lyric text here." },
+    { "part": "chorus", "singer": "gang", "lyrics": ["First line", "Second line"] },
+    { "part": "instrumental", "bars": 8, "notes": "Guitar solo" },
+    { "part": "bassSolo", "bars": 4 }
+  ]
 }
 ```
 
