@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { X } from 'lucide-react';
+import { Music2, X } from 'lucide-react';
 import { getStatus } from '@/lib/statuses';
 
 function getChartPdfUrls(chartPdfUrl) {
@@ -10,7 +10,7 @@ function getChartPdfUrls(chartPdfUrl) {
   return Array.isArray(chartPdfUrl) ? chartPdfUrl : [chartPdfUrl];
 }
 
-export function SongModal({ song, onClose }) {
+export function SongModal({ song, onClose, onStartPerformance }) {
   const dialogRef = useRef(null);
   const chartPdfUrls = getChartPdfUrls(song?.resources?.chartPdfUrl);
 
@@ -113,6 +113,13 @@ export function SongModal({ song, onClose }) {
         </div>
 
         <div className="modal-action">
+          <button
+            className="btn btn-primary mr-auto"
+            onClick={() => onStartPerformance(song.id)}
+          >
+            <Music2 className="size-4" />
+            Open performance sheet
+          </button>
           <button className="btn" onClick={onClose}>Close</button>
         </div>
       </div>

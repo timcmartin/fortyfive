@@ -120,6 +120,27 @@ Songs live in `public/songs.json`. Each song is a JSON object:
 
 To add a new status, edit `src/lib/statuses.js` — it controls the filter buttons, table badges, and modal display everywhere.
 
+### Performance Lyric Sheets
+
+Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. Since the app fetches chart PDFs for rendering, configure the chart host's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
+
+Performance sheets are editable JSON files in `public/lyric-sheets/`, one file per song named with its song ID. Register sheet IDs in `public/lyric-sheets/index.json`; Performance Mode loads that small index and fetches the current song's sheet, preloading the next song's sheet. Each file contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+
+For example, `public/lyric-sheets/index.json` contains an array of IDs such as `["867-5309-jenny", "mashup"]`, and `public/lyric-sheets/mashup.json` contains that song's sections:
+
+```json
+{
+  "sections": [
+    { "part": "verse", "singer": "richard", "lyrics": "Add the band's lyric text here." },
+    { "part": "chorus", "singer": "gang", "lyrics": ["First line", "Second line"] },
+    { "part": "instrumental", "bars": 8, "notes": "Guitar solo" },
+    { "part": "bassSolo", "bars": 4 }
+  ]
+}
+```
+
+Suggested parts: `verse`, `preChorus`, `chorus`, `bridge`, `instrumental`, `bassSolo`, `guitarSolo`, `intro`, `outro`, `tag`, `vamp`, `breakdown`, `interlude`, `ending`. Suggested singers: `olivia`, `heather`, `steve`, `richard`, `gang`. Commit and deploy JSON changes to publish them. Lyrics and cues are styled differently in performance mode; cues remain labeled, not color-only.
+
 ### Finding Lyrics URLs
 
 Use [Genius](https://genius.com/) for lyrics links. Search for the song and copy the URL directly:

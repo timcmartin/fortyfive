@@ -6,50 +6,52 @@ import { LeadSingerFilter } from "./components/LeadSingerFilter";
 import { SongTable } from "./components/SongTable";
 import { SongModal } from "./components/SongModal";
 import { SetSelector } from "./components/SetSelector";
+import { PerformanceView } from "./components/PerformanceView";
+import { useLyricSheets } from "./hooks/useLyricSheets";
 
 export default function App() {
   const { songs, loading, error } = useSongs();
+  const {
+    lyricSheetIds,
+    lyricSheets,
+    loadingSheets,
+    sheetErrors,
+    loadLyricSheet,
+    loading: sheetsLoading,
+    error: sheetsError,
+  } = useLyricSheets();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedLeadSinger, setSelectedLeadSinger] = useState("all");
   const [selectedSong, setSelectedSong] = useState(null);
   const [selectedSet, setSelectedSet] = useState("all");
-  const [setOrder, setSetOrder] = useState([]);
-  const [setsLoading, setSetsLoading] = useState(false);
-  const [setsError, setSetsError] = useState(null);
+  const [setResource, setSetResource] = useState({ set: null, ids: [], error: null });
+  const [showPerformance, setShowPerformance] = useState(false);
+  const [performanceSongId, setPerformanceSongId] = useState(null);
+  const setsLoading = selectedSet !== "all" && setResource.set !== selectedSet;
+  const setOrder = useMemo(
+    () => setResource.set === selectedSet ? setResource.ids : [],
+    [setResource, selectedSet],
+  );
+  const setsError = setResource.set === selectedSet ? setResource.error : null;
 
   useEffect(() => {
-    if (selectedSet === "all") {
-      setSetOrder([]);
-      setSetsError(null);
-      setSetsLoading(false);
-      return;
-    }
-
-    // Reset status and lead-singer filters when viewing a specific set
-    setSelectedStatus('all');
-    setSelectedLeadSinger('all');
+    if (selectedSet === "all") return;
 
     let mounted = true;
-    setSetsLoading(true);
-    setSetsError(null);
     fetch(`/sets/${selectedSet}.json`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed to load set");
         return r.json();
       })
       .then((data) => {
+        if (!Array.isArray(data)) throw new Error("Set list must be an array");
         if (!mounted) return;
-        setSetOrder(Array.isArray(data) ? data.map((i) => i.id) : []);
+        setSetResource({ set: selectedSet, ids: data.map((item) => item.id), error: null });
       })
       .catch((err) => {
         if (!mounted) return;
-        setSetsError(err.message);
-        setSetOrder([]);
-      })
-      .finally(() => {
-        if (!mounted) return;
-        setSetsLoading(false);
+        setSetResource({ set: selectedSet, ids: [], error: err.message });
       });
     return () => { mounted = false; };
   }, [selectedSet]);
@@ -82,6 +84,34 @@ export default function App() {
       .filter(matchesFilters);
   }, [songs, searchTerm, selectedStatus, selectedLeadSinger, selectedSet, setOrder]);
 
+  if (showPerformance) {
+    return (
+      <PerformanceView
+        songs={songs}
+        songsLoading={loading}
+        lyricSheetIds={lyricSheetIds}
+        lyricSheets={lyricSheets}
+        loadingSheets={loadingSheets}
+        sheetErrors={sheetErrors}
+        loadLyricSheet={loadLyricSheet}
+        sheetIndexLoading={sheetsLoading}
+        initialSongId={performanceSongId}
+        onClose={() => {
+          setShowPerformance(false);
+          setPerformanceSongId(null);
+        }}
+      />
+    );
+  }
+
+  const handleSetChange = (set) => {
+    setSelectedSet(set);
+    if (set !== "all") {
+      setSelectedStatus("all");
+      setSelectedLeadSinger("all");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-base-200">
       <div className="max-w-5xl mx-auto px-4 py-10">
@@ -90,11 +120,26 @@ export default function App() {
           <p className="text-base-content/60 mt-2">
             Browse and learn about all the songs in our repertoire
           </p>
+          <button
+            className="btn btn-primary mt-4"
+            onClick={() => {
+              setPerformanceSongId(null);
+              setShowPerformance(true);
+            }}
+          >
+            Open Performance Mode
+          </button>
         </div>
 
         {error && (
           <div className="alert alert-error mb-6">
             <span>Error loading songs: {error}</span>
+          </div>
+        )}
+
+        {sheetsError && (
+          <div className="alert alert-error mb-6">
+            <span>Error loading lyric sheets: {sheetsError}</span>
           </div>
         )}
 
@@ -123,7 +168,7 @@ export default function App() {
                 selectedStatus={selectedStatus}
                 songs={songs}
               />
-              <SetSelector selectedSet={selectedSet} onChange={setSelectedSet} loading={setsLoading} />
+              <SetSelector selectedSet={selectedSet} onChange={handleSetChange} loading={setsLoading} />
               <p className="text-sm text-base-content/50">
                 Showing {filteredSongs.length} of {songs.length} songs
                 {selectedSet !== "all" && setOrder.length > 0 && (
@@ -136,7 +181,15 @@ export default function App() {
         )}
       </div>
 
-      <SongModal song={selectedSong} onClose={() => setSelectedSong(null)} />
+      <SongModal
+        song={selectedSong}
+        onClose={() => setSelectedSong(null)}
+        onStartPerformance={(songId) => {
+          setPerformanceSongId(songId);
+          setSelectedSong(null);
+          setShowPerformance(true);
+        }}
+      />
     </div>
   );
 }

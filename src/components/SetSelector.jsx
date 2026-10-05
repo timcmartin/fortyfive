@@ -1,18 +1,12 @@
-export function SetSelector({ selectedSet, onChange, loading = false }) {
-  const sets = [
-    { value: "all", label: "All Songs" },
-    { value: "set-1", label: "Set 1" },
-    { value: "set-2", label: "Set 2" },
-    { value: "set-3", label: "Set 3" },
-    { value: "set-3-alt-1", label: "Set 3 (Alt 1)" },
-    { value: "set-3-alt-2", label: "Set 3 (Alt 2)" },
-    { value: "extras", label: "Common Inserts" },
-    { value: "new", label: "To Work On" },
-  ];
+import { SET_OPTIONS } from "@/lib/sets";
 
+export function SetSelector({ selectedSet, onChange, loading = false }) {
   return (
     <div className="flex gap-2 flex-wrap">
-      {sets.map((s) => (
+      {[
+        { value: "all", label: "All Songs" },
+        ...SET_OPTIONS,
+      ].map((s) => (
         <button
           key={s.value}
           onClick={() => onChange(s.value)}

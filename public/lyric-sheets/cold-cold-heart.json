@@ -1,0 +1,153 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 8,
+      "notes": "Instrumental"
+    },
+    {
+      "part": "intro",
+      "bars": 8,
+      "lyrics": [
+        "Oh (4x)"
+      ]
+    },
+    {
+      "part": "verse",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "It's a human sign",
+        "When things go wrong",
+        "When the scent of her lingers",
+        "And temptation's strong"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "Cold, cold heart",
+        "Hardened by you (Oh)",
+        "Some things lookin' better, baby",
+        "Just passin' through (No, no, no, no, no)"
+      ]
+    },
+    {
+      "part": "chorus",
+      "singer": "Olivia",
+      "bars": 16,
+      "lyrics": [
+        "And I think it's gonna be a long, long time",
+        "'Til touchdown brings me 'round again to find",
+        "I'm not the man they think I am at home",
+        "Oh no, no, no",
+        "And this is what I should have said",
+        "Well, I thought it, but I kept it hid"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "Cold, cold heart",
+        "Hardened by you (Oh)",
+        "Some things lookin' better, baby",
+        "Just passin' through (No, no, no, no, no)"
+      ]
+    },
+    {
+      "part": "chorus",
+      "singer": "Heather",
+      "bars": 16,
+      "lyrics": [
+        "And I think it's gonna be a long, long time",
+        "'Til touchdown brings me 'round again to find",
+        "I'm not the man they think I am at home",
+        "Oh no, no, no",
+        "And this is what I should have said",
+        "Well, I thought it, but I kept it hid"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "Cold, cold heart",
+        "Hardened by you (Oh)",
+        "Some things lookin' better, baby",
+        "Just passin' through (No, no, no, no, no)"
+      ],
+      "notes": "Break"
+    },
+    {
+      "part": "chorus",
+      "bars": 16,
+      "lyrics": [
+        "And I think it's gonna be a long, long time",
+        "'Til touchdown brings me 'round again to find",
+        "I'm not the man they think I am at home",
+        "Oh no, no, no",
+        "And this is what I should have said",
+        "Well, I thought it, but I kept it hid"
+      ]
+    },
+    {
+      "part": "bridge",
+      "bars": 8,
+      "lyrics": [
+        "Shoorah",
+        "Shoorah",
+        "Shoorah",
+        "Shoorah"
+      ]
+    },
+    {
+      "part": "verse",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "It's a human sign",
+        "When things go wrong",
+        "When the scent of her lingers",
+        "And temptation's strong"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "singer": "Steve",
+      "bars": 8,
+      "lyrics": [
+        "Cold, cold heart",
+        "Hardened by you (Oh)",
+        "Some things lookin' better, baby",
+        "Just passin' through (No, no, no, no, no)"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 16,
+      "lyrics": [
+        "And I think it's gonna be a long, long time",
+        "'Til touchdown brings me 'round again to find",
+        "I'm not the man they think I am at home",
+        "Oh no, no, no",
+        "And this is what I should have said",
+        "Well, I thought it, but I kept it hid"
+      ]
+    },
+    {
+      "part": "bridge",
+      "bars": 8,
+      "lyrics": [
+        "Shoorah",
+        "Shoorah",
+        "Shoorah",
+        "Shoorah"
+      ]
+    }
+  ]
+}
