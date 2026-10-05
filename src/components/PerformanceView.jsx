@@ -1,6 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ListMusic, Music2, X } from "lucide-react";
 import { PERFORMANCE_SETS } from "@/lib/sets";
+
+const PdfChartViewer = lazy(() =>
+  import("./PdfChartViewer").then((module) => ({ default: module.PdfChartViewer })),
+);
 
 const PART_LABELS = {
   verse: "Verse",
@@ -377,20 +381,19 @@ export function PerformanceView({
                         </select>
                       </label>
                     )}
-                    <iframe
-                      key={chartUrl}
-                      className="h-[70vh] min-h-96 w-full rounded-lg border border-base-300 bg-white"
-                      src={chartUrl}
-                      title={`${song.title} chart ${chartUrls.length > 1 ? chartIndex + 1 : ""}`}
-                    />
-                    <a
-                      className="btn btn-sm btn-outline"
-                      href={chartUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Suspense
+                      fallback={
+                        <div className="flex justify-center py-12">
+                          <span className="loading loading-spinner loading-lg" />
+                        </div>
+                      }
                     >
-                      Open chart in a new tab
-                    </a>
+                      <PdfChartViewer
+                        key={chartUrl}
+                        url={chartUrl}
+                        title={`${song.title} chart ${chartUrls.length > 1 ? chartIndex + 1 : ""}`}
+                      />
+                    </Suspense>
                   </div>
                 ) : (
                   <div className="rounded-xl border border-dashed border-base-300 px-5 py-10 text-center">
