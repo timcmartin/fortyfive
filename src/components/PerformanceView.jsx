@@ -98,6 +98,8 @@ export function PerformanceView({
   );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showSetList, setShowSetList] = useState(false);
+  const [viewMode, setViewMode] = useState("lyrics");
+  const [chartSelection, setChartSelection] = useState({ songId: null, index: 0 });
   const [setResource, setSetResource] = useState({ set: null, items: [], error: null });
   const [initialSongError, setInitialSongError] = useState(null);
   const setListDialogRef = useRef(null);
@@ -189,6 +191,13 @@ export function PerformanceView({
   const song = individualSong ?? setSongs[currentIndex];
   const lyricSheet = song ? lyricSheets[song.id] : null;
   const sections = Array.isArray(lyricSheet?.sections) ? lyricSheet.sections : [];
+  const chartUrls = song?.resources?.chartPdfUrl
+    ? Array.isArray(song.resources.chartPdfUrl)
+      ? song.resources.chartPdfUrl
+      : [song.resources.chartPdfUrl]
+    : [];
+  const chartIndex = chartSelection.songId === song?.id ? chartSelection.index : 0;
+  const chartUrl = chartUrls[chartIndex];
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -227,7 +236,7 @@ export function PerformanceView({
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-primary">Performance</p>
-            <h1 className="text-2xl sm:text-3xl font-bold">Live lyric sheets</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold">Live performance</h1>
           </div>
           <div className="flex gap-2">
             <button
@@ -304,43 +313,93 @@ export function PerformanceView({
                   )}
                 </header>
 
-                {sections.length > 0 ? (
-                  <div className="space-y-4">
-                    {sections.map((section, index) => (
-                      <LyricSection key={section.id ?? `${section.part}-${index}`} section={section} />
-                    ))}
+                <div className="join self-start" role="group" aria-label="Performance view">
+                  <button
+                    className={`btn join-item ${viewMode === "lyrics" ? "btn-primary" : "btn-outline"}`}
+                    aria-pressed={viewMode === "lyrics"}
+                    onClick={() => setViewMode("lyrics")}
+                  >
+                    Lyrics
+                  </button>
+                  <button
+                    className={`btn join-item ${viewMode === "charts" ? "btn-primary" : "btn-outline"}`}
+                    aria-pressed={viewMode === "charts"}
+                    onClick={() => setViewMode("charts")}
+                  >
+                    Charts
+                  </button>
+                </div>
+
+                {viewMode === "lyrics" ? (
+                  sections.length > 0 ? (
+                    <div className="space-y-4">
+                      {sections.map((section, index) => (
+                        <LyricSection key={section.id ?? `${section.part}-${index}`} section={section} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="rounded-xl border border-dashed border-base-300 px-5 py-10 text-center">
+                      <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
+                      <p className="font-semibold">No performance sheet yet</p>
+                      <p className="mt-1 text-sm text-base-content/60">
+                        Add this song&apos;s ordered sections to <code>public/lyric-sheets.json</code>.
+                      </p>
+                      {song.resources?.lyricsUrls?.[0] && (
+                        <a
+                          className="btn btn-sm btn-outline mt-4"
+                          href={song.resources.lyricsUrls[0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Open external lyrics
+                        </a>
+                      )}
+                    </div>
+                  )
+                ) : chartUrl ? (
+                  <div className="space-y-3">
+                    {chartUrls.length > 1 && (
+                      <label className="form-control max-w-sm">
+                        <span className="label-text mb-1">Chart</span>
+                        <select
+                          className="select select-bordered"
+                          value={chartIndex}
+                          onChange={(event) => setChartSelection({
+                            songId: song.id,
+                            index: Number(event.target.value),
+                          })}
+                        >
+                          {chartUrls.map((url, index) => (
+                            <option key={`${url}-${index}`} value={index}>
+                              Chart {index + 1}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                    )}
+                    <iframe
+                      key={chartUrl}
+                      className="h-[70vh] min-h-96 w-full rounded-lg border border-base-300 bg-white"
+                      src={chartUrl}
+                      title={`${song.title} chart ${chartUrls.length > 1 ? chartIndex + 1 : ""}`}
+                    />
+                    <a
+                      className="btn btn-sm btn-outline"
+                      href={chartUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Open chart in a new tab
+                    </a>
                   </div>
                 ) : (
                   <div className="rounded-xl border border-dashed border-base-300 px-5 py-10 text-center">
                     <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
-                    <p className="font-semibold">No performance sheet yet</p>
+                    <p className="font-semibold">No chart available for this song</p>
                     <p className="mt-1 text-sm text-base-content/60">
-                      Add this song&apos;s ordered sections to <code>public/lyric-sheets.json</code>.
+                      Add a chart PDF URL to this song&apos;s resources in <code>public/songs.json</code>.
                     </p>
-                    {song.resources?.lyricsUrls?.[0] && (
-                      <a
-                        className="btn btn-sm btn-outline mt-4"
-                        href={song.resources.lyricsUrls[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Open external lyrics
-                      </a>
-                    )}
                   </div>
-                )}
-
-                {song.resources?.chartPdfUrl && (
-                  <a
-                    className="btn btn-sm btn-outline self-start"
-                    href={Array.isArray(song.resources.chartPdfUrl)
-                      ? song.resources.chartPdfUrl[0]
-                      : song.resources.chartPdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open chart
-                  </a>
                 )}
               </div>
             </article>
@@ -404,6 +463,8 @@ export function PerformanceView({
             {drawerSongs.map((setSong, index) => {
               const isCurrentSong = index === currentIndex;
               const hasSheet = lyricSheets[setSong.id]?.sections?.length > 0;
+              const hasChart = Boolean(setSong.resources?.chartPdfUrl?.length) ||
+                typeof setSong.resources?.chartPdfUrl === "string";
               return (
                 <button
                   key={setSong.id}
@@ -423,8 +484,12 @@ export function PerformanceView({
                       {setSong.performanceNotes?.leadSinger || setSong.artistInfo?.performanceVersion}
                     </span>
                   </span>
-                  <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>
-                    {hasSheet ? "Sheet" : "No sheet"}
+                  <span className="flex shrink-0 gap-1">
+                    {hasSheet && <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>Lyrics</span>}
+                    {hasChart && <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>Chart</span>}
+                    {!hasSheet && !hasChart && (
+                      <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>No sheet</span>
+                    )}
                   </span>
                 </button>
               );

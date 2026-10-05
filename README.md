@@ -122,7 +122,7 @@ To add a new status, edit `src/lib/statuses.js` — it controls the filter butto
 
 ### Performance Lyric Sheets
 
-Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons or the left/right arrow keys. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
+Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and can be opened in a new tab if the embedded PDF viewer is unavailable. Multiple chart URLs can be selected within the Charts view. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
 
 Performance sheets are editable JSON in `public/lyric-sheets.json`, keyed by song ID. Sections render in the order listed. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
 
