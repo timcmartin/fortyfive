@@ -1,0 +1,162 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 4,
+      "notes": "Drum & Bass"
+    },
+    {
+      "part": "instrumental",
+      "bars": 8,
+      "notes": "Guitar Enters"
+    },
+    {
+      "part": "instrumental",
+      "bars": 8,
+      "notes": "Guitar Melody"
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "Easy, ready, willin', overtime",
+        "Where does it stop?",
+        "Where do you dare me",
+        "To draw the line?",
+        "You've got the body",
+        "Now you want my soul",
+        "Don't even think about it",
+        "Say \"no go\""
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Yeah, I, I'll do anything",
+        "That you want me to",
+        "Yeah, I'll do almost anything",
+        "That you want me to, ooh"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "But I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that",
+        "Can't go for that",
+        "Can't go for that",
+        "Can't go for that"
+      ]
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "I can go for being twice as nice",
+        "I can go for just repeatin'",
+        "The same old lines",
+        "Use the body",
+        "Now you want my soul",
+        "Ooh, forget about it",
+        "Now say \"no go\""
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Yeah, I, I'll do anything",
+        "That you want me to",
+        "Yeah, I'll do almost anything",
+        "That you want me to, ooh"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "But I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that",
+        "Can't go for that",
+        "Can't go for that",
+        "Can't go for that"
+      ]
+    },
+    {
+      "part": "guitarSolo",
+      "bars": 8
+    },
+    {
+      "part": "preChorus",
+      "bars": 9,
+      "lyrics": [
+        "Yeah, I, I'll do anything",
+        "That you want me to",
+        "Yeah, I'll do almost anything",
+        "That you want me to, ooh"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "But I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that, no (No)",
+        "No can do",
+        "I can't go for that",
+        "Can't go for that",
+        "Can't go for that",
+        "Can't go for that"
+      ]
+    },
+    {
+      "part": "keyboardSolo",
+      "bars": 16
+    },
+    {
+      "part": "vamp",
+      "bars": 8,
+      "lyrics": [
+        "No I can't go",
+        "I can't go for that.",
+        "Forget about it, no",
+        "Forget about it, no",
+        "I can't go for that"
+      ]
+    },
+    {
+      "part": "outro",
+      "bars": 16,
+      "lyrics": [
+        "I can't go for that, no, no, no, no.",
+        "I can't go for that",
+        "I can't go for that, no, no, no, no.",
+        "I can't go for that",
+        "I can't go for that, no, no, no, no.",
+        "I can't go for that",
+        "I can't go for that, no, no, no, no.",
+        "I can't go for that"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 8,
+      "notes": "Guitar melody"
+    }
+  ]
+}

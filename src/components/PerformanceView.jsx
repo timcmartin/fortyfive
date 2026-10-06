@@ -3,17 +3,22 @@ import { ArrowLeft, ArrowRight, ListMusic, Music2, X } from "lucide-react";
 import { PERFORMANCE_SETS } from "@/lib/sets";
 
 const PdfChartViewer = lazy(() =>
-  import("./PdfChartViewer").then((module) => ({ default: module.PdfChartViewer })),
+  import("./PdfChartViewer").then((module) => ({
+    default: module.PdfChartViewer,
+  })),
 );
 
 const PART_LABELS = {
   verse: "Verse",
   preChorus: "Pre-Chorus",
+  postChorus: "Post-Chorus",
   chorus: "Chorus",
   bridge: "Bridge",
   instrumental: "Instrumental",
+  break: "Break",
   bassSolo: "Bass Solo",
   guitarSolo: "Guitar Solo",
+  keyboardSolo: "Keyboard Solo",
   intro: "Intro",
   outro: "Outro",
   tag: "Tag",
@@ -40,37 +45,55 @@ async function fetchSetItems(setId) {
 }
 
 function formatLabel(value) {
-  return PART_LABELS[value] ?? value.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+  return (
+    PART_LABELS[value] ??
+    value.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase())
+  );
 }
 
 function LyricSection({ section }) {
   const label = formatLabel(section.part || "section");
-  const isCue = ["intro", "instrumental", "bassSolo", "guitarSolo"].includes(section.part);
-  const sectionStyle = isCue || section.part === "intro"
-    ? "performance-cue"
-    : section.part === "chorus"
-      ? "performance-chorus"
-      : "performance-lyrics";
-  const lyrics = typeof section.lyrics === "string"
-    ? section.lyrics
-    : Array.isArray(section.lyrics)
-      ? section.lyrics.join("\n")
-      : "";
+  const isCue = [
+    "intro",
+    "instrumental",
+    "bassSolo",
+    "guitarSolo",
+    "keyboardSolo",
+    "break",
+  ].includes(section.part);
+  const sectionStyle =
+    isCue || section.part === "intro"
+      ? "performance-cue"
+      : section.part === "chorus"
+        ? "performance-chorus"
+        : "performance-lyrics";
+  const lyrics =
+    typeof section.lyrics === "string"
+      ? section.lyrics
+      : Array.isArray(section.lyrics)
+        ? section.lyrics.join("\n")
+        : "";
   const singer = section.singer
-    ? SINGER_LABELS[section.singer] ?? section.singer
+    ? (SINGER_LABELS[section.singer] ?? section.singer)
     : null;
 
   return (
     <section className={`performance-section ${sectionStyle}`}>
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <h3 className="text-sm font-bold uppercase tracking-wider">{label}</h3>
-        {singer && <span className="badge badge-sm badge-outline">{singer}</span>}
+        {singer && (
+          <span className="badge badge-sm badge-outline">{singer}</span>
+        )}
         {section.bars != null && (
           <span className="badge badge-sm badge-warning">
-            {typeof section.bars === "number" ? `${section.bars} bars` : section.bars}
+            {typeof section.bars === "number"
+              ? `${section.bars} bars`
+              : section.bars}
           </span>
         )}
-        {section.notes && <span className="text-sm font-medium">{section.notes}</span>}
+        {section.notes && (
+          <span className="text-sm font-medium">{section.notes}</span>
+        )}
       </div>
       {lyrics ? (
         <p className="whitespace-pre-line text-xl leading-relaxed">{lyrics}</p>
@@ -102,22 +125,34 @@ export function PerformanceView({
   onClose,
 }) {
   const [selectedSet, setSelectedSet] = useState(
-    initialSongId ? "" : PERFORMANCE_SETS[0]?.value ?? "",
+    initialSongId ? "" : (PERFORMANCE_SETS[0]?.value ?? ""),
   );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showSetList, setShowSetList] = useState(false);
   const [viewMode, setViewMode] = useState("lyrics");
-  const [chartSelection, setChartSelection] = useState({ songId: null, index: 0 });
-  const [setResource, setSetResource] = useState({ set: null, items: [], error: null });
+  const [chartSelection, setChartSelection] = useState({
+    songId: null,
+    index: 0,
+  });
+  const [setResource, setSetResource] = useState({
+    set: null,
+    items: [],
+    error: null,
+  });
   const [initialSongError, setInitialSongError] = useState(null);
   const setListDialogRef = useRef(null);
   const isIndividualSong = selectedSet === "individual";
-  const setLoading = !isIndividualSong && (!selectedSet || setResource.set !== selectedSet);
-  const setError = !isIndividualSong && setResource.set === selectedSet
-    ? setResource.error
-    : null;
+  const setLoading =
+    !isIndividualSong && (!selectedSet || setResource.set !== selectedSet);
+  const setError =
+    !isIndividualSong && setResource.set === selectedSet
+      ? setResource.error
+      : null;
   const setItems = useMemo(
-    () => !isIndividualSong && setResource.set === selectedSet ? setResource.items : [],
+    () =>
+      !isIndividualSong && setResource.set === selectedSet
+        ? setResource.items
+        : [],
     [isIndividualSong, setResource, selectedSet],
   );
 
@@ -142,17 +177,25 @@ export function PerformanceView({
           index: items.findIndex((item) => item.id === initialSongId),
         }))
         .find(({ index }) => index >= 0);
-      const hadLoadErrors = results.some((result) => result.status === "rejected");
+      const hadLoadErrors = results.some(
+        (result) => result.status === "rejected",
+      );
 
       if (match) {
         setSelectedSet(match.set.value);
         setCurrentIndex(match.index);
-        setSetResource({ set: match.set.value, items: match.items, error: null });
+        setSetResource({
+          set: match.set.value,
+          items: match.items,
+          error: null,
+        });
       } else {
         setSelectedSet("individual");
         setCurrentIndex(0);
         if (hadLoadErrors) {
-          setInitialSongError("Could not check every set list; opening this song individually.");
+          setInitialSongError(
+            "Could not check every set list; opening this song individually.",
+          );
         }
       }
     });
@@ -189,23 +232,30 @@ export function PerformanceView({
   }, [showSetList]);
 
   const setSongs = useMemo(
-    () => setItems.map(({ id }) => songs.find((song) => song.id === id)).filter(Boolean),
+    () =>
+      setItems
+        .map(({ id }) => songs.find((song) => song.id === id))
+        .filter(Boolean),
     [setItems, songs],
   );
   const individualSong = isIndividualSong
     ? songs.find((item) => item.id === initialSongId)
     : null;
-  const drawerSongs = isIndividualSong && individualSong ? [individualSong] : setSongs;
+  const drawerSongs =
+    isIndividualSong && individualSong ? [individualSong] : setSongs;
   const song = individualSong ?? setSongs[currentIndex];
   const lyricSheet = song ? lyricSheets[song.id] : null;
-  const sections = Array.isArray(lyricSheet?.sections) ? lyricSheet.sections : [];
+  const sections = Array.isArray(lyricSheet?.sections)
+    ? lyricSheet.sections
+    : [];
   const nextSong = !isIndividualSong ? setSongs[currentIndex + 1] : null;
   const chartUrls = song?.resources?.chartPdfUrl
     ? Array.isArray(song.resources.chartPdfUrl)
       ? song.resources.chartPdfUrl
       : [song.resources.chartPdfUrl]
     : [];
-  const chartIndex = chartSelection.songId === song?.id ? chartSelection.index : 0;
+  const chartIndex =
+    chartSelection.songId === song?.id ? chartSelection.index : 0;
   const chartUrl = chartUrls[chartIndex];
 
   useEffect(() => {
@@ -216,7 +266,12 @@ export function PerformanceView({
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.altKey || event.ctrlKey || event.metaKey) return;
-      if (event.target instanceof HTMLElement && event.target.closest("input, select, textarea, [contenteditable='true']")) {
+      if (
+        event.target instanceof HTMLElement &&
+        event.target.closest(
+          "input, select, textarea, [contenteditable='true']",
+        )
+      ) {
         return;
       }
       if (event.key === "Escape") {
@@ -240,7 +295,8 @@ export function PerformanceView({
   const selectedSetLabel =
     selectedSet === "individual"
       ? "Individual song"
-      : PERFORMANCE_SETS.find((set) => set.value === selectedSet)?.label ?? "Set";
+      : (PERFORMANCE_SETS.find((set) => set.value === selectedSet)?.label ??
+        "Set");
   const hasPrevious = !isIndividualSong && currentIndex > 0;
   const hasNext = !isIndividualSong && currentIndex < setSongs.length - 1;
 
@@ -249,7 +305,9 @@ export function PerformanceView({
       <div className="max-w-4xl mx-auto px-4 py-6 sm:py-10">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">Performance</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+              Performance
+            </p>
             <h1 className="text-2xl sm:text-3xl font-bold">Live performance</h1>
           </div>
           <div className="flex gap-2">
@@ -280,19 +338,25 @@ export function PerformanceView({
             }}
           >
             {initialSongId && !selectedSet && (
-              <option value="" disabled>Finding song...</option>
+              <option value="" disabled>
+                Finding song...
+              </option>
             )}
             {initialSongId && (
               <option value="individual">Individual song</option>
             )}
             {PERFORMANCE_SETS.map((set) => (
-              <option key={set.value} value={set.value}>{set.label}</option>
+              <option key={set.value} value={set.value}>
+                {set.label}
+              </option>
             ))}
           </select>
         </label>
 
         {setError && <div className="alert alert-error mb-4">{setError}</div>}
-        {initialSongError && <div className="alert alert-warning mb-4">{initialSongError}</div>}
+        {initialSongError && (
+          <div className="alert alert-warning mb-4">{initialSongError}</div>
+        )}
         {sheetIndexLoading && (
           <div className="flex justify-center py-5">
             <span className="loading loading-spinner loading-md" />
@@ -307,10 +371,12 @@ export function PerformanceView({
           <>
             <div className="flex items-center justify-between gap-3 mb-4">
               <p className="text-sm text-base-content/60">
-                {selectedSetLabel} · Song {currentIndex + 1} of {isIndividualSong ? 1 : setSongs.length}
+                {selectedSetLabel} · Song {currentIndex + 1} of{" "}
+                {isIndividualSong ? 1 : setSongs.length}
               </p>
               <p className="text-sm text-base-content/60">
-                {song.performanceNotes?.leadSinger && `${song.performanceNotes.leadSinger} · `}
+                {song.performanceNotes?.leadSinger &&
+                  `${song.performanceNotes.leadSinger} · `}
                 {song.musicalDetails?.key}
               </p>
             </div>
@@ -318,8 +384,12 @@ export function PerformanceView({
             <article className="card bg-base-100 shadow-sm">
               <div className="card-body gap-5">
                 <header>
-                  <h2 className="text-3xl sm:text-4xl font-bold">{song.title}</h2>
-                  <p className="mt-1 text-base-content/60">{song.artistInfo?.performanceVersion}</p>
+                  <h2 className="text-3xl sm:text-4xl font-bold">
+                    {song.title}
+                  </h2>
+                  <p className="mt-1 text-base-content/60">
+                    {song.artistInfo?.performanceVersion}
+                  </p>
                   {song.performanceNotes?.arrangement && (
                     <p className="mt-3 rounded-lg bg-base-200 px-3 py-2 text-sm">
                       {song.performanceNotes.arrangement}
@@ -327,7 +397,11 @@ export function PerformanceView({
                   )}
                 </header>
 
-                <div className="join self-start" role="group" aria-label="Performance view">
+                <div
+                  className="join self-start"
+                  role="group"
+                  aria-label="Performance view"
+                >
                   <button
                     className={`btn join-item ${viewMode === "lyrics" ? "btn-primary" : "btn-outline"}`}
                     aria-pressed={viewMode === "lyrics"}
@@ -349,12 +423,17 @@ export function PerformanceView({
                     <span className="loading loading-spinner loading-lg" />
                   </div>
                 ) : viewMode === "lyrics" && song && sheetErrors[song.id] ? (
-                  <div className="alert alert-error">{sheetErrors[song.id]}</div>
+                  <div className="alert alert-error">
+                    {sheetErrors[song.id]}
+                  </div>
                 ) : viewMode === "lyrics" ? (
                   sections.length > 0 ? (
                     <div className="space-y-4">
                       {sections.map((section, index) => (
-                        <LyricSection key={section.id ?? `${section.part}-${index}`} section={section} />
+                        <LyricSection
+                          key={section.id ?? `${section.part}-${index}`}
+                          section={section}
+                        />
                       ))}
                     </div>
                   ) : (
@@ -362,7 +441,8 @@ export function PerformanceView({
                       <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
                       <p className="font-semibold">No performance sheet yet</p>
                       <p className="mt-1 text-sm text-base-content/60">
-                        Add this song&apos;s ordered sections to <code>public/lyric-sheets/{song.id}.json</code>.
+                        Add this song&apos;s ordered sections to{" "}
+                        <code>public/lyric-sheets/{song.id}.json</code>.
                       </p>
                       {song.resources?.lyricsUrls?.[0] && (
                         <a
@@ -384,10 +464,12 @@ export function PerformanceView({
                         <select
                           className="select select-bordered"
                           value={chartIndex}
-                          onChange={(event) => setChartSelection({
-                            songId: song.id,
-                            index: Number(event.target.value),
-                          })}
+                          onChange={(event) =>
+                            setChartSelection({
+                              songId: song.id,
+                              index: Number(event.target.value),
+                            })
+                          }
                         >
                           {chartUrls.map((url, index) => (
                             <option key={`${url}-${index}`} value={index}>
@@ -414,19 +496,27 @@ export function PerformanceView({
                 ) : (
                   <div className="rounded-xl border border-dashed border-base-300 px-5 py-10 text-center">
                     <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
-                    <p className="font-semibold">No chart available for this song</p>
+                    <p className="font-semibold">
+                      No chart available for this song
+                    </p>
                     <p className="mt-1 text-sm text-base-content/60">
-                      Add a chart PDF URL to this song&apos;s resources in <code>public/songs.json</code>.
+                      Add a chart PDF URL to this song&apos;s resources in{" "}
+                      <code>public/songs.json</code>.
                     </p>
                   </div>
                 )}
               </div>
             </article>
 
-            <nav className="flex justify-between mt-5" aria-label="Set list navigation">
+            <nav
+              className="flex justify-between mt-5"
+              aria-label="Set list navigation"
+            >
               <button
                 className="btn btn-lg"
-                onClick={() => setCurrentIndex((index) => Math.max(0, index - 1))}
+                onClick={() =>
+                  setCurrentIndex((index) => Math.max(0, index - 1))
+                }
                 disabled={!hasPrevious}
                 aria-keyshortcuts="ArrowLeft"
               >
@@ -435,7 +525,11 @@ export function PerformanceView({
               </button>
               <button
                 className="btn btn-primary btn-lg"
-                onClick={() => setCurrentIndex((index) => Math.min(setSongs.length - 1, index + 1))}
+                onClick={() =>
+                  setCurrentIndex((index) =>
+                    Math.min(setSongs.length - 1, index + 1),
+                  )
+                }
                 disabled={!hasNext}
                 aria-keyshortcuts="ArrowRight"
               >
@@ -448,7 +542,9 @@ export function PerformanceView({
             </p>
           </>
         ) : !setError ? (
-          <div className="alert">This set list has no songs available in the catalog.</div>
+          <div className="alert">
+            This set list has no songs available in the catalog.
+          </div>
         ) : null}
       </div>
 
@@ -478,17 +574,23 @@ export function PerformanceView({
               <X className="size-4" />
             </button>
           </header>
-          <nav className="flex-1 overflow-y-auto p-3" aria-label={`${selectedSetLabel} songs`}>
+          <nav
+            className="flex-1 overflow-y-auto p-3"
+            aria-label={`${selectedSetLabel} songs`}
+          >
             {drawerSongs.map((setSong, index) => {
               const isCurrentSong = index === currentIndex;
               const hasSheet = lyricSheetIds.includes(setSong.id);
-              const hasChart = Boolean(setSong.resources?.chartPdfUrl?.length) ||
+              const hasChart =
+                Boolean(setSong.resources?.chartPdfUrl?.length) ||
                 typeof setSong.resources?.chartPdfUrl === "string";
               return (
                 <button
                   key={setSong.id}
                   className={`mb-1 flex w-full items-center gap-3 rounded-lg px-3 py-3 text-left ${
-                    isCurrentSong ? "bg-primary text-primary-content" : "hover:bg-base-200"
+                    isCurrentSong
+                      ? "bg-primary text-primary-content"
+                      : "hover:bg-base-200"
                   }`}
                   onClick={() => {
                     setCurrentIndex(index);
@@ -496,18 +598,39 @@ export function PerformanceView({
                   }}
                   aria-current={isCurrentSong ? "true" : undefined}
                 >
-                  <span className="w-7 shrink-0 text-right text-sm opacity-70">{index + 1}</span>
+                  <span className="w-7 shrink-0 text-right text-sm opacity-70">
+                    {index + 1}
+                  </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate font-semibold">{setSong.title}</span>
+                    <span className="block truncate font-semibold">
+                      {setSong.title}
+                    </span>
                     <span className="block truncate text-xs opacity-70">
-                      {setSong.performanceNotes?.leadSinger || setSong.artistInfo?.performanceVersion}
+                      {setSong.performanceNotes?.leadSinger ||
+                        setSong.artistInfo?.performanceVersion}
                     </span>
                   </span>
                   <span className="flex shrink-0 gap-1">
-                    {hasSheet && <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>Lyrics</span>}
-                    {hasChart && <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>Chart</span>}
+                    {hasSheet && (
+                      <span
+                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
+                      >
+                        Lyrics
+                      </span>
+                    )}
+                    {hasChart && (
+                      <span
+                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
+                      >
+                        Chart
+                      </span>
+                    )}
                     {!hasSheet && !hasChart && (
-                      <span className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}>No sheet</span>
+                      <span
+                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
+                      >
+                        No sheet
+                      </span>
                     )}
                   </span>
                 </button>

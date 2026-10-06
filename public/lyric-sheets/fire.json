@@ -1,0 +1,89 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 14,
+      "lyrics": [
+        "I'm ridin' in your car",
+        "You turn on the radio",
+        "You're pullin' me close",
+        "I just say no",
+        "I say I don't like it",
+        "But you know I'm a liar",
+        "'Cause when we kiss",
+        "Ooh, fire"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 4
+    },
+    {
+      "part": "verse",
+      "bars": 14,
+      "lyrics": [
+        "Late at night",
+        "You're takin' me home",
+        "You say you want to stay",
+        "I say I wanna be alone",
+        "I say I don't love you",
+        "But you know I'm a liar",
+        "'Cause when we kiss",
+        "Ooh, fire"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 4
+    },
+    {
+      "part": "bridge",
+      "bars": 9,
+      "lyrics": [
+        "You had a hold on me right from the start",
+        "A grip so tight I couldn't tear it apart",
+        "My nerves all jumpin', actin' like a fool",
+        "Well, your kisses, they burn, but my heart stays cool"
+      ]
+    },
+    {
+      "part": "verse",
+      "bars": 14,
+      "lyrics": [
+        "Romeo and Juliet",
+        "Samson and Delilah",
+        "Baby, you can bet",
+        "A love they couldn't deny",
+        "My words say split",
+        "But my words, they lie",
+        "'Cause when we kiss",
+        "Ooh, fire"
+      ]
+    },
+    {
+      "part": "keyboardSolo",
+      "bars": 14,
+      "lyrics": ["'Cause when we kiss", "Ooh, fire"],
+      "notes": "Vocals in on last 2 bars"
+    },
+    {
+      "part": "outro",
+      "bars": 12,
+      "lyrics": [
+        "Hot kisses like fire",
+        "Burn me up with fire",
+        "I like what you're doing now, fire",
+        "Touchin' me with fire",
+        "Touchin' me, burning me with fire",
+        "Take me home with fire, now",
+        "Kisses like fire",
+        "Kisses like fire"
+      ],
+      "notes": "Ad lib"
+    }
+  ]
+}

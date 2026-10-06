@@ -1,0 +1,104 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 8,
+      "notes": "Drums & Bass"
+    },
+    {
+      "part": "verse",
+      "bars": 18,
+      "lyrics": [
+        "It's funny how I find myself",
+        "In love with you",
+        "If I could buy my reasoning",
+        "I'd pay to lose",
+        "One half won't do"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": ["I've asked myself", "How much do you", "Commit yourself?"]
+    },
+    {
+      "part": "chorus",
+      "bars": 10,
+      "lyrics": [
+        "Oh, it's my life",
+        "Don't you forget",
+        "It's my life",
+        "It never ends (It never ends)"
+      ]
+    },
+    {
+      "part": "break",
+      "bars": 2,
+      "notes": "Chug, chug, chug"
+    },
+    {
+      "part": "verse",
+      "bars": 14,
+      "lyrics": [
+        "Funny how I blind myself",
+        "I never knew",
+        "I was sometimes played upon",
+        "Afraid to lose"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Oh, I'd tell myself",
+        "What good do you do?",
+        "Convince myself"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 10,
+      "lyrics": [
+        "Oh, it's my life",
+        "Don't you forget",
+        "It's my life",
+        "It never ends (It never ends)"
+      ]
+    },
+    {
+      "part": "guitarSolo",
+      "bars": 12,
+      "notes": "Watch Tim for cue"
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": ["I've asked myself", "How much do you", "Commit yourself?"]
+    },
+    {
+      "part": "chorus",
+      "bars": 16,
+      "lyrics": [
+        "Oh, it's my life",
+        "Don't you forget",
+        "Caught in the crowd",
+        "It never ends (It never ends)",
+        "It's my life",
+        "Don't you forget",
+        "Caught in the crowd",
+        "It never ends (It never ends)"
+      ]
+    },
+    {
+      "part": "outro",
+      "bars": 8,
+      "lyrics": [
+        "Oh, it's my life (Oh, it's my life)",
+        "Don't you forget (Don't you forget)",
+        "Caught in the crowd (Caught in the crowd)",
+        "It never ends (It never ends)"
+      ],
+      "notes": "Steve echoes lyrics"
+    }
+  ]
+}
