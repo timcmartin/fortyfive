@@ -1,0 +1,83 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 8,
+      "notes": "Drums start"
+    },
+    {
+      "part": "verse",
+      "bars": 16,
+      "lyrics": [
+        "I can't stop the way I feel",
+        "Things you do don't seem real",
+        "Tell me what you've got in mind",
+        "'Cause we're running out of time",
+        "Won't you ever set me free?",
+        "This waiting 'round's killing me"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "She drives me crazy",
+        "Like no one else",
+        "She drives me crazy",
+        "And I can't help myself"
+      ]
+    },
+    {
+      "part": "verse",
+      "bars": 16,
+      "lyrics": [
+        "I can't get any rest",
+        "People say I'm obsessed",
+        "Everything you say is lies",
+        "But to me, there's no surprise",
+        "What I had for you was true",
+        "Things go wrong, they always do"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "She drives me crazy",
+        "Like no one else",
+        "She drives me crazy",
+        "And I can't help myself"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": ["I won't make it on my own", "No one likes to be alone"],
+      "notes": "Half as long."
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "She drives me crazy",
+        "Like no one else",
+        "She drives me crazy",
+        "And I can't help myself"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "She drives me crazy",
+        "Like no one else",
+        "She drives me crazy",
+        "And I can't help myself"
+      ]
+    }
+  ]
+}

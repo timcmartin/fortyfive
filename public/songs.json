@@ -131,7 +131,7 @@
     "resources": {
       "youtubeUrl": "https://youtu.be/C-u5WLJ9Yk4?si=WFMjPHLBCMaG_Gcq",
       "mp3Url": "https://fortyfive-songs.s3.amazonaws.com/baby-one-more-time.mp3",
-      "chartPdfUrl": "https://fortyfive charts.s3.amazonaws.com/Baby One More Time.pdf",
+      "chartPdfUrl": "https://fortyfive-charts.s3.amazonaws.com/BabyOneMoreTime.pdf",
       "lyricsUrls": [
         "https://genius.com/Britney-Spears-Baby-One-More-Time-lyrics"
       ]

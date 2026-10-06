@@ -1,0 +1,128 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 8,
+      "notes": "Drums start"
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "Once I had a love, and it was a gas",
+        "Soon turned out had a heart of glass",
+        "Seemed like the real thing, only to find",
+        "Mucho mistrust, love's gone behind"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 4
+    },
+    {
+      "part": "verse",
+      "bars": 9,
+      "lyrics": [
+        "Once I had a love and it was divine",
+        "Soon found out I was losing my mind",
+        "It seemed like the real thing, but I was so blind",
+        "Mucho mistrust, love's gone behind"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "In between, what I find is pleasing, and I'm feeling fine",
+        "Love is so confusing, there's no peace of mind",
+        "If I fear I'm losing you, it's just no good",
+        "You're teasing like you do"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 4
+    },
+    {
+      "part": "verse",
+      "bars": 9,
+      "lyrics": [
+        "Once I had a love, and it was a gas",
+        "Soon turned out had a heart of glass",
+        "Seemed like the real thing, only to find",
+        "Mucho mistrust, love's gone behind"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Lost inside, adorable illusion, and I cannot hide",
+        "I'm the one you're using, please don't push me aside",
+        "We could've made it cruising, yeah"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 5,
+      "notes": "3 bars of 7/4, 2 bars of 4/4"
+    },
+    {
+      "part": "interlude",
+      "bars": 8,
+      "lyrics": [
+        "La, da, da - (a la keyboard melody)",
+        "Yeah, riding high on love's true bluish light"
+      ]
+    },
+    {
+      "part": "interlude",
+      "bars": 8,
+      "lyrics": ["Ooh, woah", "Ooh, woah", "Ooh, woah", "Ooh, woah"],
+      "notes": "4 bars Vocals, bass and drums, guitar enters last 4"
+    },
+    {
+      "part": "verse",
+      "bars": 9,
+      "lyrics": [
+        "Once I had a love and it was a gas",
+        "Soon turned out to be a pain in the ass",
+        "Seemed like the real thing, only to find",
+        "Mucho mistrust, love's gone behind"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Lost inside, adorable illusion, and I cannot hide",
+        "I'm the one you're using, please don't push me aside",
+        "We could've made it cruising, yeah"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 8,
+      "notes": "All 4/4 this time."
+    },
+    {
+      "part": "interlude",
+      "bars": 8,
+      "lyrics": [
+        "La, da, da - (a la keyboard melody)",
+        "Yeah, riding high on love's true bluish light"
+      ]
+    },
+    {
+      "part": "outro",
+      "bars": 8,
+      "lyrics": ["Ooh, woah", "Ooh, woah", "Ooh, woah", "Ooh, woah"],
+      "notes": "All in"
+    },
+    {
+      "part": "instrumental",
+      "bars": 4,
+      "notes": "Band finishes"
+    }
+  ]
+}
