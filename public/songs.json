@@ -92,7 +92,7 @@
     },
     "musicalDetails": {
       "key": "Ab",
-      "bpm": "78/156"
+      "bpm": "78"
     },
     "performanceNotes": {
       "arrangement": "Same key as recording.",
@@ -263,7 +263,7 @@
     },
     "musicalDetails": {
       "key": "Eb minor",
-      "bpm": "88/178"
+      "bpm": "178"
     },
     "performanceNotes": {
       "arrangement": "Jam out at the end.",
@@ -634,7 +634,7 @@
     },
     "musicalDetails": {
       "key": "E / A",
-      "bpm": "120/118"
+      "bpm": "120"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1401,7 +1401,7 @@
     },
     "musicalDetails": {
       "key": "C minor",
-      "bpm": "111-114"
+      "bpm": "110"
     },
     "performanceNotes": {
       "arrangement": "Keyboard solo at end, Guitar melod cues.",
@@ -1486,7 +1486,7 @@
     },
     "musicalDetails": {
       "key": "A",
-      "bpm": "130-134"
+      "bpm": "130"
     },
     "performanceNotes": {
       "arrangement": "",
@@ -1767,7 +1767,7 @@
     },
     "musicalDetails": {
       "key": "E / B",
-      "bpm": "110/112"
+      "bpm": "110"
     },
     "performanceNotes": {
       "arrangement": "Mashup of That's The Way I Like It and Get Down Tonight",
@@ -2164,7 +2164,7 @@
     },
     "musicalDetails": {
       "key": "B minor",
-      "bpm": "89/178"
+      "bpm": "89"
     },
     "performanceNotes": {
       "arrangement": "",
