@@ -15,6 +15,7 @@ A web app for browsing and managing a band's song repertoire. Search by title or
 | Icons | [Lucide React](https://lucide.dev/) |
 | Font | [Geist Variable](https://vercel.com/font) |
 | Data | Static JSON (`public/songs.json`) |
+| Media storage | Amazon S3 buckets for song audio and chart PDFs |
 | Hosting | [Netlify](https://netlify.com/) |
 
 ---
@@ -39,9 +40,9 @@ npm run preview
 
 ---
 
-## Deployment (Netlify)
+## Deployment
 
-This app is a static site — no server required.
+This app is a static site — no server required. It is hosted on Netlify, while song audio files and chart PDFs are stored in Amazon S3 buckets and referenced by URL in `public/songs.json`.
 
 **Deploy via Netlify UI:**
 1. Push the repo to GitHub
@@ -122,7 +123,7 @@ To add a new status, edit `src/lib/statuses.js` — it controls the filter butto
 
 ### Performance Lyric Sheets
 
-Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. Since the app fetches chart PDFs for rendering, configure the chart host's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
+Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. Since the app fetches chart PDFs for rendering, configure the S3 bucket's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
 
 Performance sheets are editable JSON files in `public/lyric-sheets/`, one file per song named with its song ID. Register sheet IDs in `public/lyric-sheets/index.json`; Performance Mode loads that small index and fetches the current song's sheet, preloading the next song's sheet. Each file contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
 
