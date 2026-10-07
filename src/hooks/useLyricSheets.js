@@ -19,6 +19,7 @@ async function loadStaticSheet(songId) {
   if (!response.ok) {
     throw new Error(`Failed to load lyric sheet for ${songId}`);
   }
+  if (response.headers.get("content-type")?.includes("text/html")) return null;
   return validateSheet(await response.json(), songId);
 }
 
