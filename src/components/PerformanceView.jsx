@@ -1,4 +1,12 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -283,6 +291,16 @@ export function PerformanceView({
     if (nextSong) void loadLyricSheet(nextSong.id);
   }, [loadLyricSheet, nextSong, song]);
 
+  const navigateToSong = useCallback(
+    (index) => {
+      const nextIndex = Math.max(0, Math.min(setSongs.length - 1, index));
+      if (nextIndex === currentIndex) return;
+      setCurrentIndex(nextIndex);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [currentIndex, setSongs.length],
+  );
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.altKey || event.ctrlKey || event.metaKey) return;
@@ -302,15 +320,15 @@ export function PerformanceView({
       if (showSetList) return;
       if (setSongs.length === 0) return;
       if (event.key === "ArrowLeft") {
-        setCurrentIndex((index) => Math.max(0, index - 1));
+        navigateToSong(currentIndex - 1);
       } else if (event.key === "ArrowRight") {
-        setCurrentIndex((index) => Math.min(setSongs.length - 1, index + 1));
+        navigateToSong(currentIndex + 1);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose, setSongs.length, showSetList]);
+  }, [currentIndex, navigateToSong, onClose, setSongs.length, showSetList]);
 
   const selectedSetLabel =
     selectedSet === "individual"
@@ -714,9 +732,7 @@ export function PerformanceView({
             >
               <button
                 className="btn btn-lg"
-                onClick={() =>
-                  setCurrentIndex((index) => Math.max(0, index - 1))
-                }
+                onClick={() => navigateToSong(currentIndex - 1)}
                 disabled={!hasPrevious}
                 aria-keyshortcuts="ArrowLeft"
               >
@@ -725,11 +741,7 @@ export function PerformanceView({
               </button>
               <button
                 className="btn btn-primary btn-lg"
-                onClick={() =>
-                  setCurrentIndex((index) =>
-                    Math.min(setSongs.length - 1, index + 1),
-                  )
-                }
+                onClick={() => navigateToSong(currentIndex + 1)}
                 disabled={!hasNext}
                 aria-keyshortcuts="ArrowRight"
               >
