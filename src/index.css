@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist";
 
 @plugin "daisyui" {
   themes: lemonade --default;
