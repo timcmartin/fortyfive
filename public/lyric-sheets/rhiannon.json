@@ -1,0 +1,127 @@
+{
+  "sections": [
+    {
+      "bars": 8,
+      "part": "intro",
+      "notes": "Guitar and bass start."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "Rhiannon rings like a bell through the night",
+        "And wouldn't you love to love her?",
+        "Takes to the sky like a bird in flight",
+        "And who will be her lover?"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "preChorus",
+      "singer": "heather",
+      "lyrics": [
+        "All your life you've never seen",
+        "Woman taken by the wind",
+        "Would you stay if she promised you heaven?",
+        "Will you ever win?"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "She is like a cat in the dark",
+        "And then she is to darkness",
+        "She rules her life like a fine skylark",
+        "And when the sky is starless"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "preChorus",
+      "singer": "olivia",
+      "lyrics": [
+        "All your life you've never seen",
+        "Woman taken by the wind",
+        "Would you stay if she promised you heaven?",
+        "Will you ever win?"
+      ]
+    },
+    {
+      "bars": 2,
+      "part": "tag",
+      "lyrics": ["Will you ever win?"]
+    },
+    {
+      "bars": 17,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": ["(Rhiannon)", "(Rhiannon)", "(Rhiannon)", "(Rhiannon)"]
+    },
+    {
+      "bars": 1,
+      "part": "instrumental",
+      "notes": "Guitar lick."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "She rings like a bell through the night",
+        "And wouldn't you love to love her?",
+        "She rules her life like a bird in flight",
+        "And who will be her lover?"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "preChorus",
+      "singer": "olivia",
+      "lyrics": [
+        "All your life you've never seen",
+        "Woman taken by the wind",
+        "Would you stay if she promised you heaven?",
+        "Will you ever win?"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "tag",
+      "lyrics": ["Will you ever win?"]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": ["(Rhiannon)", "(Rhiannon)", "(Rhiannon)"]
+    },
+    {
+      "bars": 16,
+      "part": "postChorus",
+      "lyrics": [
+        "Taken by taken by the sky",
+        "Taken by taken by the sky",
+        "Taken by taken by the sky",
+        "Dreams unwind",
+        "Love's a state of mind",
+        "Dreams unwind",
+        "Love's a state of mind"
+      ],
+      "singer": "olivia"
+    },
+    {
+      "bars": "open",
+      "part": "outro",
+      "notes": "Guitar Solo, vocals ad lib, cue for end.",
+      "lyrics": [
+        "Dreams unwind",
+        "Love's a state of mind",
+        "Dreams unwind",
+        "Love's a state of mind"
+      ]
+    }
+  ]
+}

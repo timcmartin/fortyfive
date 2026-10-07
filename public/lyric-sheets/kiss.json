@@ -1,0 +1,117 @@
+{
+  "sections": [
+    {
+      "bars": 1,
+      "part": "intro",
+      "notes": "Guitar alone."
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 16,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "You don't have to be beautiful to turn me on",
+        "I just need your body, baby, from dusk 'til dawn",
+        "You don't need experience to turn me out",
+        "You just leave it all up to me, I'm gonna show you what it's all about"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "olivia",
+      "lyrics": [
+        "You don't have to be rich to be my girl",
+        "You don't have to be cool to rule my world",
+        "Ain't no particular sign I'm more compatible with",
+        "I just want your extra time and your kiss"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 16,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "You got to not talk dirty, baby, if you wanna impress me",
+        "You can't be too flirty, mama, I know how to undress me, yeah",
+        "I want to be your fantasy, maybe you could be mine",
+        "You just leave it all up to me, we could have a good time, oh"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "heather",
+      "lyrics": [
+        "You don't have to be rich to be my girl",
+        "You don't have to be cool to rule my world",
+        "Ain't no particular sign I'm more compatible with",
+        "I just want your extra time and your kiss"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 8,
+      "part": "break",
+      "notes": "Guitar plays funky bit.",
+      "lyrics": [
+        "Yes, oh, I think I wanna dance, uh",
+        "Oh!",
+        "Gotta, gotta, oh",
+        "Little Girl Wendy's Parade",
+        "Gotta, gotta, gotta"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "guitarSolo"
+    },
+    {
+      "bars": 16,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "Women, not girls, rule my world, I said they rule my world",
+        "Act your age, mama, not your shoe size, maybe we could do the twirl",
+        "You don't have to watch Dynasty to have an attitude, uh",
+        "You just leave it all up to me, my love will be your food"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "lyrics": [
+        "Yeah, you don't have to be rich to be my girl",
+        "You don't have to be cool to rule my world",
+        "Ain't no particular sign I'm compatible with",
+        "I just want your extra time and your kiss"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 8,
+      "part": "outro",
+      "notes": "Extra chorus.",
+      "lyrics": [
+        "You don't have to be rich to be my girl",
+        "You don't have to be cool to rule my world",
+        "Ain't no particular sign I'm more compatible with",
+        "I just want your extra time and your kiss"
+      ]
+    }
+  ]
+}

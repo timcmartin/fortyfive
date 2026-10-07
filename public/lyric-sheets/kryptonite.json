@@ -1,0 +1,111 @@
+{
+  "sections": [
+    {
+      "bars": 8,
+      "part": "intro",
+      "notes": "2 bars Guitar alone, band in for next 6."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "Well, I took a walk around the world to ease my troubled mind",
+        "I left my body lying somewhere in the sands of time",
+        "But I watched the world float to the dark side of the moon",
+        "I feel there's nothing I can do, yeah"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "I watched the world float to the dark side of the moon",
+        "After all I knew, it had to be something to do with you",
+        "I really don't mind what happens now and then",
+        "As long as you'll be my friend at the end"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "heather",
+      "lyrics": [
+        "If I go crazy, then will you still call me Superman?",
+        "If I'm alive and well, will you be there and holding my hand?",
+        "I'll keep you by my side with my superhuman might",
+        "Kryptonite"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental",
+      "notes": "Guitar plays melody."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "You called me strong, you called me weak",
+        "But still your secrets, I will keep",
+        "You took for granted all the times, I never let you down",
+        "You stumbled in and bumped your head",
+        "If not for me then you'd be dead",
+        "I picked you up and put you back on solid ground"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "olivia",
+      "lyrics": [
+        "If I go crazy, then will you still call me Superman?",
+        "If I'm alive and well, will you be there and holding my hand?",
+        "I'll keep you by my side with my superhuman might",
+        "Kryptonite"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "guitarSolo"
+    },
+    {
+      "bars": 4,
+      "part": "instrumental",
+      "notes": "Spacer - band mellows out."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "notes": "Mellower verse that builds.",
+      "singer": "heather",
+      "lyrics": [
+        "If I go crazy, then will you still call me Superman?",
+        "If I'm alive and well, will you be there and holding my hand?",
+        "I'll keep you by my side with my superhuman might",
+        "Kryptonite"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "If I go crazy, then will you still call me Superman?",
+        "If I'm alive and well, will you be there and holding my hand?",
+        "I'll keep you by my side with my superhuman might",
+        "Kryptonite"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "guitarSolo"
+    }
+  ]
+}

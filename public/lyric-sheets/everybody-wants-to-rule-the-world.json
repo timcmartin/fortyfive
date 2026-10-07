@@ -1,0 +1,126 @@
+{
+  "sections": [
+    {
+      "bars": 4,
+      "part": "intro",
+      "notes": "Guitar"
+    },
+    {
+      "bars": 8,
+      "part": "instrumental"
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "Welcome to your life",
+        "There's no turning back",
+        "Even while we sleep",
+        "We will find you"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Acting on your best behaviour",
+        "Turn your back on mother nature",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "It's my own design",
+        "It's my own remorse",
+        "Help me to decide",
+        "Help me make the most"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "lyrics": [
+        "Of freedom and of pleasure",
+        "Nothing ever lasts forever",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "bridge",
+      "singer": "gang",
+      "lyrics": [
+        "There's a room where the light won't find you",
+        "Holding hands while the walls come tumbling down",
+        "When they do I'll be right behind you"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "So glad we've almost made it",
+        "So sad they had to fade it",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": 14,
+      "part": "instrumental",
+      "notes": "String part enters after 8 bars."
+    },
+    {
+      "bars": 8,
+      "part": "guitarSolo"
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "I can't stand this indecision",
+        "Married with a lack of vision",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "postChorus",
+      "singer": "gang",
+      "lyrics": [
+        "Say that you'll never never never never need it",
+        "One headline why believe it?",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": 4,
+      "part": "instrumental"
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "All for freedom and for pleasure",
+        "Nothing ever lasts forever",
+        "Everybody wants to rule the world"
+      ]
+    },
+    {
+      "bars": "open",
+      "part": "outro",
+      "notes": "Cue for end."
+    }
+  ]
+}

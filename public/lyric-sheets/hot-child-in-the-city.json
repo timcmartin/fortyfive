@@ -1,0 +1,111 @@
+{
+  "sections": [
+    {
+      "bars": 8,
+      "part": "intro",
+      "notes": "All instruments in off top."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "Danger in the shape of something wild",
+        "Stranger dressed in black she's a hungry child"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "preChorus",
+      "singer": "heather",
+      "lyrics": [
+        "No-one knows who she is or what her name is",
+        "I don't know where she came from or what her game is"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Hot child in the city",
+        "Hot child in the city",
+        "Runnin' wild and lookin' pretty",
+        "Hot child in the city"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "So young to be loose and on her own",
+        "Young boys they all want to take her home"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "preChorus",
+      "singer": "heather",
+      "lyrics": [
+        "When she comes downtown the boys all stop and stare",
+        "When she comes downtown she walks like she just don't care",
+        "Yeah"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Hot child in the city",
+        "Hot child in the city",
+        "Runnin' wild and lookin' pretty, yeah",
+        "Hot child in the city"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "guitarSolo"
+    },
+    {
+      "bars": 8,
+      "part": "bridge",
+      "singer": "heather",
+      "lyrics": [
+        "Come on down to my place baby, we'll talk about love",
+        "Come on down to my place baby, we'll make love"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Hot child in the city",
+        "Hot child in the city",
+        "Hot child in the city",
+        "Hot child in the city"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "outro",
+      "notes": "Singer ad libs over top.",
+      "singer": "gang",
+      "lyrics": [
+        "Hot child in the city (she's kinda dangerous)",
+        "Hot child in the city (a young child)",
+        "Hot child in the city (runnin' wild)",
+        "Hot child in the city (yeah)"
+      ]
+    },
+    {
+      "bars": 2,
+      "part": "tag",
+      "notes": "Finish with vocals.",
+      "lyrics": ["Hot child in the city", "Hot child in the city"],
+      "singer": "gang"
+    }
+  ]
+}

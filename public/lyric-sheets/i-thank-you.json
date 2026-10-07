@@ -1,0 +1,86 @@
+{
+  "sections": [
+    {
+      "bars": 8,
+      "part": "intro",
+      "notes": "Drums start."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "gang",
+      "lyrics": [
+        "You've got to change your evil ways... baby",
+        "Before I stop loving you",
+        "You've got to change... baby",
+        "And every word that I say is true"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "You've got me running and hiding",
+        "All over town",
+        "You've got me sneaking and peeping",
+        "And running you down",
+        "This can't go on...",
+        "Lord knows you got to change... baby"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "gang",
+      "lyrics": [
+        "When I come home... baby",
+        "My house is dark and my pots are cold",
+        "You're hangin' round, baby",
+        "With Jean and Joan and-a who knows who"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "I'm getting tired of waiting and fooling around",
+        "I'll find somebody who won't make me feel like a clown",
+        "This can't go on...",
+        "Lord knows you got to change"
+      ]
+    },
+    {
+      "bars": "open",
+      "part": "keyboardSolo"
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "gang",
+      "lyrics": [
+        "When I come home, baby",
+        "My house is dark and my pots are cold",
+        "You're hangin' round, baby",
+        "With Jean and Joan and-a who knows who"
+      ]
+    },
+    {
+      "bars": 6,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "I'm gettin' tired of waitin' and foolin' around",
+        "I'll find somebody who won't make me feel like a clown",
+        "This can't go on",
+        "Yeah ... Yeah ... Yeah ..."
+      ]
+    },
+    {
+      "bars": "open",
+      "part": "guitarSolo",
+      "notes": "Goes until the end."
+    }
+  ]
+}

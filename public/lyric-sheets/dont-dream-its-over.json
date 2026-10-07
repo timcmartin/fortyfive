@@ -1,0 +1,114 @@
+{
+  "sections": [
+    {
+      "bars": 4,
+      "part": "intro",
+      "notes": "Guitar alone."
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "There is freedom within, there is freedom without",
+        "Try to catch the deluge in a paper cup",
+        "There's a battle ahead, many battles are lost",
+        "But you'll never see the end of the road while you're travelling with me"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Hey now, hey now",
+        "Don't dream it's over",
+        "Hey now, hey now",
+        "When the world comes in",
+        "They come, they come",
+        "To build a wall between us",
+        "We know, they won't win"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "olivia",
+      "lyrics": [
+        "Now I'm towing my car, there's a hole in the roof",
+        "My possessions are causing me suspicion, but there's no proof",
+        "In the paper today, tales of war and of waste",
+        "But you turn right over to the TV page"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "singer": "gang",
+      "lyrics": [
+        "Hey now, hey now",
+        "Don't dream it's over",
+        "Hey now, hey now",
+        "When the world comes in",
+        "They come, they come",
+        "To build a wall between us",
+        "We know, they won't win"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "keyboardSolo"
+    },
+    {
+      "bars": 5,
+      "part": "guitarSolo"
+    },
+    {
+      "bars": 8,
+      "part": "verse",
+      "singer": "heather",
+      "lyrics": [
+        "Now I'm walking again to the beat of a drum",
+        "And I'm counting the steps to the door of your heart",
+        "Only shadows ahead, barely clearing the roof",
+        "Get to know the feeling of liberation and release"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "chorus",
+      "lyrics": [
+        "Hey now, hey now",
+        "Don't dream it's over",
+        "Hey now, hey now",
+        "When the world comes in",
+        "They come, they come",
+        "To build a wall between us",
+        "You know, they won't win",
+        "Don't let them win (hey now, hey now)",
+        "Hey now, hey now",
+        "Hey now, hey now",
+        "Don't let them win (they come, they come)",
+        "Don't let them win (hey now, hey now), yeah",
+        "Hey now, hey now"
+      ]
+    },
+    {
+      "bars": 8,
+      "part": "keyboardSolo",
+      "lyrics": ["Don't let them win (hey now, hey now)", "Hey now, hey now"],
+      "notes": "Vocals sparse over solo"
+    },
+    {
+      "bars": 8,
+      "part": "outro",
+      "notes": "Singers ad lib with the \"Hey Now\" and Steve hits the DLTW at the end of the phrase.",
+      "lyrics": [
+        "(Hey now, hey now) Don't Let them win",
+        "(Hey now, hey now) Don't Let them win",
+        "(Hey now, hey now) Don't Let them win",
+        "(Hey now, hey now) Don't Let them win"
+      ]
+    }
+  ]
+}
