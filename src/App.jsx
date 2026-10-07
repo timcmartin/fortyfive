@@ -8,18 +8,20 @@ import { SongModal } from "./components/SongModal";
 import { SetSelector } from "./components/SetSelector";
 import { PerformanceView } from "./components/PerformanceView";
 import { useLyricSheets } from "./hooks/useLyricSheets";
+import { useEditorAuth } from "./hooks/useEditorAuth";
 
 export default function App() {
   const { songs, loading, error } = useSongs();
   const {
     lyricSheetIds,
+    indexError: sheetIndexError,
     lyricSheets,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
-    loading: sheetsLoading,
-    error: sheetsError,
+    saveLyricSheet,
   } = useLyricSheets();
+  const editorAuth = useEditorAuth();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedLeadSinger, setSelectedLeadSinger] = useState("all");
@@ -89,12 +91,14 @@ export default function App() {
       <PerformanceView
         songs={songs}
         songsLoading={loading}
+        sheetIndexError={sheetIndexError}
         lyricSheetIds={lyricSheetIds}
         lyricSheets={lyricSheets}
         loadingSheets={loadingSheets}
         sheetErrors={sheetErrors}
         loadLyricSheet={loadLyricSheet}
-        sheetIndexLoading={sheetsLoading}
+        saveLyricSheet={saveLyricSheet}
+        editorAuth={editorAuth}
         initialSongId={performanceSongId}
         onClose={() => {
           setShowPerformance(false);
@@ -137,9 +141,9 @@ export default function App() {
           </div>
         )}
 
-        {sheetsError && (
+        {sheetIndexError && (
           <div className="alert alert-error mb-6">
-            <span>Error loading lyric sheets: {sheetsError}</span>
+            <span>Error loading lyric sheet availability: {sheetIndexError}</span>
           </div>
         )}
 

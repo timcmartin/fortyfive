@@ -1,39 +1,83 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+function validateSheet(data, songId) {
+  if (
+    !data ||
+    Array.isArray(data) ||
+    typeof data !== "object" ||
+    !Array.isArray(data.sections)
+  ) {
+    throw new Error(`Lyric sheet for ${songId} must contain a sections array`);
+  }
+  return data;
+}
+
+async function loadStaticSheet(songId) {
+  const response = await fetch(`/lyric-sheets/${songId}.json`);
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    throw new Error(`Failed to load lyric sheet for ${songId}`);
+  }
+  return validateSheet(await response.json(), songId);
+}
 
 export function useLyricSheets() {
   const [lyricSheetIds, setLyricSheetIds] = useState([]);
+  const [indexError, setIndexError] = useState(null);
   const [lyricSheets, setLyricSheets] = useState({});
   const [loadingSheets, setLoadingSheets] = useState({});
   const [sheetErrors, setSheetErrors] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const sheetRequests = useRef(new Map());
 
   useEffect(() => {
-    const fetchIndex = async () => {
+    let mounted = true;
+    const loadAvailableIds = async () => {
+      const ids = new Set();
+      const errors = [];
+
       try {
         const response = await fetch("/lyric-sheets/index.json");
-        if (!response.ok) throw new Error("Failed to load lyric sheet index");
-        const data = await response.json();
-        if (!Array.isArray(data) || !data.every((id) => typeof id === "string")) {
-          throw new Error("Lyric sheet index must be an array of song IDs");
+        if (response.ok) {
+          const legacyIds = await response.json();
+          if (
+            !Array.isArray(legacyIds) ||
+            !legacyIds.every((id) => typeof id === "string")
+          ) {
+            throw new Error("Lyric sheet index must be an array of song IDs");
+          }
+          legacyIds.forEach((id) => ids.add(id));
+        } else if (response.status !== 404) {
+          throw new Error("Failed to load lyric sheet index");
         }
-        setLyricSheetIds(data);
-        setError(null);
-      } catch (loadError) {
-        setError(loadError.message);
-        setLyricSheetIds([]);
-      } finally {
-        setLoading(false);
+      } catch (error) {
+        errors.push(error.message);
       }
+
+      if (supabase) {
+        try {
+          const { data, error } = await supabase
+            .from("lyric_sheets")
+            .select("song_id");
+          if (error) throw error;
+          data.forEach(({ song_id: songId }) => ids.add(songId));
+        } catch (error) {
+          errors.push(error.message);
+        }
+      }
+
+      if (!mounted) return;
+      setLyricSheetIds([...ids]);
+      setIndexError(errors.length > 0 ? errors.join("; ") : null);
     };
 
-    fetchIndex();
+    void loadAvailableIds();
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const loadLyricSheet = useCallback((songId) => {
-    if (!lyricSheetIds.includes(songId)) return Promise.resolve(null);
-
     const existingRequest = sheetRequests.current.get(songId);
     if (existingRequest) return existingRequest;
 
@@ -44,20 +88,30 @@ export function useLyricSheets() {
       return next;
     });
 
-    const request = fetch(`/lyric-sheets/${songId}.json`)
-      .then((response) => {
-        if (!response.ok) throw new Error(`Failed to load lyric sheet for ${songId}`);
-        return response.json();
-      })
-      .then((data) => {
-        if (!data || Array.isArray(data) || typeof data !== "object" || !Array.isArray(data.sections)) {
-          throw new Error(`Lyric sheet for ${songId} must contain a sections array`);
-        }
-        setLyricSheets((current) => ({ ...current, [songId]: data }));
-        return data;
-      })
+    const request = (async () => {
+      let sheet = null;
+      if (supabase) {
+        const { data, error } = await supabase
+          .from("lyric_sheets")
+          .select("sections")
+          .eq("song_id", songId)
+          .maybeSingle();
+        if (error) throw error;
+        if (data) sheet = { sections: data.sections };
+      }
+
+      if (!sheet) sheet = await loadStaticSheet(songId);
+      if (sheet) {
+        validateSheet(sheet, songId);
+        setLyricSheets((current) => ({ ...current, [songId]: sheet }));
+      }
+      return sheet;
+    })()
       .catch((loadError) => {
-        setSheetErrors((current) => ({ ...current, [songId]: loadError.message }));
+        setSheetErrors((current) => ({
+          ...current,
+          [songId]: loadError.message,
+        }));
         sheetRequests.current.delete(songId);
         return null;
       })
@@ -67,15 +121,46 @@ export function useLyricSheets() {
 
     sheetRequests.current.set(songId, request);
     return request;
-  }, [lyricSheetIds]);
+  }, []);
+
+  const saveLyricSheet = useCallback(async (songId, sections, userId) => {
+    if (!supabase) throw new Error("Supabase is not configured");
+    if (!Array.isArray(sections)) {
+      throw new Error("Lyric sheet must contain a sections array");
+    }
+
+    const sheet = { sections };
+    const { error } = await supabase.from("lyric_sheets").upsert(
+      {
+        song_id: songId,
+        sections,
+        updated_at: new Date().toISOString(),
+        updated_by: userId,
+      },
+      { onConflict: "song_id" },
+    );
+    if (error) throw error;
+
+    setLyricSheets((current) => ({ ...current, [songId]: sheet }));
+    setLyricSheetIds((current) =>
+      current.includes(songId) ? current : [...current, songId],
+    );
+    setSheetErrors((current) => {
+      const next = { ...current };
+      delete next[songId];
+      return next;
+    });
+    sheetRequests.current.set(songId, Promise.resolve(sheet));
+    return sheet;
+  }, []);
 
   return {
     lyricSheetIds,
+    indexError,
     lyricSheets,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
-    loading,
-    error,
+    saveLyricSheet,
   };
 }

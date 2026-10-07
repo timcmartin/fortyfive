@@ -1,5 +1,15 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, ListMusic, Music2, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ListMusic,
+  LogIn,
+  LogOut,
+  Music2,
+  Pencil,
+  Save,
+  X,
+} from "lucide-react";
 import { PERFORMANCE_SETS } from "@/lib/sets";
 
 const PdfChartViewer = lazy(() =>
@@ -115,12 +125,14 @@ function LyricSection({ section }) {
 export function PerformanceView({
   songs,
   songsLoading,
+  sheetIndexError,
   lyricSheetIds,
   lyricSheets,
   loadingSheets,
   sheetErrors,
   loadLyricSheet,
-  sheetIndexLoading,
+  saveLyricSheet,
+  editorAuth,
   initialSongId,
   onClose,
 }) {
@@ -140,6 +152,14 @@ export function PerformanceView({
     error: null,
   });
   const [initialSongError, setInitialSongError] = useState(null);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [signInEmail, setSignInEmail] = useState("");
+  const [signInPassword, setSignInPassword] = useState("");
+  const [signInError, setSignInError] = useState(null);
+  const [isEditingSheet, setIsEditingSheet] = useState(false);
+  const [sheetDraft, setSheetDraft] = useState("");
+  const [saveError, setSaveError] = useState(null);
+  const [savingSheet, setSavingSheet] = useState(false);
   const setListDialogRef = useRef(null);
   const isIndividualSong = selectedSet === "individual";
   const setLoading =
@@ -300,6 +320,45 @@ export function PerformanceView({
   const hasPrevious = !isIndividualSong && currentIndex > 0;
   const hasNext = !isIndividualSong && currentIndex < setSongs.length - 1;
 
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    setSignInError(null);
+    try {
+      await editorAuth.signIn(signInEmail, signInPassword);
+      setSignInPassword("");
+      setShowSignIn(false);
+    } catch (error) {
+      setSignInError(error.message);
+    }
+  };
+
+  const handleSaveSheet = async (event) => {
+    event.preventDefault();
+    setSaveError(null);
+
+    let parsed;
+    try {
+      parsed = JSON.parse(sheetDraft);
+    } catch {
+      setSaveError("Enter valid JSON before saving.");
+      return;
+    }
+    if (!parsed || !Array.isArray(parsed.sections)) {
+      setSaveError('The JSON must have a "sections" array.');
+      return;
+    }
+
+    setSavingSheet(true);
+    try {
+      await saveLyricSheet(song.id, parsed.sections, editorAuth.user.id);
+      setIsEditingSheet(false);
+    } catch (error) {
+      setSaveError(error.message);
+    } finally {
+      setSavingSheet(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-base-200">
       <div className="max-w-4xl mx-auto px-4 py-6 sm:py-10">
@@ -354,21 +413,100 @@ export function PerformanceView({
         </label>
 
         {setError && <div className="alert alert-error mb-4">{setError}</div>}
+        {sheetIndexError && (
+          <div className="alert alert-error mb-4">
+            Lyric sheet availability could not be loaded: {sheetIndexError}
+          </div>
+        )}
         {initialSongError && (
           <div className="alert alert-warning mb-4">{initialSongError}</div>
         )}
-        {sheetIndexLoading && (
-          <div className="flex justify-center py-5">
-            <span className="loading loading-spinner loading-md" />
-          </div>
-        )}
-
         {setLoading || songsLoading ? (
           <div className="flex justify-center py-16">
             <span className="loading loading-spinner loading-lg" />
           </div>
         ) : song ? (
           <>
+            <div className="mb-5 rounded-xl bg-base-100 p-4 shadow-sm">
+              {editorAuth.loading ? (
+                <span className="loading loading-spinner loading-sm" />
+              ) : editorAuth.user ? (
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <p className="text-sm">
+                    {editorAuth.isEditor
+                      ? "Signed in as an editor"
+                      : "Signed in, but this account does not have editor access"}
+                  </p>
+                  <button
+                    className="btn btn-ghost btn-sm"
+                    onClick={() => void editorAuth.signOut()}
+                  >
+                    <LogOut className="size-4" />
+                    Sign out
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <button
+                    className="btn btn-outline btn-sm"
+                    onClick={() => setShowSignIn((current) => !current)}
+                    disabled={!editorAuth.configured}
+                  >
+                    <LogIn className="size-4" />
+                    Editor sign in
+                  </button>
+                  {!editorAuth.configured && (
+                    <p className="mt-2 text-sm text-warning">
+                      Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to enable
+                      editor access.
+                    </p>
+                  )}
+                  {showSignIn && (
+                    <form
+                      className="mt-4 flex flex-wrap items-end gap-3"
+                      onSubmit={handleSignIn}
+                    >
+                      <label className="form-control">
+                        <span className="label-text mb-1">Email</span>
+                        <input
+                          className="input input-bordered"
+                          type="email"
+                          autoComplete="username"
+                          required
+                          value={signInEmail}
+                          onChange={(event) => setSignInEmail(event.target.value)}
+                        />
+                      </label>
+                      <label className="form-control">
+                        <span className="label-text mb-1">Password</span>
+                        <input
+                          className="input input-bordered"
+                          type="password"
+                          autoComplete="current-password"
+                          required
+                          value={signInPassword}
+                          onChange={(event) =>
+                            setSignInPassword(event.target.value)
+                          }
+                        />
+                      </label>
+                      <button className="btn btn-primary" type="submit">
+                        Sign in
+                      </button>
+                    </form>
+                  )}
+                  {(signInError || editorAuth.error) && (
+                    <p className="mt-3 text-sm text-error">
+                      {signInError ?? editorAuth.error}
+                    </p>
+                  )}
+                </>
+              )}
+              {editorAuth.user && editorAuth.error && (
+                <p className="mt-3 text-sm text-error">{editorAuth.error}</p>
+              )}
+            </div>
+
             <div className="flex items-center justify-between gap-3 mb-4">
               <p className="text-sm text-base-content/60">
                 {selectedSetLabel} · Song {currentIndex + 1} of{" "}
@@ -418,7 +556,68 @@ export function PerformanceView({
                   </button>
                 </div>
 
-                {viewMode === "lyrics" && song && loadingSheets[song.id] ? (
+                {viewMode === "lyrics" && editorAuth.isEditor && (
+                  <div className="space-y-3">
+                    {!isEditingSheet ? (
+                      <button
+                        className="btn btn-outline btn-sm"
+                        onClick={() => {
+                          setSheetDraft(
+                            JSON.stringify(lyricSheet ?? { sections: [] }, null, 2),
+                          );
+                          setSaveError(null);
+                          setIsEditingSheet(true);
+                        }}
+                      >
+                        <Pencil className="size-4" />
+                        Edit sheet
+                      </button>
+                    ) : (
+                      <form className="space-y-3" onSubmit={handleSaveSheet}>
+                        <label className="form-control">
+                          <span className="label-text mb-1">
+                            Lyric sheet JSON
+                          </span>
+                          <textarea
+                            className="textarea textarea-bordered min-h-96 font-mono text-sm"
+                            spellCheck="false"
+                            value={sheetDraft}
+                            onChange={(event) =>
+                              setSheetDraft(event.target.value)
+                            }
+                          />
+                        </label>
+                        {saveError && (
+                          <p className="text-sm text-error">{saveError}</p>
+                        )}
+                        <div className="flex gap-2">
+                          <button
+                            className="btn btn-primary"
+                            type="submit"
+                            disabled={savingSheet}
+                          >
+                            {savingSheet ? (
+                              <span className="loading loading-spinner loading-sm" />
+                            ) : (
+                              <Save className="size-4" />
+                            )}
+                            Save sheet
+                          </button>
+                          <button
+                            className="btn btn-ghost"
+                            type="button"
+                            disabled={savingSheet}
+                            onClick={() => setIsEditingSheet(false)}
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </form>
+                    )}
+                  </div>
+                )}
+
+                {viewMode === "lyrics" && isEditingSheet ? null : viewMode === "lyrics" && song && loadingSheets[song.id] ? (
                   <div className="flex justify-center py-12">
                     <span className="loading loading-spinner loading-lg" />
                   </div>
@@ -441,8 +640,9 @@ export function PerformanceView({
                       <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
                       <p className="font-semibold">No performance sheet yet</p>
                       <p className="mt-1 text-sm text-base-content/60">
-                        Add this song&apos;s ordered sections to{" "}
-                        <code>public/lyric-sheets/{song.id}.json</code>.
+                        {editorAuth.isEditor
+                          ? "Use Edit sheet to add its ordered sections."
+                          : "An editor can add its ordered sections."}
                       </p>
                       {song.resources?.lyricsUrls?.[0] && (
                         <a
@@ -580,7 +780,9 @@ export function PerformanceView({
           >
             {drawerSongs.map((setSong, index) => {
               const isCurrentSong = index === currentIndex;
-              const hasSheet = lyricSheetIds.includes(setSong.id);
+              const hasSheet =
+                lyricSheetIds.includes(setSong.id) ||
+                Boolean(lyricSheets[setSong.id]);
               const hasChart =
                 Boolean(setSong.resources?.chartPdfUrl?.length) ||
                 typeof setSong.resources?.chartPdfUrl === "string";

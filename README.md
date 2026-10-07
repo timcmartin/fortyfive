@@ -15,6 +15,7 @@ A web app for browsing and managing a band's song repertoire. Search by title or
 | Icons | [Lucide React](https://lucide.dev/) |
 | Font | [Geist Variable](https://vercel.com/font) |
 | Data | Static JSON (`public/songs.json`) |
+| Editable lyric sheets | [Supabase](https://supabase.com/) (with static JSON fallback) |
 | Media storage | Amazon S3 buckets for song audio and chart PDFs |
 | Hosting | [Netlify](https://netlify.com/) |
 
@@ -125,7 +126,22 @@ To add a new status, edit `src/lib/statuses.js` — it controls the filter butto
 
 Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. Since the app fetches chart PDFs for rendering, configure the S3 bucket's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
 
-Performance sheets are editable JSON files in `public/lyric-sheets/`, one file per song named with its song ID. Register sheet IDs in `public/lyric-sheets/index.json`; Performance Mode loads that small index and fetches the current song's sheet, preloading the next song's sheet. Each file contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+Lyric sheets are stored in Supabase's `lyric_sheets` table as a `sections` JSON array. Performance Mode checks Supabase first and falls back to `public/lyric-sheets/{song-id}.json` while existing files are being migrated. Editors can sign in from Performance Mode and edit a sheet as JSON; saving creates or updates its database row. Each sheet contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+
+#### Supabase setup and editor access
+
+1. In the Supabase SQL Editor, run [`supabase/schema.sql`](supabase/schema.sql) to create the table and row-level security policies. Sheets are publicly readable; only authenticated users whose trusted `app_metadata.role` is `editor` can save.
+2. Set `VITE_SUPABASE_URL` to the project URL (for example, `https://your-project.supabase.co`) and `VITE_SUPABASE_ANON_KEY` to the project's publishable/anon key in `.env.local` for local development and as build environment variables in Netlify. Start from `.env.example`. These are browser-side settings; never put a service-role key in the client app.
+3. Create the editor's account in Supabase **Authentication → Users**, setting its password there. Then run the following in the SQL Editor, replacing the email with the account's email:
+
+   ```sql
+   update auth.users
+   set raw_app_meta_data =
+     coalesce(raw_app_meta_data, '{}'::jsonb) || '{"role":"editor"}'::jsonb
+   where email = 'you@example.com';
+   ```
+
+   This only updates an existing Auth user. After granting the role, sign out and sign back in so the app receives a refreshed session token. Do not use user-editable `user_metadata` for authorization.
 
 For example, `public/lyric-sheets/index.json` contains an array of IDs such as `["867-5309-jenny", "mashup"]`, and `public/lyric-sheets/mashup.json` contains that song's sections:
 
@@ -140,7 +156,7 @@ For example, `public/lyric-sheets/index.json` contains an array of IDs such as `
 }
 ```
 
-Suggested parts: `verse`, `preChorus`, `chorus`, `bridge`, `instrumental`, `bassSolo`, `guitarSolo`, `intro`, `outro`, `tag`, `vamp`, `breakdown`, `interlude`, `ending`. Suggested singers: `olivia`, `heather`, `steve`, `richard`, `gang`. Commit and deploy JSON changes to publish them. Lyrics and cues are styled differently in performance mode; cues remain labeled, not color-only.
+Suggested parts: `verse`, `preChorus`, `chorus`, `bridge`, `instrumental`, `bassSolo`, `guitarSolo`, `intro`, `outro`, `tag`, `vamp`, `breakdown`, `interlude`, `ending`. Suggested singers: `olivia`, `heather`, `steve`, `richard`, `gang`. Existing JSON files remain as a fallback during migration; new or edited sheets are saved to Supabase. Lyrics and cues are styled differently in performance mode; cues remain labeled, not color-only.
 
 ### Finding Lyrics URLs
 
