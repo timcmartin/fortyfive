@@ -403,10 +403,10 @@ export function PerformanceView({
           </div>
         </div>
 
-        <label className="form-control max-w-sm mb-5">
-          <span className="label-text mb-1">Set list</span>
+        <label className="mb-5 block max-w-sm">
+          <span className="label-text mb-1 block">Set list</span>
           <select
-            className="select select-bordered"
+            className="select select-bordered w-full"
             value={selectedSet}
             disabled={!selectedSet}
             onChange={(event) => {
