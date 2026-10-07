@@ -19,6 +19,7 @@ import {
   X,
 } from "lucide-react";
 import { PERFORMANCE_SETS } from "@/lib/sets";
+import { MetronomeControl } from "./MetronomeControl";
 
 const PdfChartViewer = lazy(() =>
   import("./PdfChartViewer").then((module) => ({
@@ -539,6 +540,10 @@ export function PerformanceView({
 
             <article className="card bg-base-100 shadow-sm">
               <div className="card-body gap-5">
+                <MetronomeControl
+                  key={song.id}
+                  tempo={song.musicalDetails?.bpm}
+                />
                 <header>
                   <h2 className="text-3xl sm:text-4xl font-bold">
                     {song.title}
