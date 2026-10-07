@@ -1,0 +1,83 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 4,
+      "lyrics": ["Ah, ah, ah, ah"],
+      "singer": "gang"
+    },
+    {
+      "part": "instrumental",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 16,
+      "lyrics": [
+        "(Let's dance) Put on your red shoes and dance the blue",
+        "(Let's dance) To the song they're playing on the radio",
+        "(Let's sway) While colour lights up your face",
+        "(Let's sway) Sway through the crowd to an empty space"
+      ],
+      "singer": "steve",
+      "notes": "Singers in on \"Let's Dance\""
+    },
+    {
+      "part": "chorus",
+      "bars": 15,
+      "lyrics": [
+        "If you say run, I'll run with you",
+        "And if you say hide, we'll hide",
+        "Because my love for you would break my heart in two",
+        "If you should fall, into my arms and tremble like a flower"
+      ],
+      "singer": "steve"
+    },
+    {
+      "part": "instrumental",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 16,
+      "lyrics": [
+        "(Let's dance) For fear your grace should fall",
+        "(Let's dance) For fear tonight is all",
+        "(Let's sway) You could look into my eyes",
+        "(Let's sway) Under the moonlight, the serious moonlight"
+      ],
+      "singer": "steve",
+      "notes": "Singers in on \"Let's Dance\""
+    },
+    {
+      "part": "chorus",
+      "bars": 15,
+      "lyrics": [
+        "If you say run, I'll run with you",
+        "And if you say hide, we'll hide",
+        "Because my love for you would break my heart in two",
+        "If you should fall, into my arms and tremble like a flower"
+      ],
+      "singer": "steve"
+    },
+    {
+      "part": "instrumental",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "(Let's dance) Put on your red shoes and dance the blues",
+        "(Let's sway) Under the moonlight, the serious moonlight"
+      ],
+      "singer": "steve",
+      "notes": "Singers in on \"Let's Dance\""
+    },
+    {
+      "part": "guitarSolo",
+      "bars": "open",
+      "notes": "Goes until the end."
+    }
+  ]
+}
