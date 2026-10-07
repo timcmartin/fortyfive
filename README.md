@@ -128,6 +128,8 @@ Select **Open Performance Mode** to navigate the existing ordered set lists with
 
 Lyric sheets are stored in Supabase's `lyric_sheets` table as a `sections` JSON array. Performance Mode checks Supabase first and falls back to `public/lyric-sheets/{song-id}.json` while existing files are being migrated. Editors can sign in from Performance Mode and edit a sheet as JSON; saving creates or updates its database row. Each sheet contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
 
+For a nontechnical walkthrough focused on assigning singers to parts, see the [Lyric Sheet Editing Guide](LYRIC-SHEET-EDITING-GUIDE.md).
+
 #### Supabase setup and editor access
 
 1. In the Supabase SQL Editor, run [`supabase/schema.sql`](supabase/schema.sql) to create the table and row-level security policies. Sheets are publicly readable; only authenticated users whose trusted `app_metadata.role` is `editor` can save.
