@@ -170,6 +170,14 @@ export function PerformanceView({
   const [saveError, setSaveError] = useState(null);
   const [savingSheet, setSavingSheet] = useState(false);
   const setListDialogRef = useRef(null);
+  const wakeLockRef = useRef(null);
+  const wakeLockRequestRef = useRef(null);
+  const [wakeLockStatus, setWakeLockStatus] = useState(() =>
+    typeof navigator !== "undefined" && "wakeLock" in navigator
+      ? "requesting"
+      : "unsupported",
+  );
+  const [wakeLockError, setWakeLockError] = useState(null);
   const isIndividualSong = selectedSet === "individual";
   const setLoading =
     !isIndividualSong && (!selectedSet || setResource.set !== selectedSet);
@@ -184,6 +192,68 @@ export function PerformanceView({
         : [],
     [isIndividualSong, setResource, selectedSet],
   );
+
+  useEffect(() => {
+    let active = true;
+
+    const requestWakeLock = async () => {
+      if (
+        !active ||
+        document.visibilityState !== "visible" ||
+        (wakeLockRef.current && !wakeLockRef.current.released)
+      ) {
+        return;
+      }
+      if (wakeLockRequestRef.current) return;
+
+      let request;
+      try {
+        request = navigator.wakeLock.request("screen");
+        wakeLockRequestRef.current = request;
+        const wakeLock = await request;
+        if (!active) {
+          await wakeLock.release();
+          return;
+        }
+        wakeLockRef.current = wakeLock;
+        setWakeLockStatus("active");
+        setWakeLockError(null);
+        wakeLock.addEventListener("release", () => {
+          if (wakeLockRef.current === wakeLock) {
+            wakeLockRef.current = null;
+            if (active) setWakeLockStatus("requesting");
+          }
+        });
+      } catch (error) {
+        if (active) {
+          setWakeLockStatus("unavailable");
+          setWakeLockError(
+            error instanceof Error ? error.message : String(error),
+          );
+        }
+      } finally {
+        if (wakeLockRequestRef.current === request) {
+          wakeLockRequestRef.current = null;
+        }
+      }
+    };
+
+    void requestWakeLock();
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        void requestWakeLock();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      active = false;
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      const wakeLock = wakeLockRef.current;
+      wakeLockRef.current = null;
+      if (wakeLock && !wakeLock.released) void wakeLock.release();
+    };
+  }, []);
 
   useEffect(() => {
     if (!initialSongId) return;
@@ -387,6 +457,17 @@ export function PerformanceView({
               Performance
             </p>
             <h1 className="text-2xl sm:text-3xl font-bold">Live performance</h1>
+            {wakeLockStatus === "active" ? (
+              <p className="mt-1 text-xs text-success">Screen will stay awake</p>
+            ) : wakeLockStatus === "unsupported" ? (
+              <p className="mt-1 text-xs text-base-content/50">
+                Screen wake lock is not supported by this browser.
+              </p>
+            ) : wakeLockStatus === "unavailable" ? (
+              <p className="mt-1 text-xs text-warning" role="status">
+                Could not keep the screen awake{wakeLockError ? `: ${wakeLockError}` : "."}
+              </p>
+            ) : null}
           </div>
           <div className="flex gap-2">
             <button
