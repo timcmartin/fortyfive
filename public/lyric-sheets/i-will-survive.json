@@ -1,0 +1,123 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 1,
+      "notes": "Piano cadenza.",
+      "singer": "olivia"
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "At first I was afraid, I was petrified",
+        "Kept thinkin' I could never live without you by my side",
+        "But then I spent so many nights thinkin' how you did me wrong",
+        "And I grew strong and I learned how to get along"
+      ],
+      "notes": "Piano and vocals only"
+    },
+    {
+      "part": "verse",
+      "bars": 8,
+      "lyrics": [
+        "And so you're back from outer space",
+        "I just walked in to find you here with that sad look upon your face",
+        "I should have changed that stupid lock, I should have made you leave your key",
+        "If I'd have known for just one second you'd be back to bother me"
+      ],
+      "notes": "Band In"
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Go on now, go, walk out the door",
+        "Just turn around now, 'cause you're not welcome anymore",
+        "Weren't you the one who tried to hurt me with goodbye?",
+        "Did you think I'd crumble? Did you think I'd lay down and die?"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Oh, no, not I, I will survive",
+        "Oh, as long as I know how to love, I know I'll stay alive",
+        "I've got all my life to live, and I've got all my love to give",
+        "And I'll survive, I will survive, hey, hey"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 8
+    },
+    {
+      "part": "verse",
+      "bars": 16,
+      "lyrics": [
+        "It took all the strength I had not to fall apart",
+        "Kept tryin' hard to mend the pieces of my broken heart",
+        "And I spent oh-so many nights just feelin' sorry for myself",
+        "I used to cry, but now I hold my head up high",
+        "And you see me, somebody new",
+        "I'm not that chained-up little person still in love with you",
+        "And so you felt like droppin' in and just expect me to be free",
+        "Now I'm savin' all my lovin' for someone who's lovin' me"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Go on now, go, walk out the door",
+        "Just turn around now, 'cause you're not welcome anymore",
+        "Weren't you the one who tried to hurt me with goodbye?",
+        "Did you think I'd crumble? Did you think I'd lay down and die?"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Oh, no, not I, I will survive",
+        "Oh, as long as I know how to love, I know I'll stay alive",
+        "I've got all my life to live, and I've got all my love to give",
+        "And I'll survive, I will survive, hey, hey"
+      ]
+    },
+    {
+      "part": "break",
+      "bars": 2
+    },
+    {
+      "part": "preChorus",
+      "bars": 8,
+      "lyrics": [
+        "Go on now, go, walk out the door",
+        "Just turn around now, 'cause you're not welcome anymore",
+        "Weren't you the one who tried to hurt me with goodbye?",
+        "Did you think I'd crumble? Did you think I'd lay down and die?"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Oh, no, not I, I will survive",
+        "Oh, as long as I know how to love, I know I'll stay alive",
+        "I've got all my life to live, and I've got all my love to give",
+        "And I'll survive, I will survive, hey, hey"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 16,
+      "notes": "Vocals done."
+    },
+    {
+      "part": "outro",
+      "bars": 8
+    }
+  ]
+}

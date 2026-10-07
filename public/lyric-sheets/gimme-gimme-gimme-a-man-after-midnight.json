@@ -1,0 +1,119 @@
+{
+  "sections": [
+    {
+      "part": "intro",
+      "bars": 9,
+      "notes": "Guitar starts, 8th bar is 2/4"
+    },
+    {
+      "part": "instrumental",
+      "bars": 9,
+      "notes": "Keyboard arpeggio melody"
+    },
+    {
+      "part": "verse",
+      "bars": 10,
+      "lyrics": [
+        "Half-past twelve",
+        "And I'm watchin' the late show in my flat, all alone",
+        "How I hate to spend the evening on my own",
+        "Autumn winds",
+        "Blowin' outside the window as I look around the room",
+        "And it makes me so depressed to see the gloom"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 6,
+      "lyrics": ["There's not a soul out there", "No one to hear my prayer"]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Gimme, gimme, gimme a man after midnight",
+        "Won't somebody help me chase the shadows away?",
+        "Gimme, gimme, gimme a man after midnight",
+        "Take me through the darkness to the break of the day"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 10,
+      "notes": "Keyboard arpeggio melody"
+    },
+    {
+      "part": "verse",
+      "bars": 10,
+      "lyrics": [
+        "Movie stars",
+        "Find the end of the rainbow with a fortune to win",
+        "It's so different from the world I'm livin' in",
+        "Tired of TV",
+        "I open the window and I gaze into the night",
+        "But there's nothing there to see, no one in sight"
+      ]
+    },
+    {
+      "part": "preChorus",
+      "bars": 6,
+      "lyrics": ["There's not a soul out there", "No one to hear my prayer"]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Gimme, gimme, gimme a man after midnight",
+        "Won't somebody help me chase the shadows away?",
+        "Gimme, gimme, gimme a man after midnight",
+        "Take me through the darkness to the break of the day"
+      ]
+    },
+    {
+      "part": "postChorus",
+      "bars": 8,
+      "lyrics": [
+        "Gimme, gimme, gimme a man after midnight",
+        "Gimme, gimme, gimme a man after midnight"
+      ]
+    },
+    {
+      "part": "bassSolo",
+      "bars": 8
+    },
+    {
+      "part": "guitarSolo",
+      "bars": 8
+    },
+    {
+      "part": "preChorus",
+      "bars": 6,
+      "lyrics": ["There's not a soul out there", "No one to hear my prayer"]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Gimme, gimme, gimme a man after midnight",
+        "Won't somebody help me chase the shadows away?",
+        "Gimme, gimme, gimme a man after midnight",
+        "Take me through the darkness to the break of the day"
+      ]
+    },
+    {
+      "part": "chorus",
+      "bars": 8,
+      "lyrics": [
+        "Gimme, gimme, gimme a man after midnight",
+        "Won't somebody help me chase the shadows away?",
+        "Gimme, gimme, gimme a man after midnight",
+        "Take me through the darkness to the break of the day"
+      ]
+    },
+    {
+      "part": "instrumental",
+      "bars": 16,
+      "notes": "Keyboard arpeggio melody"
+    }
+  ]
+}
