@@ -1,5 +1,6 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSongs } from "./hooks/useSongs";
+import { useSets } from "./hooks/useSets";
 import { SearchBar } from "./components/SearchBar";
 import { StatusFilter } from "./components/StatusFilter";
 import { LeadSingerFilter } from "./components/LeadSingerFilter";
@@ -7,12 +8,30 @@ import { SongTable } from "./components/SongTable";
 import { SongModal } from "./components/SongModal";
 import { SetSelector } from "./components/SetSelector";
 import { PerformanceView } from "./components/PerformanceView";
-import { PERFORMANCE_SETS } from "./lib/sets";
 import { useLyricSheets } from "./hooks/useLyricSheets";
 import { useEditorAuth } from "./hooks/useEditorAuth";
+import { EditorAccess } from "./components/EditorAccess";
+import { SongEditorModal } from "./components/SongEditorModal";
+import { SetlistManager } from "./components/SetlistManager";
 
 export default function App() {
-  const { songs, loading, error } = useSongs();
+  const editorAuth = useEditorAuth();
+  const {
+    songs,
+    loading,
+    error,
+    databaseError: songDatabaseError,
+    saveSong,
+    deleteSong,
+  } = useSongs(editorAuth.user?.id);
+  const {
+    sets,
+    loading: loadingSets,
+    error: setsError,
+    databaseError: setDatabaseError,
+    saveSet,
+    deleteSet,
+  } = useSets(editorAuth.user?.id);
   const {
     lyricSheetIds,
     lyricSheetIndexLoaded,
@@ -23,47 +42,25 @@ export default function App() {
     loadLyricSheet,
     saveLyricSheet,
   } = useLyricSheets();
-  const editorAuth = useEditorAuth();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedLeadSinger, setSelectedLeadSinger] = useState("all");
   const [selectedSong, setSelectedSong] = useState(null);
   const [selectedSet, setSelectedSet] = useState("all");
-  const [setResource, setSetResource] = useState({ set: null, ids: [], error: null });
+  const [editingSong, setEditingSong] = useState(null);
+  const [showSongEditor, setShowSongEditor] = useState(false);
+  const [showSetlistManager, setShowSetlistManager] = useState(false);
   const [showPerformance, setShowPerformance] = useState(false);
   const [performanceSongId, setPerformanceSongId] = useState(null);
-  const setsLoading = selectedSet !== "all" && setResource.set !== selectedSet;
   const setOrder = useMemo(
-    () => setResource.set === selectedSet ? setResource.ids : [],
-    [setResource, selectedSet],
+    () => sets.find((set) => set.id === selectedSet)?.songIds ?? [],
+    [sets, selectedSet],
   );
-  const setsError = setResource.set === selectedSet ? setResource.error : null;
   const initialPerformanceSet =
     selectedSet !== "all" &&
-    PERFORMANCE_SETS.some((set) => set.value === selectedSet)
+    sets.some((set) => set.id === selectedSet && set.kind === "performance")
       ? selectedSet
       : null;
-
-  useEffect(() => {
-    if (selectedSet === "all") return;
-
-    let mounted = true;
-    fetch(`/sets/${selectedSet}.json`)
-      .then((r) => {
-        if (!r.ok) throw new Error("Failed to load set");
-        return r.json();
-      })
-      .then((data) => {
-        if (!Array.isArray(data)) throw new Error("Set list must be an array");
-        if (!mounted) return;
-        setSetResource({ set: selectedSet, ids: data.map((item) => item.id), error: null });
-      })
-      .catch((err) => {
-        if (!mounted) return;
-        setSetResource({ set: selectedSet, ids: [], error: err.message });
-      });
-    return () => { mounted = false; };
-  }, [selectedSet]);
 
   const filteredSongs = useMemo(() => {
     const matchesFilters = (song) => {
@@ -98,6 +95,11 @@ export default function App() {
       <PerformanceView
         songs={songs}
         songsLoading={loading}
+        sets={sets}
+        setsLoading={loadingSets}
+        setsError={setsError}
+        songDatabaseError={songDatabaseError}
+        setDatabaseError={setDatabaseError}
         sheetIndexError={sheetIndexError}
         lyricSheetIds={lyricSheetIds}
         lyricSheetIndexLoaded={lyricSheetIndexLoaded}
@@ -142,23 +144,36 @@ export default function App() {
           >
             Open Performance Mode
           </button>
+          <div className="mt-3 flex justify-center">
+            <EditorAccess editorAuth={editorAuth} />
+          </div>
         </div>
 
+        {songDatabaseError && (
+          <div className="alert alert-warning mb-4" role="status">
+            Could not load song changes from Supabase; showing JSON catalog data. {songDatabaseError}
+          </div>
+        )}
+        {setDatabaseError && (
+          <div className="alert alert-warning mb-4" role="status">
+            Could not load setlist changes from Supabase; showing JSON setlists. {setDatabaseError}
+          </div>
+        )}
         {error && (
           <div className="alert alert-error mb-6">
             <span>Error loading songs: {error}</span>
           </div>
         )}
 
-        {sheetIndexError && (
+        {setsError && (
           <div className="alert alert-error mb-6">
-            <span>Error loading lyric sheet availability: {sheetIndexError}</span>
+            <span>Error loading setlists: {setsError}</span>
           </div>
         )}
 
-        {setsError && (
+        {sheetIndexError && (
           <div className="alert alert-error mb-6">
-            <span>Error loading set: {setsError}</span>
+            <span>Error loading lyric sheet availability: {sheetIndexError}</span>
           </div>
         )}
 
@@ -170,6 +185,26 @@ export default function App() {
           <div className="card bg-base-100 shadow-sm">
             <div className="card-body gap-4">
               <SearchBar value={searchTerm} onChange={setSearchTerm} />
+              {editorAuth.isEditor && (
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    className="btn btn-primary btn-sm"
+                    onClick={() => {
+                      setEditingSong(null);
+                      setShowSongEditor(true);
+                    }}
+                  >
+                    Add song
+                  </button>
+                  <button
+                    className="btn btn-outline btn-sm"
+                    onClick={() => setShowSetlistManager(true)}
+                    disabled={loadingSets}
+                  >
+                    Manage setlists
+                  </button>
+                </div>
+              )}
               <StatusFilter
                 selectedStatus={selectedStatus}
                 onChange={setSelectedStatus}
@@ -181,7 +216,12 @@ export default function App() {
                 selectedStatus={selectedStatus}
                 songs={songs}
               />
-              <SetSelector selectedSet={selectedSet} onChange={handleSetChange} loading={setsLoading} />
+              <SetSelector
+                selectedSet={selectedSet}
+                onChange={handleSetChange}
+                loading={loadingSets}
+                sets={sets}
+              />
               <p className="text-sm text-base-content/50">
                 Showing {filteredSongs.length} of {songs.length} songs
                 {selectedSet !== "all" && setOrder.length > 0 && (
@@ -213,7 +253,32 @@ export default function App() {
           setSelectedSong(null);
           setShowPerformance(true);
         }}
+        isEditor={editorAuth.isEditor}
+        onEditSong={(song) => {
+          setSelectedSong(null);
+          setEditingSong(song);
+          setShowSongEditor(true);
+        }}
       />
+      {showSongEditor && (
+        <SongEditorModal
+          open
+          song={editingSong}
+          onClose={() => setShowSongEditor(false)}
+          onSave={saveSong}
+          onDelete={deleteSong}
+        />
+      )}
+      {showSetlistManager && (
+        <SetlistManager
+          open
+          sets={sets}
+          songs={songs}
+          onClose={() => setShowSetlistManager(false)}
+          onSave={saveSet}
+          onDelete={deleteSet}
+        />
+      )}
     </div>
   );
 }

@@ -14,8 +14,8 @@ A web app for browsing and managing a band's song repertoire. Search by title or
 | Theme | DaisyUI `lemonade` (configurable in `src/index.css`) |
 | Icons | [Lucide React](https://lucide.dev/) |
 | Font | [Geist Variable](https://vercel.com/font) |
-| Data | Static JSON (`public/songs.json`) |
-| Editable lyric sheets | [Supabase](https://supabase.com/) (with static JSON fallback) |
+| Song catalog and setlists | [Supabase](https://supabase.com/) (with static JSON fallback) |
+| Editable lyric sheets | Supabase (with static JSON fallback) |
 | Media storage | Amazon S3 buckets for song audio and chart PDFs |
 | Hosting | [Netlify](https://netlify.com/) |
 
@@ -122,9 +122,17 @@ Songs live in `public/songs.json`. Each song is a JSON object:
 
 To add a new status, edit `src/lib/statuses.js` — it controls the filter buttons, table badges, and modal display everywhere.
 
+### Database-backed catalog and setlists
+
+The app loads the song catalog from `public/songs.json` and overlays rows from Supabase's `songs` table by song ID. Setlists work the same way: the checked-in files in `public/sets/` provide defaults, and rows in Supabase's `setlists` table override those defaults or add new setlists. If Supabase is unavailable or a read fails, the app reports a warning and uses the JSON data. Database deletions are recorded as tombstones so deleted JSON-backed entries do not reappear while Supabase is available.
+
+Sign in as an editor from the catalog page to add, edit, and delete songs, or create, rename, categorize, reorder, and delete setlists. Performance setlists appear in Performance Mode; catalog groupings are available as catalog filters only. Song records use the same object shape as `public/songs.json`. Setlist song order is stored as an array of song IDs.
+
+Run `supabase/schema.sql` to create the `songs` and `setlists` tables and editor policies alongside the lyric-sheet schema. Existing JSON data does not need to be imported: it remains the default layer, and edits are saved as database overrides.
+
 ### Performance Lyric Sheets
 
-Select **Open Performance Mode** to navigate the existing ordered set lists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. A metronome remains available above either view, defaults to a song's BPM when that value is a single tempo, and accents beat one in 4/4. Adjust the tempo with the BPM input, +/- controls, or Tap; changing tempo stops playback until restarted, and changing songs also stops playback. Ambiguous catalog tempos (such as ranges or slash-separated values) are shown as notes and require a playable tempo to be entered or tapped in. The metronome's tempo adjustment is temporary and does not change `public/songs.json`. Since the app fetches chart PDFs for rendering, configure the S3 bucket's CORS policy to allow GET requests from the deployed app origin. Set lists are JSON files in `public/sets/`; add a new file there and register it in `src/lib/sets.js` to make it available in performance mode.
+Select **Open Performance Mode** to navigate performance setlists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. A metronome remains available above either view, defaults to a song's BPM when that value is a single tempo, and accents beat one in 4/4. Adjust the tempo with the BPM input, +/- controls, or Tap; changing tempo stops playback until restarted, and changing songs also stops playback. Ambiguous catalog tempos (such as ranges or slash-separated values) are shown as notes and require a playable tempo to be entered or tapped in. The metronome's tempo adjustment is temporary and does not change the catalog. Since the app fetches chart PDFs for rendering, configure the S3 bucket's CORS policy to allow GET requests from the deployed app origin.
 
 Lyric sheets are stored in Supabase's `lyric_sheets` table as a `sections` JSON array. Performance Mode checks Supabase first and falls back to `public/lyric-sheets/{song-id}.json` while existing files are being migrated. Editors can sign in from Performance Mode and edit a sheet as JSON; saving creates or updates its database row. Each sheet contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
 
@@ -132,7 +140,7 @@ For a nontechnical walkthrough focused on assigning singers to parts, see the [L
 
 #### Supabase setup and editor access
 
-1. In the Supabase SQL Editor, run [`supabase/schema.sql`](supabase/schema.sql) to create the table and row-level security policies. Sheets are publicly readable; only authenticated users whose trusted `app_metadata.role` is `editor` can save.
+1. In the Supabase SQL Editor, run [`supabase/schema.sql`](supabase/schema.sql) to create the tables and row-level security policies. Catalog data and sheets are publicly readable; only authenticated users whose trusted `app_metadata.role` is `editor` can make changes.
 2. Set `VITE_SUPABASE_URL` to the project URL (for example, `https://your-project.supabase.co`) and `VITE_SUPABASE_ANON_KEY` to the project's publishable/anon key in `.env.local` for local development and as build environment variables in Netlify. Start from `.env.example`. These are browser-side settings; never put a service-role key in the client app.
 3. Create the editor's account in Supabase **Authentication → Users**, setting its password there. Then run the following in the SQL Editor, replacing the email with the account's email:
 

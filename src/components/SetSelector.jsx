@@ -1,11 +1,13 @@
-import { SET_OPTIONS } from "@/lib/sets";
-
-export function SetSelector({ selectedSet, onChange, loading = false }) {
+export function SetSelector({ selectedSet, onChange, loading = false, sets }) {
   return (
     <div className="flex gap-2 flex-wrap">
       {[
         { value: "all", label: "All Songs" },
-        ...SET_OPTIONS,
+        ...sets.map((set) => ({
+          value: set.id,
+          label: set.label,
+          kind: set.kind,
+        })),
       ].map((s) => (
         <button
           key={s.value}

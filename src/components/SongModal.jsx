@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Music2, X } from "lucide-react";
+import { Music2, Pencil, X } from "lucide-react";
 import { getStatus } from "@/lib/statuses";
 
 function getChartPdfUrls(chartPdfUrl) {
@@ -24,6 +24,8 @@ export function SongModal({
   lyricSheetIndexLoaded,
   onClose,
   onStartPerformance,
+  isEditor = false,
+  onEditSong,
 }) {
   const dialogRef = useRef(null);
   const chartPdfUrls = getChartPdfUrls(song?.resources?.chartPdfUrl);
@@ -49,6 +51,16 @@ export function SongModal({
             <X className="size-4" />
           </button>
           <h2 className="text-xl font-bold truncate">{song.title}</h2>
+          {isEditor && (
+            <button
+              className="btn btn-ghost btn-sm"
+              onClick={() => onEditSong(song)}
+              aria-label={`Edit ${song.title}`}
+            >
+              <Pencil className="size-4" />
+              Edit
+            </button>
+          )}
           {(() => {
             const s = getStatus(song.status);
             return (

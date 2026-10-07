@@ -18,7 +18,6 @@ import {
   Save,
   X,
 } from "lucide-react";
-import { PERFORMANCE_SETS } from "@/lib/sets";
 import { MetronomeControl } from "./MetronomeControl";
 
 const PdfChartViewer = lazy(() =>
@@ -54,14 +53,6 @@ const SINGER_LABELS = {
   richard: "Richard",
   gang: "Gang",
 };
-
-async function fetchSetItems(setId) {
-  const response = await fetch(`/sets/${setId}.json`);
-  if (!response.ok) throw new Error(`Failed to load ${setId}`);
-  const data = await response.json();
-  if (!Array.isArray(data)) throw new Error(`${setId} must be an array`);
-  return data;
-}
 
 function formatLabel(value) {
   return (
@@ -134,6 +125,11 @@ function LyricSection({ section }) {
 export function PerformanceView({
   songs,
   songsLoading,
+  sets,
+  setsLoading,
+  setsError,
+  songDatabaseError,
+  setDatabaseError,
   sheetIndexError,
   lyricSheetIds,
   lyricSheets,
@@ -146,25 +142,39 @@ export function PerformanceView({
   initialSet = null,
   onClose,
 }) {
-  const [selectedSet, setSelectedSet] = useState(() => {
-    if (initialSet && PERFORMANCE_SETS.some((set) => set.value === initialSet)) {
-      return initialSet;
-    }
-    return initialSongId ? "" : (PERFORMANCE_SETS[0]?.value ?? "");
-  });
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const initialSongSet = initialSongId && !setsLoading
+    ? sets
+        .filter((set) => set.kind === "performance")
+        .map((set) => ({ set, index: set.songIds.indexOf(initialSongId) }))
+        .filter(({ index }) => index >= 0)
+        .find(({ set }) => set.id === initialSet) ??
+      sets
+        .filter((set) => set.kind === "performance")
+        .map((set) => ({ set, index: set.songIds.indexOf(initialSongId) }))
+        .find(({ index }) => index >= 0)
+    : null;
+  const [selectedSetState, setSelectedSetState] = useState(() =>
+    initialSongId
+      ? ""
+      : initialSet ??
+        sets.find((set) => set.kind === "performance")?.id ??
+        "set-1",
+  );
+  const selectedSet = initialSongId
+    ? selectedSetState || (setsLoading ? "" : initialSongSet?.set.id ?? "individual")
+    : sets.some((set) => set.id === selectedSetState)
+      ? selectedSetState
+      : (sets.find((set) => set.kind === "performance")?.id ?? "");
+  const [currentIndexState, setCurrentIndexState] = useState(0);
+  const currentIndex = selectedSetState
+    ? currentIndexState
+    : (initialSongSet?.index ?? 0);
   const [showSetList, setShowSetList] = useState(false);
   const [viewMode, setViewMode] = useState("lyrics");
   const [chartSelection, setChartSelection] = useState({
     songId: null,
     index: 0,
   });
-  const [setResource, setSetResource] = useState({
-    set: null,
-    items: [],
-    error: null,
-  });
-  const [initialSongError, setInitialSongError] = useState(null);
   const [showSignIn, setShowSignIn] = useState(false);
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
@@ -183,19 +193,20 @@ export function PerformanceView({
   );
   const [wakeLockError, setWakeLockError] = useState(null);
   const isIndividualSong = selectedSet === "individual";
-  const setLoading =
-    !isIndividualSong && (!selectedSet || setResource.set !== selectedSet);
-  const setError =
-    !isIndividualSong && setResource.set === selectedSet
-      ? setResource.error
-      : null;
+  const selectedSetData = sets.find((set) => set.id === selectedSet);
+  const setLoading = !isIndividualSong && (setsLoading || !selectedSet || !selectedSetData);
+  const setError = !isIndividualSong ? setsError : null;
   const setItems = useMemo(
     () =>
-      !isIndividualSong && setResource.set === selectedSet
-        ? setResource.items
+      !isIndividualSong && selectedSetData
+        ? selectedSetData.songIds.map((id) => ({ id }))
         : [],
-    [isIndividualSong, setResource, selectedSet],
+    [isIndividualSong, selectedSetData],
   );
+  const initialSongError =
+    initialSongId && !setsLoading && !initialSongSet && setsError
+      ? "Could not check every set list; opening this song individually."
+      : null;
 
   useEffect(() => {
     let active = true;
@@ -260,74 +271,6 @@ export function PerformanceView({
   }, []);
 
   useEffect(() => {
-    if (!initialSongId) return;
-
-    let mounted = true;
-    Promise.allSettled(
-      PERFORMANCE_SETS.map(async (set) => ({
-        set,
-        items: await fetchSetItems(set.value),
-      })),
-    ).then((results) => {
-      if (!mounted) return;
-      const availableSets = results
-        .filter((result) => result.status === "fulfilled")
-        .map((result) => result.value);
-      const match = availableSets
-        .map(({ set, items }) => ({
-          set,
-          items,
-          index: items.findIndex((item) => item.id === initialSongId),
-        }))
-        .find(({ index }) => index >= 0);
-      const hadLoadErrors = results.some(
-        (result) => result.status === "rejected",
-      );
-
-      if (match) {
-        setSelectedSet(match.set.value);
-        setCurrentIndex(match.index);
-        setSetResource({
-          set: match.set.value,
-          items: match.items,
-          error: null,
-        });
-      } else {
-        setSelectedSet("individual");
-        setCurrentIndex(0);
-        if (hadLoadErrors) {
-          setInitialSongError(
-            "Could not check every set list; opening this song individually.",
-          );
-        }
-      }
-    });
-
-    return () => {
-      mounted = false;
-    };
-  }, [initialSongId]);
-
-  useEffect(() => {
-    if (!selectedSet || isIndividualSong) return;
-
-    let mounted = true;
-    fetchSetItems(selectedSet)
-      .then((data) => {
-        if (!mounted) return;
-        setSetResource({ set: selectedSet, items: data, error: null });
-      })
-      .catch((error) => {
-        if (!mounted) return;
-        setSetResource({ set: selectedSet, items: [], error: error.message });
-      });
-
-    return () => {
-      mounted = false;
-    };
-  }, [isIndividualSong, selectedSet]);
-
-  useEffect(() => {
     const dialog = setListDialogRef.current;
     if (!dialog) return;
     if (showSetList && !dialog.open) dialog.showModal();
@@ -370,10 +313,11 @@ export function PerformanceView({
     (index) => {
       const nextIndex = Math.max(0, Math.min(setSongs.length - 1, index));
       if (nextIndex === currentIndex) return;
-      setCurrentIndex(nextIndex);
+      setSelectedSetState(selectedSet);
+      setCurrentIndexState(nextIndex);
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
-    [currentIndex, setSongs.length],
+    [currentIndex, selectedSet, setSongs.length],
   );
 
   useEffect(() => {
@@ -408,7 +352,7 @@ export function PerformanceView({
   const selectedSetLabel =
     selectedSet === "individual"
       ? "Individual song"
-      : (PERFORMANCE_SETS.find((set) => set.value === selectedSet)?.label ??
+      : (selectedSetData?.label ??
         "Set");
   const hasPrevious = !isIndividualSong && currentIndex > 0;
   const hasNext = !isIndividualSong && currentIndex < setSongs.length - 1;
@@ -496,8 +440,8 @@ export function PerformanceView({
             value={selectedSet}
             disabled={!selectedSet}
             onChange={(event) => {
-              setSelectedSet(event.target.value);
-              setCurrentIndex(0);
+              setSelectedSetState(event.target.value);
+              setCurrentIndexState(0);
             }}
           >
             {initialSongId && !selectedSet && (
@@ -508,8 +452,8 @@ export function PerformanceView({
             {initialSongId && (
               <option value="individual">Individual song</option>
             )}
-            {PERFORMANCE_SETS.map((set) => (
-              <option key={set.value} value={set.value}>
+            {sets.filter((set) => set.kind === "performance").map((set) => (
+              <option key={set.id} value={set.id}>
                 {set.label}
               </option>
             ))}
@@ -517,6 +461,16 @@ export function PerformanceView({
         </label>
 
         {setError && <div className="alert alert-error mb-4">{setError}</div>}
+        {songDatabaseError && (
+          <div className="alert alert-warning mb-4" role="status">
+            Supabase catalog unavailable; using JSON song data. {songDatabaseError}
+          </div>
+        )}
+        {setDatabaseError && (
+          <div className="alert alert-warning mb-4" role="status">
+            Supabase setlists unavailable; using JSON setlists. {setDatabaseError}
+          </div>
+        )}
         {sheetIndexError && (
           <div className="alert alert-error mb-4">
             Lyric sheet availability could not be loaded: {sheetIndexError}
@@ -897,7 +851,8 @@ export function PerformanceView({
                       : "hover:bg-base-200"
                   }`}
                   onClick={() => {
-                    setCurrentIndex(index);
+                    setSelectedSetState(selectedSet);
+                    setCurrentIndexState(index);
                     setShowSetList(false);
                   }}
                   aria-current={isCurrentSong ? "true" : undefined}
