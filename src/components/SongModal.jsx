@@ -10,9 +10,18 @@ function getChartPdfUrls(chartPdfUrl) {
   return Array.isArray(chartPdfUrl) ? chartPdfUrl : [chartPdfUrl];
 }
 
-export function SongModal({ song, onClose, onStartPerformance }) {
+export function SongModal({
+  song,
+  lyricSheetIds,
+  lyricSheetIndexLoaded,
+  onClose,
+  onStartPerformance,
+}) {
   const dialogRef = useRef(null);
   const chartPdfUrls = getChartPdfUrls(song?.resources?.chartPdfUrl);
+  const lyricUrls = song?.resources?.lyricsUrls ?? [];
+  const hasLyricSheet =
+    song && lyricSheetIds.includes(song.id);
 
   useEffect(() => {
     if (song) {
@@ -80,7 +89,7 @@ export function SongModal({ song, onClose, onStartPerformance }) {
           )}
 
           {/* Resources */}
-          {(song.resources.youtubeUrl || song.resources.lyricsUrls?.length || song.resources.mp3Url || chartPdfUrls.length) && (
+          {(song.resources.youtubeUrl || lyricUrls.length || song.resources.mp3Url || chartPdfUrls.length) && (
             <>
               <div className="divider my-0" />
               <div>
@@ -91,11 +100,24 @@ export function SongModal({ song, onClose, onStartPerformance }) {
                       🎥 YouTube
                     </a>
                   )}
-                  {song.resources.lyricsUrls?.map((url, i) => (
-                    <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                      📝 Lyrics{song.resources.lyricsUrls.length > 1 ? ` ${i + 1}` : ''}
-                    </a>
-                  ))}
+                  {hasLyricSheet ? (
+                    <button
+                      className="btn btn-sm btn-outline"
+                      onClick={() => onStartPerformance(song.id)}
+                    >
+                      📝 Lyrics
+                    </button>
+                  ) : lyricSheetIndexLoaded ? (
+                    lyricUrls.map((url, i) => (
+                      <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                        📝 Lyrics{lyricUrls.length > 1 ? ` ${i + 1}` : ''}
+                      </a>
+                    ))
+                  ) : lyricUrls.length > 0 ? (
+                    <button className="btn btn-sm btn-outline" disabled>
+                      📝 Checking lyrics…
+                    </button>
+                  ) : null}
                   {song.resources.mp3Url && (
                     <a href={song.resources.mp3Url} download className="btn btn-sm btn-outline">
                       🎵 MP3

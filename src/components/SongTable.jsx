@@ -16,7 +16,33 @@ function getPrimaryResourceUrl(value, array) {
   return value;
 }
 
-function ResourceCell({ url, Icon, label }) {
+function ResourceCell({ url, Icon, label, onClick, disabled = false }) {
+  if (disabled) {
+    return (
+      <button
+        type="button"
+        disabled
+        title={label}
+        aria-label={label}
+        className="text-base-content/30"
+      >
+        <Icon className="size-4" />
+      </button>
+    );
+  }
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        title={label}
+        aria-label={label}
+        className="text-primary hover:text-primary/70 transition-colors"
+      >
+        <Icon className="size-4" />
+      </button>
+    );
+  }
   if (url) {
     return (
       <a
@@ -34,7 +60,13 @@ function ResourceCell({ url, Icon, label }) {
   return <Icon className="size-4 text-base-content/15" />;
 }
 
-export function SongTable({ songs, onSelectSong }) {
+export function SongTable({
+  songs,
+  lyricSheetIds,
+  lyricSheetIndexLoaded,
+  onSelectSong,
+  onStartPerformance,
+}) {
   if (songs.length === 0) {
     return (
       <div className="text-center py-12 text-base-content/50">
@@ -77,10 +109,30 @@ export function SongTable({ songs, onSelectSong }) {
                 {RESOURCES.map(({ key, Icon, label, array }) => {
                   const val = song.resources[key];
                   const url = getPrimaryResourceUrl(val, array);
+                  const hasLyricSheet =
+                    key === "lyricsUrls" && lyricSheetIds.includes(song.id);
+                  const hasLyricsUrl = key === "lyricsUrls" && Boolean(url);
                   return (
                     <td key={key}>
                       <div className="flex justify-center">
-                        <ResourceCell url={url} Icon={Icon} label={label} />
+                        {hasLyricSheet ? (
+                          <ResourceCell
+                            Icon={Icon}
+                            label="Open lyric sheet"
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              onStartPerformance(song.id);
+                            }}
+                          />
+                        ) : key === "lyricsUrls" && !lyricSheetIndexLoaded && hasLyricsUrl ? (
+                          <ResourceCell
+                            Icon={Icon}
+                            label="Checking lyrics"
+                            disabled
+                          />
+                        ) : (
+                          <ResourceCell url={url} Icon={Icon} label={label} />
+                        )}
                       </div>
                     </td>
                   );

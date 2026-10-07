@@ -14,6 +14,7 @@ export default function App() {
   const { songs, loading, error } = useSongs();
   const {
     lyricSheetIds,
+    lyricSheetIndexLoaded,
     indexError: sheetIndexError,
     lyricSheets,
     loadingSheets,
@@ -93,6 +94,7 @@ export default function App() {
         songsLoading={loading}
         sheetIndexError={sheetIndexError}
         lyricSheetIds={lyricSheetIds}
+        lyricSheetIndexLoaded={lyricSheetIndexLoaded}
         lyricSheets={lyricSheets}
         loadingSheets={loadingSheets}
         sheetErrors={sheetErrors}
@@ -179,7 +181,16 @@ export default function App() {
                   <> — viewing {selectedSet.replace('-', ' ')}</>
                 )}
               </p>
-              <SongTable songs={filteredSongs} onSelectSong={setSelectedSong} />
+              <SongTable
+                songs={filteredSongs}
+                lyricSheetIds={lyricSheetIds}
+                lyricSheetIndexLoaded={lyricSheetIndexLoaded}
+                onSelectSong={setSelectedSong}
+                onStartPerformance={(songId) => {
+                  setPerformanceSongId(songId);
+                  setShowPerformance(true);
+                }}
+              />
             </div>
           </div>
         )}
@@ -187,6 +198,8 @@ export default function App() {
 
       <SongModal
         song={selectedSong}
+        lyricSheetIds={lyricSheetIds}
+        lyricSheetIndexLoaded={lyricSheetIndexLoaded}
         onClose={() => setSelectedSong(null)}
         onStartPerformance={(songId) => {
           setPerformanceSongId(songId);

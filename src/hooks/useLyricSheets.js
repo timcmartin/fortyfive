@@ -25,6 +25,7 @@ async function loadStaticSheet(songId) {
 
 export function useLyricSheets() {
   const [lyricSheetIds, setLyricSheetIds] = useState([]);
+  const [lyricSheetIndexLoaded, setLyricSheetIndexLoaded] = useState(false);
   const [indexError, setIndexError] = useState(null);
   const [lyricSheets, setLyricSheets] = useState({});
   const [loadingSheets, setLoadingSheets] = useState({});
@@ -70,6 +71,7 @@ export function useLyricSheets() {
       if (!mounted) return;
       setLyricSheetIds([...ids]);
       setIndexError(errors.length > 0 ? errors.join("; ") : null);
+      setLyricSheetIndexLoaded(true);
     };
 
     void loadAvailableIds();
@@ -157,6 +159,7 @@ export function useLyricSheets() {
 
   return {
     lyricSheetIds,
+    lyricSheetIndexLoaded,
     indexError,
     lyricSheets,
     loadingSheets,
