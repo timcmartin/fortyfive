@@ -7,6 +7,7 @@ import { SongTable } from "./components/SongTable";
 import { SongModal } from "./components/SongModal";
 import { SetSelector } from "./components/SetSelector";
 import { PerformanceView } from "./components/PerformanceView";
+import { PERFORMANCE_SETS } from "./lib/sets";
 import { useLyricSheets } from "./hooks/useLyricSheets";
 import { useEditorAuth } from "./hooks/useEditorAuth";
 
@@ -37,6 +38,11 @@ export default function App() {
     [setResource, selectedSet],
   );
   const setsError = setResource.set === selectedSet ? setResource.error : null;
+  const initialPerformanceSet =
+    selectedSet !== "all" &&
+    PERFORMANCE_SETS.some((set) => set.value === selectedSet)
+      ? selectedSet
+      : null;
 
   useEffect(() => {
     if (selectedSet === "all") return;
@@ -102,6 +108,7 @@ export default function App() {
         saveLyricSheet={saveLyricSheet}
         editorAuth={editorAuth}
         initialSongId={performanceSongId}
+        initialSet={initialPerformanceSet}
         onClose={() => {
           setShowPerformance(false);
           setPerformanceSongId(null);

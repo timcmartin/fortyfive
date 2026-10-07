@@ -143,11 +143,15 @@ export function PerformanceView({
   saveLyricSheet,
   editorAuth,
   initialSongId,
+  initialSet = null,
   onClose,
 }) {
-  const [selectedSet, setSelectedSet] = useState(
-    initialSongId ? "" : (PERFORMANCE_SETS[0]?.value ?? ""),
-  );
+  const [selectedSet, setSelectedSet] = useState(() => {
+    if (initialSet && PERFORMANCE_SETS.some((set) => set.value === initialSet)) {
+      return initialSet;
+    }
+    return initialSongId ? "" : (PERFORMANCE_SETS[0]?.value ?? "");
+  });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showSetList, setShowSetList] = useState(false);
   const [viewMode, setViewMode] = useState("lyrics");
