@@ -54,6 +54,14 @@ const SINGER_LABELS = {
   gang: "Gang",
 };
 
+const SINGER_STYLES = {
+  olivia: "performance-singer-olivia",
+  heather: "performance-singer-heather",
+  steve: "performance-singer-steve",
+  richard: "performance-singer-richard",
+  gang: "performance-singer-gang",
+};
+
 function formatLabel(value) {
   return (
     PART_LABELS[value] ??
@@ -71,21 +79,22 @@ function LyricSection({ section }) {
     "keyboardSolo",
     "break",
   ].includes(section.part);
-  const sectionStyle =
-    isCue || section.part === "intro"
-      ? "performance-cue"
-      : section.part === "chorus"
-        ? "performance-chorus"
-        : "performance-lyrics";
   const lyrics =
     typeof section.lyrics === "string"
       ? section.lyrics
       : Array.isArray(section.lyrics)
         ? section.lyrics.join("\n")
         : "";
-  const singer = section.singer
-    ? (SINGER_LABELS[section.singer] ?? section.singer)
+  const hasLyrics = Boolean(lyrics.trim());
+  const singerValue =
+    typeof section.singer === "string" ? section.singer.trim() : "";
+  const singerKey = singerValue.toLowerCase();
+  const singer = singerValue
+    ? (SINGER_LABELS[singerKey] ?? singerValue)
     : null;
+  const sectionStyle = hasLyrics
+    ? (SINGER_STYLES[singerKey] ?? "performance-singer-default")
+    : "performance-no-lyrics";
 
   return (
     <section className={`performance-section ${sectionStyle}`}>
@@ -105,7 +114,7 @@ function LyricSection({ section }) {
           <span className="text-sm font-medium">{section.notes}</span>
         )}
       </div>
-      {lyrics ? (
+      {hasLyrics ? (
         <p className="whitespace-pre-line text-xl leading-relaxed">{lyrics}</p>
       ) : isCue ? (
         <p className="text-lg font-semibold">

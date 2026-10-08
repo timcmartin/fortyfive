@@ -78,7 +78,7 @@ Popular options: `cupcake`, `nord`, `dracula`, `sunset`, `emerald`, `retro`
 
 ## Song Data
 
-Songs live in `public/songs.json`. Each song is a JSON object:
+The checked-in `public/songs.json` file is the default song catalog. At runtime, the app loads that JSON and overlays any matching rows from Supabase's `public.songs` table by `song_id`, so the database behaves like an override layer rather than a replacement for the file. Each song object still follows the same JSON shape as the static file:
 
 ```json
 {
@@ -109,6 +109,8 @@ Songs live in `public/songs.json`. Each song is a JSON object:
 }
 ```
 
+In Supabase, a song is stored as a row with `song_id`, a JSON `song` object, and a `deleted` flag. For example, to add or update a song, upsert a row where `song_id` matches the song's `id` and `song` contains the full JSON object above. Deleting a row marks it with `deleted = true` so it disappears from the merged catalog without deleting the default JSON entry.
+
 `chartPdfUrl` may be either a single URL string or an array of chart URLs for medleys/mashups that need more than one PDF.
 
 ### Status Values
@@ -124,7 +126,7 @@ To add a new status, edit `src/lib/statuses.js` — it controls the filter butto
 
 ### Database-backed catalog and setlists
 
-The app loads the song catalog from `public/songs.json` and overlays rows from Supabase's `songs` table by song ID. Setlists work the same way: the checked-in files in `public/sets/` provide defaults, and rows in Supabase's `setlists` table override those defaults or add new setlists. If Supabase is unavailable or a read fails, the app reports a warning and uses the JSON data. Database deletions are recorded as tombstones so deleted JSON-backed entries do not reappear while Supabase is available.
+The app loads the song catalog from `public/songs.json` and overlays rows from Supabase's `songs` table by song ID. Setlists work the same way: the checked-in files in `public/sets/` provide defaults, and rows in Supabase's `setlists` table override those defaults or add new setlists. Song records and set objects in Supabase use the same object shape as their JSON counterparts, so the database acts like a layer of overrides on top of the checked-in files, just as lyric sheets do. If Supabase is unavailable or a read fails, the app reports a warning and uses the JSON data. Database deletions are recorded as tombstones so deleted JSON-backed entries do not reappear while Supabase is available.
 
 Sign in as an editor from the catalog page to add, edit, and delete songs, or create, rename, categorize, reorder, and delete setlists. Performance setlists appear in Performance Mode; catalog groupings are available as catalog filters only. Song records use the same object shape as `public/songs.json`. Setlist song order is stored as an array of song IDs.
 
@@ -134,7 +136,7 @@ Run `supabase/schema.sql` to create the `songs` and `setlists` tables and editor
 
 Select **Open Performance Mode** to navigate performance setlists with Previous/Next buttons, the left/right arrow keys, or the set-list drawer. Switch between the Lyrics and Charts views without leaving the current song; charts use the song's existing `chartPdfUrl` resource and render as scrollable pages, with an option to open the PDF in a new tab. Multiple chart URLs can be selected within the Charts view. A metronome remains available above either view, defaults to a song's BPM when that value is a single tempo, and accents beat one in 4/4. Adjust the tempo with the BPM input, +/- controls, or Tap; changing tempo stops playback until restarted, and changing songs also stops playback. Ambiguous catalog tempos (such as ranges or slash-separated values) are shown as notes and require a playable tempo to be entered or tapped in. The metronome's tempo adjustment is temporary and does not change the catalog. Since the app fetches chart PDFs for rendering, configure the S3 bucket's CORS policy to allow GET requests from the deployed app origin.
 
-Lyric sheets are stored in Supabase's `lyric_sheets` table as a `sections` JSON array. Performance Mode checks Supabase first and falls back to `public/lyric-sheets/{song-id}.json` while existing files are being migrated. Editors can sign in from Performance Mode and edit a sheet as JSON; saving creates or updates its database row. Each sheet contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Suggested part and singer values are shown below; custom part and singer labels are also supported.
+Lyric sheets are stored in Supabase's `lyric_sheets` table as a `sections` JSON array. Performance Mode checks Supabase first and falls back to `public/lyric-sheets/{song-id}.json` while existing files are being migrated. Editors can sign in from Performance Mode and edit a sheet as JSON; saving creates or updates its database row. Each sheet contains a `sections` array, rendered in order. `lyrics` can be a multiline string or an array of lines; instrumental/solo cues can include a bar count and notes. The singer is optional. Sections with lyrics are color-coded by Olivia, Heather, Steve, Richard, or Gang: Olivia is rose/red, Heather is purple, Steve is blue, Richard is teal, and Gang is amber; unspecified and other singer values use the default neutral color, and sections with no lyrics use a separate cue color. The styling is a left-border accent plus a lightly tinted background for each section, so the singer color acts as a quick visual grouping without relying on color alone. Suggested part and singer values are shown below; custom part and singer labels are also supported.
 
 For a nontechnical walkthrough focused on assigning singers to parts, see the [Lyric Sheet Editing Guide](LYRIC-SHEET-EDITING-GUIDE.md).
 
@@ -166,7 +168,7 @@ For example, `public/lyric-sheets/index.json` contains an array of IDs such as `
 }
 ```
 
-Suggested parts: `verse`, `preChorus`, `chorus`, `bridge`, `instrumental`, `bassSolo`, `guitarSolo`, `intro`, `outro`, `tag`, `vamp`, `breakdown`, `interlude`, `ending`. Suggested singers: `olivia`, `heather`, `steve`, `richard`, `gang`. Existing JSON files remain as a fallback during migration; new or edited sheets are saved to Supabase. Lyrics and cues are styled differently in performance mode; cues remain labeled, not color-only.
+Suggested parts: `verse`, `preChorus`, `chorus`, `bridge`, `instrumental`, `bassSolo`, `guitarSolo`, `intro`, `outro`, `tag`, `vamp`, `breakdown`, `interlude`, `ending`. Suggested singers: `olivia`, `heather`, `steve`, `richard`, `gang`. Existing JSON files remain as a fallback during migration; new or edited sheets are saved to Supabase. Lyrics and cues are styled differently in performance mode; cues remain labeled, not color-only. The CSS classes used for singer styling are `performance-singer-olivia`, `performance-singer-heather`, `performance-singer-steve`, `performance-singer-richard`, `performance-singer-gang`, with the default neutral styling in `performance-singer-default` and cue-only sections in `performance-no-lyrics`.
 
 ### Finding Lyrics URLs
 
