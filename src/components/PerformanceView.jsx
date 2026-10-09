@@ -69,7 +69,11 @@ function formatLabel(value) {
   );
 }
 
-function LyricSection({ section }) {
+function LyricSection({ section, canEditSinger, onSaveSinger }) {
+  const [editingSinger, setEditingSinger] = useState(false);
+  const [savingSinger, setSavingSinger] = useState(false);
+  const [singerError, setSingerError] = useState(null);
+  const singerEditorRef = useRef(null);
   const label = formatLabel(section.part || "section");
   const isCue = [
     "intro",
@@ -89,12 +93,49 @@ function LyricSection({ section }) {
   const singerValue =
     typeof section.singer === "string" ? section.singer.trim() : "";
   const singerKey = singerValue.toLowerCase();
+  const selectedSinger = Object.hasOwn(SINGER_LABELS, singerKey)
+    ? singerKey
+    : singerValue;
   const singer = singerValue
     ? (SINGER_LABELS[singerKey] ?? singerValue)
     : null;
   const sectionStyle = hasLyrics
     ? (SINGER_STYLES[singerKey] ?? "performance-singer-default")
     : "performance-no-lyrics";
+
+  useEffect(() => {
+    if (!editingSinger) return undefined;
+
+    const handlePointerDown = (event) => {
+      if (!singerEditorRef.current?.contains(event.target)) {
+        setEditingSinger(false);
+      }
+    };
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setEditingSinger(false);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [editingSinger]);
+
+  const handleSingerChange = async (event) => {
+    const nextSinger = event.target.value;
+    setSavingSinger(true);
+    setSingerError(null);
+    try {
+      await onSaveSinger(nextSinger);
+      setEditingSinger(false);
+    } catch (error) {
+      setSingerError(error.message);
+    } finally {
+      setSavingSinger(false);
+    }
+  };
 
   return (
     <section className={`performance-section ${sectionStyle}`}>
@@ -112,6 +153,53 @@ function LyricSection({ section }) {
         )}
         {section.notes && (
           <span className="text-sm font-medium">{section.notes}</span>
+        )}
+        {hasLyrics && canEditSinger && (
+          <div
+            ref={singerEditorRef}
+            className="inline-flex items-center gap-2"
+          >
+            <button
+              className="btn btn-ghost btn-xs"
+              type="button"
+              aria-label={`Edit singer for ${label}`}
+              aria-expanded={editingSinger}
+              onClick={() => {
+                setSingerError(null);
+                setEditingSinger((current) => !current);
+              }}
+            >
+              <Pencil className="size-3" />
+              Edit singer
+            </button>
+            {editingSinger && (
+              <select
+                className="select select-bordered select-xs"
+                aria-label={`Singer for ${label}`}
+                value={selectedSinger}
+                disabled={savingSinger}
+                onChange={(event) => void handleSingerChange(event)}
+              >
+                <option value="">No singer</option>
+                {singerValue && !Object.hasOwn(SINGER_LABELS, singerKey) && (
+                  <option value={singerValue}>{singerValue}</option>
+                )}
+                {Object.entries(SINGER_LABELS).map(([value, name]) => (
+                  <option key={value} value={value}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            )}
+            {savingSinger && (
+              <span className="loading loading-spinner loading-xs" aria-label="Saving singer" />
+            )}
+            {singerError && (
+              <span className="text-xs text-error" role="alert">
+                Could not save singer: {singerError}
+              </span>
+            )}
+          </div>
         )}
       </div>
       {hasLyrics ? (
@@ -403,6 +491,16 @@ export function PerformanceView({
     } finally {
       setSavingSheet(false);
     }
+  };
+
+  const handleSaveSectionSinger = async (sectionIndex, singer) => {
+    if (!song || !editorAuth.isEditor || !editorAuth.user) {
+      throw new Error("Editor access is required to change a singer.");
+    }
+    const updatedSections = sections.map((section, index) =>
+      index === sectionIndex ? { ...section, singer } : section,
+    );
+    await saveLyricSheet(song.id, updatedSections, editorAuth.user.id);
   };
 
   return (
@@ -703,6 +801,10 @@ export function PerformanceView({
                         <LyricSection
                           key={section.id ?? `${section.part}-${index}`}
                           section={section}
+                          canEditSinger={editorAuth.isEditor}
+                          onSaveSinger={(singer) =>
+                            handleSaveSectionSinger(index, singer)
+                          }
                         />
                       ))}
                     </div>
