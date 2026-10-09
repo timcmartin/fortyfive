@@ -4,7 +4,6 @@ import {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 import {
@@ -14,290 +13,18 @@ import {
   LogIn,
   LogOut,
   Music2,
-  Pencil,
-  Save,
   X,
 } from "lucide-react";
 import { MetronomeControl } from "./MetronomeControl";
+import { PerformanceLyrics } from "./PerformanceLyrics";
+import { PerformanceSetListDrawer } from "./PerformanceSetListDrawer";
+import { useScreenWakeLock } from "../hooks/useScreenWakeLock";
 
 const PdfChartViewer = lazy(() =>
   import("./PdfChartViewer").then((module) => ({
     default: module.PdfChartViewer,
   })),
 );
-
-const PART_LABELS = {
-  verse: "Verse",
-  preChorus: "Pre-Chorus",
-  postChorus: "Post-Chorus",
-  chorus: "Chorus",
-  bridge: "Bridge",
-  instrumental: "Instrumental",
-  break: "Break",
-  bassSolo: "Bass Solo",
-  guitarSolo: "Guitar Solo",
-  keyboardSolo: "Keyboard Solo",
-  intro: "Intro",
-  outro: "Outro",
-  tag: "Tag",
-  vamp: "Vamp",
-  breakdown: "Breakdown",
-  interlude: "Interlude",
-  ending: "Ending",
-};
-
-const SINGER_LABELS = {
-  olivia: "Olivia",
-  heather: "Heather",
-  steve: "Steve",
-  richard: "Richard",
-  gang: "Gang",
-};
-
-const SINGER_STYLES = {
-  olivia: "performance-singer-olivia",
-  heather: "performance-singer-heather",
-  steve: "performance-singer-steve",
-  richard: "performance-singer-richard",
-  gang: "performance-singer-gang",
-};
-
-function formatLabel(value) {
-  return (
-    PART_LABELS[value] ??
-    value.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase())
-  );
-}
-
-function LyricSection({
-  section,
-  canEditSinger,
-  onSaveSinger,
-  onSaveLyrics,
-}) {
-  const [editingSinger, setEditingSinger] = useState(false);
-  const [savingSinger, setSavingSinger] = useState(false);
-  const [singerError, setSingerError] = useState(null);
-  const [editingLyrics, setEditingLyrics] = useState(false);
-  const [lyricsDraft, setLyricsDraft] = useState("");
-  const [savingLyrics, setSavingLyrics] = useState(false);
-  const [lyricsError, setLyricsError] = useState(null);
-  const singerEditorRef = useRef(null);
-  const label = formatLabel(section.part || "section");
-  const isCue = [
-    "intro",
-    "instrumental",
-    "bassSolo",
-    "guitarSolo",
-    "keyboardSolo",
-    "break",
-  ].includes(section.part);
-  const lyrics =
-    typeof section.lyrics === "string"
-      ? section.lyrics
-      : Array.isArray(section.lyrics)
-        ? section.lyrics.join("\n")
-        : "";
-  const hasLyrics = Boolean(lyrics.trim());
-  const singerValue =
-    typeof section.singer === "string" ? section.singer.trim() : "";
-  const singerKey = singerValue.toLowerCase();
-  const selectedSinger = Object.hasOwn(SINGER_LABELS, singerKey)
-    ? singerKey
-    : singerValue;
-  const singer = singerValue
-    ? (SINGER_LABELS[singerKey] ?? singerValue)
-    : null;
-  const sectionStyle = hasLyrics
-    ? (SINGER_STYLES[singerKey] ?? "performance-singer-default")
-    : "performance-no-lyrics";
-
-  useEffect(() => {
-    if (!editingSinger) return undefined;
-
-    const handlePointerDown = (event) => {
-      if (!singerEditorRef.current?.contains(event.target)) {
-        setEditingSinger(false);
-      }
-    };
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") setEditingSinger(false);
-    };
-
-    document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [editingSinger]);
-
-  const handleSingerChange = async (event) => {
-    const nextSinger = event.target.value;
-    setSavingSinger(true);
-    setSingerError(null);
-    try {
-      await onSaveSinger(nextSinger);
-      setEditingSinger(false);
-    } catch (error) {
-      setSingerError(error.message);
-    } finally {
-      setSavingSinger(false);
-    }
-  };
-
-  const handleSaveLyrics = async (event) => {
-    event.preventDefault();
-    setSavingLyrics(true);
-    setLyricsError(null);
-    try {
-      const lines = lyricsDraft === "" ? [] : lyricsDraft.split("\n");
-      await onSaveLyrics(lines);
-      setEditingLyrics(false);
-    } catch (error) {
-      setLyricsError(error.message);
-    } finally {
-      setSavingLyrics(false);
-    }
-  };
-
-  return (
-    <section className={`performance-section ${sectionStyle}`}>
-      <div className="flex flex-wrap items-center gap-2 mb-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider">{label}</h3>
-        {singer && (
-          <span className="badge badge-sm badge-outline">{singer}</span>
-        )}
-        {section.bars != null && (
-          <span className="badge badge-sm badge-warning">
-            {typeof section.bars === "number"
-              ? `${section.bars} bars`
-              : section.bars}
-          </span>
-        )}
-        {section.notes && (
-          <span className="text-sm font-medium">{section.notes}</span>
-        )}
-        {hasLyrics && canEditSinger && (
-          <div
-            ref={singerEditorRef}
-            className="inline-flex items-center gap-2"
-          >
-            <button
-              className="btn btn-ghost btn-xs"
-              type="button"
-              aria-label={`Edit singer for ${label}`}
-              aria-expanded={editingSinger}
-              onClick={() => {
-                setSingerError(null);
-                setEditingSinger((current) => !current);
-              }}
-            >
-              <Pencil className="size-3" />
-              Edit singer
-            </button>
-            {editingSinger && (
-              <select
-                className="select select-bordered select-xs"
-                aria-label={`Singer for ${label}`}
-                value={selectedSinger}
-                disabled={savingSinger}
-                onChange={(event) => void handleSingerChange(event)}
-              >
-                <option value="">No singer</option>
-                {singerValue && !Object.hasOwn(SINGER_LABELS, singerKey) && (
-                  <option value={singerValue}>{singerValue}</option>
-                )}
-                {Object.entries(SINGER_LABELS).map(([value, name]) => (
-                  <option key={value} value={value}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-            )}
-            {savingSinger && (
-              <span className="loading loading-spinner loading-xs" aria-label="Saving singer" />
-            )}
-            {singerError && (
-              <span className="text-xs text-error" role="alert">
-                Could not save singer: {singerError}
-              </span>
-            )}
-          </div>
-        )}
-        {canEditSinger && (
-          <button
-            className="btn btn-ghost btn-xs"
-            type="button"
-            aria-label={`Edit lyrics for ${label}`}
-            aria-expanded={editingLyrics}
-            onClick={() => {
-              setLyricsDraft(lyrics);
-              setLyricsError(null);
-              setEditingLyrics((current) => !current);
-            }}
-          >
-            <Pencil className="size-3" />
-            Edit lyrics
-          </button>
-        )}
-      </div>
-      {editingLyrics ? (
-        <form className="space-y-3" onSubmit={handleSaveLyrics}>
-          <label className="form-control">
-            <span className="label-text mb-1">{label} lyrics</span>
-            <textarea
-              className="textarea textarea-bordered w-full min-h-40 text-lg leading-relaxed"
-              aria-label={`${label} lyrics`}
-              value={lyricsDraft}
-              disabled={savingLyrics}
-              onChange={(event) => setLyricsDraft(event.target.value)}
-            />
-          </label>
-          {lyricsError && (
-            <p className="text-sm text-error" role="alert">
-              Could not save lyrics: {lyricsError}
-            </p>
-          )}
-          <div className="flex gap-2">
-            <button
-              className="btn btn-primary btn-sm"
-              type="submit"
-              disabled={savingLyrics}
-            >
-              {savingLyrics ? (
-                <span className="loading loading-spinner loading-sm" />
-              ) : (
-                <Save className="size-4" />
-              )}
-              Save lyrics
-            </button>
-            <button
-              className="btn btn-ghost btn-sm"
-              type="button"
-              disabled={savingLyrics}
-              onClick={() => setEditingLyrics(false)}
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
-      ) : hasLyrics ? (
-        <p className="whitespace-pre-line text-xl leading-relaxed">{lyrics}</p>
-      ) : isCue ? (
-        <p className="text-lg font-semibold">
-          {section.bars != null
-            ? typeof section.bars === "number"
-              ? `Play for ${section.bars} bars`
-              : section.bars
-            : `${label} cue`}
-        </p>
-      ) : (
-        <p className="text-base-content/40 italic">Lyrics not entered</p>
-      )}
-    </section>
-  );
-}
 
 export function PerformanceView({
   songs,
@@ -356,19 +83,8 @@ export function PerformanceView({
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
   const [signInError, setSignInError] = useState(null);
-  const [isEditingSheet, setIsEditingSheet] = useState(false);
-  const [sheetDraft, setSheetDraft] = useState("");
-  const [saveError, setSaveError] = useState(null);
-  const [savingSheet, setSavingSheet] = useState(false);
-  const setListDialogRef = useRef(null);
-  const wakeLockRef = useRef(null);
-  const wakeLockRequestRef = useRef(null);
-  const [wakeLockStatus, setWakeLockStatus] = useState(() =>
-    typeof navigator !== "undefined" && "wakeLock" in navigator
-      ? "requesting"
-      : "unsupported",
-  );
-  const [wakeLockError, setWakeLockError] = useState(null);
+  const { status: wakeLockStatus, error: wakeLockError } =
+    useScreenWakeLock();
   const isIndividualSong = selectedSet === "individual";
   const selectedSetData = sets.find((set) => set.id === selectedSet);
   const setLoading = !isIndividualSong && (setsLoading || !selectedSet || !selectedSetData);
@@ -384,75 +100,6 @@ export function PerformanceView({
     initialSongId && !setsLoading && !initialSongSet && setsError
       ? "Could not check every set list; opening this song individually."
       : null;
-
-  useEffect(() => {
-    let active = true;
-
-    const requestWakeLock = async () => {
-      if (
-        !active ||
-        document.visibilityState !== "visible" ||
-        (wakeLockRef.current && !wakeLockRef.current.released)
-      ) {
-        return;
-      }
-      if (wakeLockRequestRef.current) return;
-
-      let request;
-      try {
-        request = navigator.wakeLock.request("screen");
-        wakeLockRequestRef.current = request;
-        const wakeLock = await request;
-        if (!active) {
-          await wakeLock.release();
-          return;
-        }
-        wakeLockRef.current = wakeLock;
-        setWakeLockStatus("active");
-        setWakeLockError(null);
-        wakeLock.addEventListener("release", () => {
-          if (wakeLockRef.current === wakeLock) {
-            wakeLockRef.current = null;
-            if (active) setWakeLockStatus("requesting");
-          }
-        });
-      } catch (error) {
-        if (active) {
-          setWakeLockStatus("unavailable");
-          setWakeLockError(
-            error instanceof Error ? error.message : String(error),
-          );
-        }
-      } finally {
-        if (wakeLockRequestRef.current === request) {
-          wakeLockRequestRef.current = null;
-        }
-      }
-    };
-
-    void requestWakeLock();
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        void requestWakeLock();
-      }
-    };
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      active = false;
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      const wakeLock = wakeLockRef.current;
-      wakeLockRef.current = null;
-      if (wakeLock && !wakeLock.released) void wakeLock.release();
-    };
-  }, []);
-
-  useEffect(() => {
-    const dialog = setListDialogRef.current;
-    if (!dialog) return;
-    if (showSetList && !dialog.open) dialog.showModal();
-    if (!showSetList && dialog.open) dialog.close();
-  }, [showSetList]);
 
   const setSongs = useMemo(
     () =>
@@ -546,41 +193,11 @@ export function PerformanceView({
     }
   };
 
-  const handleSaveSheet = async (event) => {
-    event.preventDefault();
-    setSaveError(null);
-
-    let parsed;
-    try {
-      parsed = JSON.parse(sheetDraft);
-    } catch {
-      setSaveError("Enter valid JSON before saving.");
-      return;
-    }
-    if (!parsed || !Array.isArray(parsed.sections)) {
-      setSaveError('The JSON must have a "sections" array.');
-      return;
-    }
-
-    setSavingSheet(true);
-    try {
-      await saveLyricSheet(song.id, parsed.sections, editorAuth.user.id);
-      setIsEditingSheet(false);
-    } catch (error) {
-      setSaveError(error.message);
-    } finally {
-      setSavingSheet(false);
-    }
-  };
-
-  const handleSaveSection = async (sectionIndex, update) => {
+  const handleSaveSections = async (nextSections) => {
     if (!song || !editorAuth.isEditor || !editorAuth.user) {
       throw new Error("Editor access is required to edit lyric sections.");
     }
-    const updatedSections = sections.map((section, index) =>
-      index === sectionIndex ? { ...section, ...update } : section,
-    );
-    await saveLyricSheet(song.id, updatedSections, editorAuth.user.id);
+    await saveLyricSheet(song.id, nextSections, editorAuth.user.id);
   };
 
   return (
@@ -805,113 +422,16 @@ export function PerformanceView({
                   </button>
                 </div>
 
-                {viewMode === "lyrics" && editorAuth.isEditor && (
-                  <div className="space-y-3">
-                    {!isEditingSheet ? (
-                      <button
-                        className="btn btn-outline btn-sm"
-                        onClick={() => {
-                          setSheetDraft(
-                            JSON.stringify(lyricSheet ?? { sections: [] }, null, 2),
-                          );
-                          setSaveError(null);
-                          setIsEditingSheet(true);
-                        }}
-                      >
-                        <Pencil className="size-4" />
-                        Edit sheet
-                      </button>
-                    ) : (
-                      <form className="space-y-3" onSubmit={handleSaveSheet}>
-                        <label className="form-control">
-                          <span className="label-text mb-1">
-                            Lyric sheet JSON
-                          </span>
-                          <textarea
-                            className="textarea textarea-bordered min-h-96 font-mono text-sm"
-                            spellCheck="false"
-                            value={sheetDraft}
-                            onChange={(event) =>
-                              setSheetDraft(event.target.value)
-                            }
-                          />
-                        </label>
-                        {saveError && (
-                          <p className="text-sm text-error">{saveError}</p>
-                        )}
-                        <div className="flex gap-2">
-                          <button
-                            className="btn btn-primary"
-                            type="submit"
-                            disabled={savingSheet}
-                          >
-                            {savingSheet ? (
-                              <span className="loading loading-spinner loading-sm" />
-                            ) : (
-                              <Save className="size-4" />
-                            )}
-                            Save sheet
-                          </button>
-                          <button
-                            className="btn btn-ghost"
-                            type="button"
-                            disabled={savingSheet}
-                            onClick={() => setIsEditingSheet(false)}
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </form>
-                    )}
-                  </div>
-                )}
-
-                {viewMode === "lyrics" && isEditingSheet ? null : viewMode === "lyrics" && song && loadingSheets[song.id] ? (
-                  <div className="flex justify-center py-12">
-                    <span className="loading loading-spinner loading-lg" />
-                  </div>
-                ) : viewMode === "lyrics" && song && sheetErrors[song.id] ? (
-                  <div className="alert alert-error">
-                    {sheetErrors[song.id]}
-                  </div>
-                ) : viewMode === "lyrics" ? (
-                  sections.length > 0 ? (
-                    <div className="space-y-4">
-                      {sections.map((section, index) => (
-                        <LyricSection
-                          key={`${song.id}:${section.id ?? `${section.part}-${index}`}`}
-                          section={section}
-                          canEditSinger={editorAuth.isEditor}
-                          onSaveSinger={(singer) =>
-                            handleSaveSection(index, { singer })
-                          }
-                          onSaveLyrics={(lyrics) =>
-                            handleSaveSection(index, { lyrics })
-                          }
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="rounded-xl border border-dashed border-base-300 px-5 py-10 text-center">
-                      <Music2 className="size-8 mx-auto mb-3 text-base-content/40" />
-                      <p className="font-semibold">No performance sheet yet</p>
-                      <p className="mt-1 text-sm text-base-content/60">
-                        {editorAuth.isEditor
-                          ? "Use Edit sheet to add its ordered sections."
-                          : "An editor can add its ordered sections."}
-                      </p>
-                      {song.resources?.lyricsUrls?.[0] && (
-                        <a
-                          className="btn btn-sm btn-outline mt-4"
-                          href={song.resources.lyricsUrls[0]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Open external lyrics
-                        </a>
-                      )}
-                    </div>
-                  )
+                {viewMode === "lyrics" ? (
+                  <PerformanceLyrics
+                    key={song.id}
+                    song={song}
+                    sections={sections}
+                    canEdit={editorAuth.isEditor}
+                    loading={Boolean(loadingSheets[song.id])}
+                    error={sheetErrors[song.id]}
+                    onSaveSections={handleSaveSections}
+                  />
                 ) : chartUrl ? (
                   <div className="space-y-3">
                     {chartUrls.length > 1 && (
@@ -998,100 +518,20 @@ export function PerformanceView({
         ) : null}
       </div>
 
-      <dialog
-        ref={setListDialogRef}
-        className="fixed inset-0 m-0 h-dvh w-screen max-h-none max-w-none bg-transparent p-0 backdrop:bg-black/40"
-        aria-label={`${selectedSetLabel} song list`}
-        onCancel={(event) => {
-          event.preventDefault();
+      <PerformanceSetListDrawer
+        open={showSetList}
+        songs={drawerSongs}
+        currentIndex={currentIndex}
+        selectedSetLabel={selectedSetLabel}
+        lyricSheetIds={lyricSheetIds}
+        lyricSheets={lyricSheets}
+        onSelectSong={(index) => {
+          setSelectedSetState(selectedSet);
+          setCurrentIndexState(index);
           setShowSetList(false);
         }}
-        onClick={(event) => {
-          if (event.target === setListDialogRef.current) setShowSetList(false);
-        }}
-      >
-        <aside className="ml-auto flex h-full w-full max-w-md flex-col bg-base-100 shadow-xl">
-          <header className="flex items-start justify-between gap-3 border-b border-base-300 p-5">
-            <div>
-              <p className="text-sm text-base-content/60">{selectedSetLabel}</p>
-              <h2 className="text-xl font-bold">Jump to a song</h2>
-            </div>
-            <button
-              className="btn btn-ghost btn-sm btn-circle"
-              onClick={() => setShowSetList(false)}
-              aria-label="Close set list"
-            >
-              <X className="size-4" />
-            </button>
-          </header>
-          <nav
-            className="flex-1 overflow-y-auto p-3"
-            aria-label={`${selectedSetLabel} songs`}
-          >
-            {drawerSongs.map((setSong, index) => {
-              const isCurrentSong = index === currentIndex;
-              const hasSheet =
-                lyricSheetIds.includes(setSong.id) ||
-                Boolean(lyricSheets[setSong.id]);
-              const hasChart =
-                Boolean(setSong.resources?.chartPdfUrl?.length) ||
-                typeof setSong.resources?.chartPdfUrl === "string";
-              return (
-                <button
-                  key={setSong.id}
-                  className={`mb-1 flex w-full items-center gap-3 rounded-lg px-3 py-3 text-left ${
-                    isCurrentSong
-                      ? "bg-primary text-primary-content"
-                      : "hover:bg-base-200"
-                  }`}
-                  onClick={() => {
-                    setSelectedSetState(selectedSet);
-                    setCurrentIndexState(index);
-                    setShowSetList(false);
-                  }}
-                  aria-current={isCurrentSong ? "true" : undefined}
-                >
-                  <span className="w-7 shrink-0 text-right text-sm opacity-70">
-                    {index + 1}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate font-semibold">
-                      {setSong.title}
-                    </span>
-                    <span className="block truncate text-xs opacity-70">
-                      {setSong.performanceNotes?.leadSinger ||
-                        setSong.artistInfo?.performanceVersion}
-                    </span>
-                  </span>
-                  <span className="flex shrink-0 gap-1">
-                    {hasSheet && (
-                      <span
-                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
-                      >
-                        Lyrics
-                      </span>
-                    )}
-                    {hasChart && (
-                      <span
-                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
-                      >
-                        Chart
-                      </span>
-                    )}
-                    {!hasSheet && !hasChart && (
-                      <span
-                        className={`badge badge-sm ${isCurrentSong ? "badge-outline" : "badge-ghost"}`}
-                      >
-                        No sheet
-                      </span>
-                    )}
-                  </span>
-                </button>
-              );
-            })}
-          </nav>
-        </aside>
-      </dialog>
+        onClose={() => setShowSetList(false)}
+      />
     </div>
   );
 }
