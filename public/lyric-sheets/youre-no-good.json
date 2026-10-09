@@ -13,7 +13,8 @@
         "Feeling better 'cause I'm over you",
         "I learned my lesson, it left a scar",
         "Now I see how you really are"
-      ]
+      ],
+      "singer": "olivia"
     },
     {
       "part": "chorus",
@@ -24,7 +25,8 @@
         "I'm gonna say it again",
         "You're no good, you're no good, you're no good",
         "Baby, you're no good"
-      ]
+      ],
+      "singer": "gang"
     },
     {
       "part": "verse",
@@ -34,7 +36,8 @@
         "Well, I broke a heart over someone like you",
         "I'll beg his forgiveness on bended knee",
         "I wouldn't blame him if he said to me"
-      ]
+      ],
+      "singer": "olivia"
     },
     {
       "part": "chorus",
@@ -45,7 +48,8 @@
         "I'm gonna say it again",
         "You're no good, you're no good, you're no good",
         "Baby, you're no good"
-      ]
+      ],
+      "singer": "gang"
     },
     {
       "part": "instrumental",
@@ -62,7 +66,8 @@
         "I'm turning you down, baby, and I'm going my way",
         "Forget about you, baby, 'cause I'm leaving to stay"
       ],
-      "notes": "Short verse"
+      "notes": "Short verse",
+      "singer": "olivia"
     },
     {
       "part": "chorus",
@@ -73,7 +78,8 @@
         "I'm gonna say it again",
         "You're no good, you're no good, you're no good",
         "Baby, you're no good"
-      ]
+      ],
+      "singer": "gang"
     },
     {
       "part": "break",
@@ -83,7 +89,8 @@
         "You're no good, you're no good, you're no good",
         "Baby, you're no good"
       ],
-      "notes": "A Capella"
+      "notes": "A Capella",
+      "singer": "gang"
     },
     {
       "part": "instrumental",
