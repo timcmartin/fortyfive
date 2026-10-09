@@ -69,10 +69,19 @@ function formatLabel(value) {
   );
 }
 
-function LyricSection({ section, canEditSinger, onSaveSinger }) {
+function LyricSection({
+  section,
+  canEditSinger,
+  onSaveSinger,
+  onSaveLyrics,
+}) {
   const [editingSinger, setEditingSinger] = useState(false);
   const [savingSinger, setSavingSinger] = useState(false);
   const [singerError, setSingerError] = useState(null);
+  const [editingLyrics, setEditingLyrics] = useState(false);
+  const [lyricsDraft, setLyricsDraft] = useState("");
+  const [savingLyrics, setSavingLyrics] = useState(false);
+  const [lyricsError, setLyricsError] = useState(null);
   const singerEditorRef = useRef(null);
   const label = formatLabel(section.part || "section");
   const isCue = [
@@ -134,6 +143,21 @@ function LyricSection({ section, canEditSinger, onSaveSinger }) {
       setSingerError(error.message);
     } finally {
       setSavingSinger(false);
+    }
+  };
+
+  const handleSaveLyrics = async (event) => {
+    event.preventDefault();
+    setSavingLyrics(true);
+    setLyricsError(null);
+    try {
+      const lines = lyricsDraft === "" ? [] : lyricsDraft.split("\n");
+      await onSaveLyrics(lines);
+      setEditingLyrics(false);
+    } catch (error) {
+      setLyricsError(error.message);
+    } finally {
+      setSavingLyrics(false);
     }
   };
 
@@ -201,8 +225,64 @@ function LyricSection({ section, canEditSinger, onSaveSinger }) {
             )}
           </div>
         )}
+        {canEditSinger && (
+          <button
+            className="btn btn-ghost btn-xs"
+            type="button"
+            aria-label={`Edit lyrics for ${label}`}
+            aria-expanded={editingLyrics}
+            onClick={() => {
+              setLyricsDraft(lyrics);
+              setLyricsError(null);
+              setEditingLyrics((current) => !current);
+            }}
+          >
+            <Pencil className="size-3" />
+            Edit lyrics
+          </button>
+        )}
       </div>
-      {hasLyrics ? (
+      {editingLyrics ? (
+        <form className="space-y-3" onSubmit={handleSaveLyrics}>
+          <label className="form-control">
+            <span className="label-text mb-1">{label} lyrics</span>
+            <textarea
+              className="textarea textarea-bordered w-full min-h-40 text-lg leading-relaxed"
+              aria-label={`${label} lyrics`}
+              value={lyricsDraft}
+              disabled={savingLyrics}
+              onChange={(event) => setLyricsDraft(event.target.value)}
+            />
+          </label>
+          {lyricsError && (
+            <p className="text-sm text-error" role="alert">
+              Could not save lyrics: {lyricsError}
+            </p>
+          )}
+          <div className="flex gap-2">
+            <button
+              className="btn btn-primary btn-sm"
+              type="submit"
+              disabled={savingLyrics}
+            >
+              {savingLyrics ? (
+                <span className="loading loading-spinner loading-sm" />
+              ) : (
+                <Save className="size-4" />
+              )}
+              Save lyrics
+            </button>
+            <button
+              className="btn btn-ghost btn-sm"
+              type="button"
+              disabled={savingLyrics}
+              onClick={() => setEditingLyrics(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      ) : hasLyrics ? (
         <p className="whitespace-pre-line text-xl leading-relaxed">{lyrics}</p>
       ) : isCue ? (
         <p className="text-lg font-semibold">
@@ -493,12 +573,12 @@ export function PerformanceView({
     }
   };
 
-  const handleSaveSectionSinger = async (sectionIndex, singer) => {
+  const handleSaveSection = async (sectionIndex, update) => {
     if (!song || !editorAuth.isEditor || !editorAuth.user) {
-      throw new Error("Editor access is required to change a singer.");
+      throw new Error("Editor access is required to edit lyric sections.");
     }
     const updatedSections = sections.map((section, index) =>
-      index === sectionIndex ? { ...section, singer } : section,
+      index === sectionIndex ? { ...section, ...update } : section,
     );
     await saveLyricSheet(song.id, updatedSections, editorAuth.user.id);
   };
@@ -799,11 +879,14 @@ export function PerformanceView({
                     <div className="space-y-4">
                       {sections.map((section, index) => (
                         <LyricSection
-                          key={section.id ?? `${section.part}-${index}`}
+                          key={`${song.id}:${section.id ?? `${section.part}-${index}`}`}
                           section={section}
                           canEditSinger={editorAuth.isEditor}
                           onSaveSinger={(singer) =>
-                            handleSaveSectionSinger(index, singer)
+                            handleSaveSection(index, { singer })
+                          }
+                          onSaveLyrics={(lyrics) =>
+                            handleSaveSection(index, { lyrics })
                           }
                         />
                       ))}
