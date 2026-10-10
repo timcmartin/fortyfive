@@ -389,10 +389,9 @@ export function PerformanceView({
               </p>
             </div>
 
-            <article className="card bg-base-100 shadow-sm">
+            <article key={song.id} className="card bg-base-100 shadow-sm">
               <div className="card-body gap-5">
                 <MetronomeControl
-                  key={song.id}
                   tempo={song.musicalDetails?.bpm}
                 />
                 <header>
