@@ -1,11 +1,15 @@
 create table if not exists public.lyric_sheets (
   song_id text primary key,
   sections jsonb not null default '[]'::jsonb,
+  revision bigint not null default 1,
   updated_at timestamptz not null default now(),
   updated_by uuid references auth.users(id),
   constraint lyric_sheets_sections_is_array
     check (jsonb_typeof(sections) = 'array')
 );
+
+alter table public.lyric_sheets
+  add column if not exists revision bigint not null default 1;
 
 alter table public.lyric_sheets enable row level security;
 

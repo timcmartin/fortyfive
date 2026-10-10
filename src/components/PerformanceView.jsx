@@ -37,9 +37,11 @@ export function PerformanceView({
   sheetIndexError,
   lyricSheetIds,
   lyricSheets,
+  lyricSheetRevisions,
   loadingSheets,
   sheetErrors,
   loadLyricSheet,
+  reloadLyricSheet,
   saveLyricSheet,
   editorAuth,
   initialSongId,
@@ -197,7 +199,12 @@ export function PerformanceView({
     if (!song || !editorAuth.isEditor || !editorAuth.user) {
       throw new Error("Editor access is required to edit lyric sections.");
     }
-    await saveLyricSheet(song.id, nextSections, editorAuth.user.id);
+    await saveLyricSheet(
+      song.id,
+      nextSections,
+      editorAuth.user.id,
+      lyricSheetRevisions[song.id] ?? null,
+    );
   };
 
   return (
@@ -430,6 +437,7 @@ export function PerformanceView({
                     canEdit={editorAuth.isEditor}
                     loading={Boolean(loadingSheets[song.id])}
                     error={sheetErrors[song.id]}
+                    onReloadSheet={() => reloadLyricSheet(song.id)}
                     onSaveSections={handleSaveSections}
                   />
                 ) : chartUrl ? (

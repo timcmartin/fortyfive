@@ -44,7 +44,14 @@ function formatPartLabel(value) {
   );
 }
 
-function LyricSection({ section, canEdit, onSaveSinger, onSaveLyrics }) {
+function LyricSection({
+  section,
+  canEdit,
+  onSaveSinger,
+  onSaveLyrics,
+  onReloadLatest,
+  reloading,
+}) {
   const [editingSinger, setEditingSinger] = useState(false);
   const [savingSinger, setSavingSinger] = useState(false);
   const [singerError, setSingerError] = useState(null);
@@ -110,7 +117,7 @@ function LyricSection({ section, canEdit, onSaveSinger, onSaveLyrics }) {
       await onSaveSinger(nextSinger);
       setEditingSinger(false);
     } catch (error) {
-      setSingerError(error.message);
+      setSingerError(error);
     } finally {
       setSavingSinger(false);
     }
@@ -125,7 +132,7 @@ function LyricSection({ section, canEdit, onSaveSinger, onSaveLyrics }) {
       await onSaveLyrics(lines);
       setEditingLyrics(false);
     } catch (error) {
-      setLyricsError(error.message);
+      setLyricsError(error);
     } finally {
       setSavingLyrics(false);
     }
@@ -193,7 +200,17 @@ function LyricSection({ section, canEdit, onSaveSinger, onSaveLyrics }) {
             )}
             {singerError && (
               <span className="text-xs text-error" role="alert">
-                Could not save singer: {singerError}
+                Could not save singer: {singerError.message}
+                {singerError.name === "LyricSheetConflictError" && (
+                  <button
+                    className="btn btn-link btn-xs"
+                    type="button"
+                    disabled={reloading}
+                    onClick={onReloadLatest}
+                  >
+                    {reloading ? "Reloading…" : "Reload latest"}
+                  </button>
+                )}
               </span>
             )}
           </div>
@@ -229,7 +246,17 @@ function LyricSection({ section, canEdit, onSaveSinger, onSaveLyrics }) {
           </label>
           {lyricsError && (
             <p className="text-sm text-error" role="alert">
-              Could not save lyrics: {lyricsError}
+              Could not save lyrics: {lyricsError.message}
+              {lyricsError.name === "LyricSheetConflictError" && (
+                <button
+                  className="btn btn-link btn-xs ml-2"
+                  type="button"
+                  disabled={reloading}
+                  onClick={onReloadLatest}
+                >
+                  {reloading ? "Reloading…" : "Reload latest"}
+                </button>
+              )}
             </p>
           )}
           <div className="flex gap-2">
@@ -279,11 +306,54 @@ export function PerformanceLyrics({
   loading,
   error,
   onSaveSections,
+  onReloadSheet,
 }) {
   const [editingSheet, setEditingSheet] = useState(false);
   const [sheetDraft, setSheetDraft] = useState("");
   const [saveError, setSaveError] = useState(null);
   const [savingSheet, setSavingSheet] = useState(false);
+  const [savedMessage, setSavedMessage] = useState(null);
+  const [reloadError, setReloadError] = useState(null);
+  const [reloading, setReloading] = useState(false);
+  const [sectionEditorVersion, setSectionEditorVersion] = useState(0);
+  const feedbackTimer = useRef(null);
+
+  useEffect(
+    () => () => {
+      if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
+    },
+    [],
+  );
+
+  const saveSections = async (nextSections) => {
+    setSavedMessage(null);
+    await onSaveSections(nextSections);
+    setSavedMessage("Changes saved.");
+    if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
+    feedbackTimer.current = setTimeout(() => setSavedMessage(null), 3000);
+  };
+
+  const reloadLatest = async () => {
+    setReloadError(null);
+    setReloading(true);
+    try {
+      const latestSheet = await onReloadSheet();
+      if (!latestSheet) {
+        throw new Error("Could not load the latest sheet. Please try again.");
+      }
+      if (!Array.isArray(latestSheet.sections)) {
+        throw new Error("The latest lyric sheet has invalid sections.");
+      }
+      setSheetDraft(JSON.stringify({ sections: latestSheet.sections }, null, 2));
+      setEditingSheet(false);
+      setSectionEditorVersion((version) => version + 1);
+      setSavedMessage(null);
+    } catch (error) {
+      setReloadError(error.message);
+    } finally {
+      setReloading(false);
+    }
+  };
 
   const handleSaveSheet = async (event) => {
     event.preventDefault();
@@ -293,20 +363,20 @@ export function PerformanceLyrics({
     try {
       parsed = JSON.parse(sheetDraft);
     } catch {
-      setSaveError("Enter valid JSON before saving.");
+      setSaveError(new Error("Enter valid JSON before saving."));
       return;
     }
     if (!parsed || !Array.isArray(parsed.sections)) {
-      setSaveError('The JSON must have a "sections" array.');
+      setSaveError(new Error('The JSON must have a "sections" array.'));
       return;
     }
 
     setSavingSheet(true);
     try {
-      await onSaveSections(parsed.sections);
+      await saveSections(parsed.sections);
       setEditingSheet(false);
     } catch (saveFailure) {
-      setSaveError(saveFailure.message);
+      setSaveError(saveFailure);
     } finally {
       setSavingSheet(false);
     }
@@ -320,10 +390,39 @@ export function PerformanceLyrics({
     );
   }
 
-  if (error) return <div className="alert alert-error">{error}</div>;
+  if (error) {
+    return (
+      <div className="space-y-2">
+        <div className="alert alert-error">{error}</div>
+        {canEdit && (
+          <button
+            className="btn btn-outline btn-sm"
+            type="button"
+            disabled={reloading}
+            onClick={() => void reloadLatest()}
+          >
+            {reloading ? "Reloading…" : "Retry loading lyric sheet"}
+          </button>
+        )}
+        {reloadError && (
+          <p className="text-sm text-error" role="alert">{reloadError}</p>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">
+      {savedMessage && (
+        <p className="text-sm text-success" role="status">
+          {savedMessage}
+        </p>
+      )}
+      {reloadError && (
+        <p className="text-sm text-error" role="alert">
+          {reloadError}
+        </p>
+      )}
       {canEdit && (
         <div className="space-y-3">
           {!editingSheet ? (
@@ -334,6 +433,7 @@ export function PerformanceLyrics({
                   JSON.stringify({ sections }, null, 2),
                 );
                 setSaveError(null);
+                setSavedMessage(null);
                 setEditingSheet(true);
               }}
             >
@@ -352,7 +452,19 @@ export function PerformanceLyrics({
                 />
               </label>
               {saveError && (
-                <p className="text-sm text-error" role="alert">{saveError}</p>
+                <p className="text-sm text-error" role="alert">
+                  {saveError.message}
+                  {saveError.name === "LyricSheetConflictError" && (
+                    <button
+                      className="btn btn-link btn-xs ml-2"
+                      type="button"
+                      disabled={reloading}
+                      onClick={() => void reloadLatest()}
+                    >
+                      {reloading ? "Reloading…" : "Reload latest sheet"}
+                    </button>
+                  )}
+                </p>
               )}
               <div className="flex gap-2">
                 <button
@@ -385,18 +497,20 @@ export function PerformanceLyrics({
         <div className="space-y-4">
           {sections.map((section, index) => (
             <LyricSection
-              key={`${song.id}:${section.id ?? `${section.part}-${index}`}`}
+              key={`${song.id}:${sectionEditorVersion}:${section.id ?? `${section.part}-${index}`}`}
               section={section}
               canEdit={canEdit}
+              onReloadLatest={() => void reloadLatest()}
+              reloading={reloading}
               onSaveSinger={(singer) =>
-                onSaveSections(
+                saveSections(
                   sections.map((current, currentIndex) =>
                     currentIndex === index ? { ...current, singer } : current,
                   ),
                 )
               }
               onSaveLyrics={(lyrics) =>
-                onSaveSections(
+                saveSections(
                   sections.map((current, currentIndex) =>
                     currentIndex === index ? { ...current, lyrics } : current,
                   ),

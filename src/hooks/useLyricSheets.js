@@ -28,9 +28,11 @@ export function useLyricSheets() {
   const [lyricSheetIndexLoaded, setLyricSheetIndexLoaded] = useState(false);
   const [indexError, setIndexError] = useState(null);
   const [lyricSheets, setLyricSheets] = useState({});
+  const [lyricSheetRevisions, setLyricSheetRevisions] = useState({});
   const [loadingSheets, setLoadingSheets] = useState({});
   const [sheetErrors, setSheetErrors] = useState({});
   const sheetRequests = useRef(new Map());
+  const sheetRevisions = useRef({});
 
   useEffect(() => {
     let mounted = true;
@@ -80,7 +82,8 @@ export function useLyricSheets() {
     };
   }, []);
 
-  const loadLyricSheet = useCallback((songId) => {
+  const loadLyricSheet = useCallback((songId, { force = false } = {}) => {
+    if (force) sheetRequests.current.delete(songId);
     const existingRequest = sheetRequests.current.get(songId);
     if (existingRequest) return existingRequest;
 
@@ -96,14 +99,34 @@ export function useLyricSheets() {
       if (supabase) {
         const { data, error } = await supabase
           .from("lyric_sheets")
-          .select("sections")
+          .select("sections, revision")
           .eq("song_id", songId)
           .maybeSingle();
         if (error) throw error;
-        if (data) sheet = { sections: data.sections };
+        if (data) {
+          sheetRevisions.current[songId] = data.revision;
+          setLyricSheetRevisions((current) => ({
+            ...current,
+            [songId]: data.revision,
+          }));
+          sheet = { sections: data.sections };
+        } else {
+          sheetRevisions.current[songId] = null;
+          setLyricSheetRevisions((current) => ({
+            ...current,
+            [songId]: null,
+          }));
+        }
       }
 
-      if (!sheet) sheet = await loadStaticSheet(songId);
+      if (!sheet) {
+        sheetRevisions.current[songId] = null;
+        setLyricSheetRevisions((current) => ({
+          ...current,
+          [songId]: null,
+        }));
+        sheet = await loadStaticSheet(songId);
+      }
       if (sheet) {
         validateSheet(sheet, songId);
         setLyricSheets((current) => ({ ...current, [songId]: sheet }));
@@ -126,23 +149,71 @@ export function useLyricSheets() {
     return request;
   }, []);
 
-  const saveLyricSheet = useCallback(async (songId, sections, userId) => {
+  const saveLyricSheet = useCallback(async (
+    songId,
+    sections,
+    userId,
+    loadedRevision = sheetRevisions.current[songId],
+  ) => {
     if (!supabase) throw new Error("Supabase is not configured");
     if (!Array.isArray(sections)) {
       throw new Error("Lyric sheet must contain a sections array");
     }
 
     const sheet = { sections };
-    const { error } = await supabase.from("lyric_sheets").upsert(
-      {
-        song_id: songId,
-        sections,
-        updated_at: new Date().toISOString(),
-        updated_by: userId,
-      },
-      { onConflict: "song_id" },
-    );
-    if (error) throw error;
+    const updatedAt = new Date().toISOString();
+    const expectedRevision = loadedRevision;
+    let savedRevision;
+
+    if (expectedRevision == null) {
+      const { data, error } = await supabase
+        .from("lyric_sheets")
+        .insert({
+          song_id: songId,
+          sections,
+          updated_at: updatedAt,
+          updated_by: userId,
+        })
+        .select("revision")
+        .single();
+      if (error?.code === "23505") {
+        const conflict = new Error(
+          "This lyric sheet was created by another editor. Reload it before saving your changes.",
+        );
+        conflict.name = "LyricSheetConflictError";
+        throw conflict;
+      }
+      if (error) throw error;
+      savedRevision = data.revision;
+    } else {
+      const { data, error } = await supabase
+        .from("lyric_sheets")
+        .update({
+          sections,
+          revision: expectedRevision + 1,
+          updated_at: updatedAt,
+          updated_by: userId,
+        })
+        .eq("song_id", songId)
+        .eq("revision", expectedRevision)
+        .select("revision")
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) {
+        const conflict = new Error(
+          "This lyric sheet changed since it was loaded. Reload the latest version before saving.",
+        );
+        conflict.name = "LyricSheetConflictError";
+        throw conflict;
+      }
+      savedRevision = data.revision;
+    }
+
+    sheetRevisions.current[songId] = savedRevision;
+    setLyricSheetRevisions((current) => ({
+      ...current,
+      [songId]: savedRevision,
+    }));
 
     setLyricSheets((current) => ({ ...current, [songId]: sheet }));
     setLyricSheetIds((current) =>
@@ -157,14 +228,21 @@ export function useLyricSheets() {
     return sheet;
   }, []);
 
+  const reloadLyricSheet = useCallback(
+    (songId) => loadLyricSheet(songId, { force: true }),
+    [loadLyricSheet],
+  );
+
   return {
     lyricSheetIds,
     lyricSheetIndexLoaded,
     indexError,
     lyricSheets,
+    lyricSheetRevisions,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
+    reloadLyricSheet,
     saveLyricSheet,
   };
 }

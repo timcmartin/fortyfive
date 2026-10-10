@@ -37,9 +37,11 @@ export default function App() {
     lyricSheetIndexLoaded,
     indexError: sheetIndexError,
     lyricSheets,
+    lyricSheetRevisions,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
+    reloadLyricSheet,
     saveLyricSheet,
   } = useLyricSheets();
   const [searchTerm, setSearchTerm] = useState("");
@@ -104,9 +106,11 @@ export default function App() {
         lyricSheetIds={lyricSheetIds}
         lyricSheetIndexLoaded={lyricSheetIndexLoaded}
         lyricSheets={lyricSheets}
+        lyricSheetRevisions={lyricSheetRevisions}
         loadingSheets={loadingSheets}
         sheetErrors={sheetErrors}
         loadLyricSheet={loadLyricSheet}
+        reloadLyricSheet={reloadLyricSheet}
         saveLyricSheet={saveLyricSheet}
         editorAuth={editorAuth}
         initialSongId={performanceSongId}
