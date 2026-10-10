@@ -38,6 +38,7 @@ export function PerformanceView({
   lyricSheetIds,
   lyricSheets,
   lyricSheetRevisions,
+  lyricSheetUpdatedAt,
   loadingSheets,
   sheetErrors,
   loadLyricSheet,
@@ -434,6 +435,7 @@ export function PerformanceView({
                     key={song.id}
                     song={song}
                     sections={sections}
+                    updatedAt={lyricSheetUpdatedAt[song.id]}
                     canEdit={editorAuth.isEditor}
                     loading={Boolean(loadingSheets[song.id])}
                     error={sheetErrors[song.id]}

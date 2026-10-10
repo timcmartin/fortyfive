@@ -38,6 +38,7 @@ export default function App() {
     indexError: sheetIndexError,
     lyricSheets,
     lyricSheetRevisions,
+    lyricSheetUpdatedAt,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
@@ -107,6 +108,7 @@ export default function App() {
         lyricSheetIndexLoaded={lyricSheetIndexLoaded}
         lyricSheets={lyricSheets}
         lyricSheetRevisions={lyricSheetRevisions}
+        lyricSheetUpdatedAt={lyricSheetUpdatedAt}
         loadingSheets={loadingSheets}
         sheetErrors={sheetErrors}
         loadLyricSheet={loadLyricSheet}

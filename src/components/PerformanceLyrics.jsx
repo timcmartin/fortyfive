@@ -302,6 +302,7 @@ function LyricSection({
 export function PerformanceLyrics({
   song,
   sections,
+  updatedAt,
   canEdit,
   loading,
   error,
@@ -411,8 +412,20 @@ export function PerformanceLyrics({
     );
   }
 
+  const updatedDate = updatedAt ? new Date(updatedAt) : null;
+  const formattedUpdatedAt =
+    updatedDate && !Number.isNaN(updatedDate.getTime())
+      ? updatedDate.toLocaleString()
+      : null;
+
   return (
     <div className="space-y-4">
+      {formattedUpdatedAt && (
+        <p className="text-xs text-base-content/50">
+          Last updated{" "}
+          <time dateTime={updatedDate.toISOString()}>{formattedUpdatedAt}</time>
+        </p>
+      )}
       {savedMessage && (
         <p className="text-sm text-success" role="status">
           {savedMessage}

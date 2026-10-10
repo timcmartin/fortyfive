@@ -29,6 +29,7 @@ export function useLyricSheets() {
   const [indexError, setIndexError] = useState(null);
   const [lyricSheets, setLyricSheets] = useState({});
   const [lyricSheetRevisions, setLyricSheetRevisions] = useState({});
+  const [lyricSheetUpdatedAt, setLyricSheetUpdatedAt] = useState({});
   const [loadingSheets, setLoadingSheets] = useState({});
   const [sheetErrors, setSheetErrors] = useState({});
   const sheetRequests = useRef(new Map());
@@ -99,7 +100,7 @@ export function useLyricSheets() {
       if (supabase) {
         const { data, error } = await supabase
           .from("lyric_sheets")
-          .select("sections, revision")
+          .select("sections, revision, updated_at")
           .eq("song_id", songId)
           .maybeSingle();
         if (error) throw error;
@@ -109,10 +110,18 @@ export function useLyricSheets() {
             ...current,
             [songId]: data.revision,
           }));
+          setLyricSheetUpdatedAt((current) => ({
+            ...current,
+            [songId]: data.updated_at,
+          }));
           sheet = { sections: data.sections };
         } else {
           sheetRevisions.current[songId] = null;
           setLyricSheetRevisions((current) => ({
+            ...current,
+            [songId]: null,
+          }));
+          setLyricSheetUpdatedAt((current) => ({
             ...current,
             [songId]: null,
           }));
@@ -122,6 +131,10 @@ export function useLyricSheets() {
       if (!sheet) {
         sheetRevisions.current[songId] = null;
         setLyricSheetRevisions((current) => ({
+          ...current,
+          [songId]: null,
+        }));
+        setLyricSheetUpdatedAt((current) => ({
           ...current,
           [songId]: null,
         }));
@@ -164,6 +177,7 @@ export function useLyricSheets() {
     const updatedAt = new Date().toISOString();
     const expectedRevision = loadedRevision;
     let savedRevision;
+    let savedUpdatedAt;
 
     if (expectedRevision == null) {
       const { data, error } = await supabase
@@ -174,7 +188,7 @@ export function useLyricSheets() {
           updated_at: updatedAt,
           updated_by: userId,
         })
-        .select("revision")
+        .select("revision, updated_at")
         .single();
       if (error?.code === "23505") {
         const conflict = new Error(
@@ -185,6 +199,7 @@ export function useLyricSheets() {
       }
       if (error) throw error;
       savedRevision = data.revision;
+      savedUpdatedAt = data.updated_at;
     } else {
       const { data, error } = await supabase
         .from("lyric_sheets")
@@ -196,7 +211,7 @@ export function useLyricSheets() {
         })
         .eq("song_id", songId)
         .eq("revision", expectedRevision)
-        .select("revision")
+        .select("revision, updated_at")
         .maybeSingle();
       if (error) throw error;
       if (!data) {
@@ -207,12 +222,17 @@ export function useLyricSheets() {
         throw conflict;
       }
       savedRevision = data.revision;
+      savedUpdatedAt = data.updated_at;
     }
 
     sheetRevisions.current[songId] = savedRevision;
     setLyricSheetRevisions((current) => ({
       ...current,
       [songId]: savedRevision,
+    }));
+    setLyricSheetUpdatedAt((current) => ({
+      ...current,
+      [songId]: savedUpdatedAt,
     }));
 
     setLyricSheets((current) => ({ ...current, [songId]: sheet }));
@@ -239,6 +259,7 @@ export function useLyricSheets() {
     indexError,
     lyricSheets,
     lyricSheetRevisions,
+    lyricSheetUpdatedAt,
     loadingSheets,
     sheetErrors,
     loadLyricSheet,
